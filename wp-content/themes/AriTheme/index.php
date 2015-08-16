@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<video autoplay loop poster="Ari.jpg" id="bgvid">
+<video autoplay loop poster="ari-photo.jpg" id="bgvid">
 	<!--<source src="polina.webm" type="video/webm">-->
 	<source src="Ari.mp4" type="video/mp4">
 </video>
