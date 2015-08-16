@@ -9,10 +9,6 @@
 
 	<body <?php body_class(); ?>>
 
-		<!--<div style="position: fixed; z-index: -99; width: 100%; height: 100%">
-		  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/NvRkBDLlMWo?autoplay=1&controls=0&showinfo=0&autohide=1" frameborder="0" allowfullscreen></iframe>
-		</div>-->
-
 		<!-- container -->
 		<div class="container">
 
@@ -22,8 +18,11 @@
 					<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
 				</div> -->
 				<div class="row">
+					<div class="logo-site col-md-2">
+						<span class="helper"></span><?php echo remove_width_and_height_attribute(wp_get_attachment_image( 33, 'full' ));  ?>
+					</div>
 					<!-- Navigation Menu -->
-					<nav class="site-nav">
+					<nav class="site-nav col-md-10">
 						<?php
 							$args = array(
 								'theme_location' => 'primary'

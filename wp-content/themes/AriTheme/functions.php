@@ -19,3 +19,13 @@ function my_bootstrap_theme_scripts() {
 	wp_enqueue_style( 'bootstrap-css' );
 }
 add_action('wp_enqueue_scripts', 'my_bootstrap_theme_scripts');
+
+function home_page_menu_args( $args ) {
+	$args['show_home'] = true;
+	return $args;
+}
+add_filter( 'wp_page_menu_args', 'home_page_menu_args' );
+
+function remove_width_and_height_attribute( $html ) {
+   return preg_replace( '/(height|width)="\d*"\s/', "", $html );
+}

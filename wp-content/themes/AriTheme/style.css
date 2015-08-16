@@ -14,23 +14,22 @@ html, body {
 body { 
 	font-family: Arial, sans-serif;
 	font-size: 14px;
-	color: #333;
+	color: #FFF;
 }
 
-#bg-video {
+video#bgvid {
 	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	object-fit: cover;
-}
-
-video {
-  background-color: black;
-  background-image: /* Ici, notre vidéo */;
-  background-position: center center;
-  background-size: contain;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	background: url(Ari.jpg) no-repeat;
+	background-size: cover;
 }
 
 /* General layout */
@@ -49,7 +48,6 @@ div.container {
 	width: 100%;
 	background: rgba(0,0,0,0.2);
 	height: 80px;
-	padding-top: 20px;
 	z-index: 100;
 }
 
@@ -57,14 +55,15 @@ div.container {
 .site-nav {
 	max-width: 920px;
     margin: 0 auto;
+	padding-top: 20px;
 }
-.site-nav ul { margin : 0; padding : 0; }
+.site-nav ul { margin : 0; padding : 0; text-align: center; }
 .site-nav ul:before, .site-nav ul:after { content: ""; display: table; }
 .site-nav ul:after { clear: both; }
 .site-nav ul { *zoom: 1; }
 .site-nav ul li { 
 	list-style: none;
-	float: left;
+	display: inline-block;
 }
 
 /* Site Header Menu */
@@ -73,6 +72,7 @@ div.container {
 	display: block;
 	padding: 10px 45px;
 	text-decoration: none;
+	color: #fff;
 }
 
 .site-header nav ul li.current-menu-item a:link,
@@ -81,9 +81,37 @@ div.container {
 	color: #fff;
 }
 
+.site-header div, .site-header nav { height: 100%; }
 
 /* footer */
 .site-footer {
 	margin-top: 20px;
 	border-top: 2px solid #999;
+}
+
+.home-buttons { 
+	position: fixed;
+    bottom: 0;
+    left: 0; 
+    width: 100%;
+    padding-bottom: 65px;
+}
+
+.home-buttons div {
+	text-align: center;
+}
+
+.logo-site {
+	text-align: center;
+}
+
+.logo-site img { 
+	vertical-align: middle;
+	width: 83px;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
