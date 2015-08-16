@@ -5,7 +5,10 @@
 	<source src="Ari.mp4" type="video/mp4">
 </video>
 
-
+	<div class="centered-content row">
+		<div class="main-logo col-md-12"><?php echo wp_get_attachment_image( 33, 'medium' ); ?></div>
+		<p class="slogan col-md-12"><?php bloginfo("description");?></p>
+	</div>
 
 	<div class="row home-buttons">
 		<div class="right-button col-md-4">

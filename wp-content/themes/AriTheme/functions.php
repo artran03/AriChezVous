@@ -29,3 +29,8 @@ add_filter( 'wp_page_menu_args', 'home_page_menu_args' );
 function remove_width_and_height_attribute( $html ) {
    return preg_replace( '/(height|width)="\d*"\s/', "", $html );
 }
+
+function my_function_admin_bar(){
+    return false;
+}
+add_filter( 'show_admin_bar' , 'my_function_admin_bar');

@@ -76,7 +76,10 @@ div.container {
 }
 
 .site-header nav ul li.current-menu-item a:link,
-.site-header nav ul li.current-menu-item a:visited {
+.site-header nav ul li.current-menu-item a:visited,
+.site-header nav ul li.current_page_item a:link,
+.site-header nav ul li.current_page_item a:visited
+ {
 	background-color: #006ec3;
 	color: #fff;
 }
@@ -114,4 +117,15 @@ div.container {
     display: inline-block;
     height: 100%;
     vertical-align: middle;
+}
+
+.centered-content div, .centered-content p {
+	text-align: center;
+}
+
+.slogan {
+	margin-top: 11px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
 }
