@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width">
 		<title><?php bloginfo('name'); ?></title>
 		<?php wp_head(); ?>
+		<link href='https://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
 	</head>
 
 	<body <?php body_class(); ?>>
@@ -19,7 +20,7 @@
 				</div> -->
 				<div class="row">
 					<div class="logo-site col-md-2">
-						<span class="helper"></span><?php echo remove_width_and_height_attribute(wp_get_attachment_image( 33, 'full' ));  ?>
+						<span class="helper"></span><a href="<?php echo home_url(); ?>"><?php echo remove_width_and_height_attribute(wp_get_attachment_image( 45, 'full' ));  ?></a>
 					</div>
 					<!-- Navigation Menu -->
 					<nav class="site-nav col-md-10">

@@ -6,7 +6,7 @@
 </video>
 
 	<div class="centered-content row">
-		<div class="main-logo col-md-12"><?php echo wp_get_attachment_image( 33, 'medium' ); ?></div>
+		<div class="main-logo col-md-12"><?php echo wp_get_attachment_image( 41, 'medium' ); ?></div>
 		<p class="slogan col-md-12"><?php bloginfo("description");?></p>
 	</div>
 

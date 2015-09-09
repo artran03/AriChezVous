@@ -12,9 +12,11 @@ html, body {
 }
 
 body { 
-	font-family: Arial, sans-serif;
+	/*font-family: Arial, sans-serif;*/
 	font-size: 14px;
 	color: #FFF;
+	font-family: 'Lobster Two', cursive!important;
+	font-style: italic;
 }
 
 video#bgvid {
@@ -37,18 +39,17 @@ div.container {
 	margin : 0 auto;
 	padding-left: 20px;
 	padding-right: 20px;
-	padding-top: 100px;
+	padding-top: 20px;
 }
 
 /* header */
 .site-header {
-	position: fixed;
-	top: 0;
-	left: 0;
 	width: 100%;
-	background: rgba(0,0,0,0.2);
-	height: 80px;
+	background: url(img/header-background.png) no-repeat center center;
+	background-size: 87%;
+    height: 137px;
 	z-index: 100;
+	color: #000;
 }
 
 /* Navigation Menus */
@@ -70,9 +71,9 @@ div.container {
 .site-header nav ul li a:link,
 .site-header nav ul li a:visited {
 	display: block;
-	padding: 10px 45px;
+	padding: 10px 40px;
 	text-decoration: none;
-	color: #fff;
+	color: #000;
 }
 
 .site-header nav ul li.current-menu-item a:link,
@@ -80,16 +81,29 @@ div.container {
 .site-header nav ul li.current_page_item a:link,
 .site-header nav ul li.current_page_item a:visited
  {
-	background-color: #006ec3;
-	color: #fff;
+	/*background-color: #006ec3;
+	color: #fff;*/
+	background-position: center -2px;
 }
 
+.site-header nav ul li a { 
+    padding-top: 49px!important; 
+	font-size: 18px; 
+	font-weight: bold;
+}
+
+
 .site-header div, .site-header nav { height: 100%; }
+
+li.demande-item.current_page_item a {
+	background: url(img/icone-demande.png) no-repeat center;
+}
 
 /* footer */
 .site-footer {
 	margin-top: 20px;
 	border-top: 2px solid #999;
+	display: none;
 }
 
 .home-buttons { 
@@ -110,7 +124,12 @@ div.container {
 
 .logo-site img { 
 	vertical-align: middle;
-	width: 83px;
+	width: 110px;
+	position: absolute;
+    top: 24px;
+    left: 160px;
+    width: 68%;
+    z-index: 99;
 }
 
 .helper {
@@ -129,3 +148,52 @@ div.container {
     font-weight: bold;
     font-size: 24px;
 }
+
+.page-id-30 { 
+	background: url(img/demande-background.png) repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#demande-form {
+	text-align: center;
+	padding-top: 310px;
+	background: url(img/form-frame.png) no-repeat center center;
+	height: 643px;
+}
+
+#demande-form span {
+	font-weight: bold;
+	font-size: 15px;
+}
+
+#demande-form span.field-container {
+	display: inline-block;
+    height: 55px;
+    padding-left: 13px;
+    padding-top: 16px;
+    padding-bottom: 13px;
+    background-color: #fff;
+    width: 214px;
+    text-align: left;
+}
+
+#demande-form span.field-container.date {
+	width : 430px;
+}
+
+#demande-form span.field-container.date input{
+	width : 150px;
+}
+
+
+#demande-form input {
+	width: 120px;
+	border : none;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#demande-form .left { text-align: right; padding-right: 1px!important; margin-bottom: 2px; }
+#demande-form .right { text-align: left;padding-left: 1px!important; margin-bottom: 2px; }
