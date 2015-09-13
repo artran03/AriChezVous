@@ -20,7 +20,7 @@
 				</div> -->
 				<div class="row">
 					<div class="logo-site col-md-2">
-						<span class="helper"></span><a href="<?php echo home_url(); ?>"><?php echo remove_width_and_height_attribute(wp_get_attachment_image( 45, 'full' ));  ?></a>
+						<span class="helper"></span><a href="<?php echo home_url(); ?>"><img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/logo.png" class="attachment-full" alt="logo"></a>
 					</div>
 					<!-- Navigation Menu -->
 					<nav class="site-nav col-md-10">

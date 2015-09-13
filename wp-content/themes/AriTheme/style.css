@@ -99,6 +99,22 @@ li.demande-item.current_page_item a {
 	background: url(img/icone-demande.png) no-repeat center;
 }
 
+li.concept-item.current_page_item a {
+	background: url(img/icone-concept.png) no-repeat center;
+}
+
+li.souvenirs-item.current_page_item a {
+	background: url(img/icone-souvenirs.png) no-repeat center;
+}
+
+li.apropos-item.current_page_item a {
+	background: url(img/icone-apropos.png) no-repeat center;
+}
+
+li.livredor-item.current_page_item a {
+	background: url(img/icone-livredor.png) no-repeat center;
+}
+
 /* footer */
 .site-footer {
 	margin-top: 20px;
@@ -151,6 +167,30 @@ li.demande-item.current_page_item a {
 
 .page-id-30 { 
 	background: url(img/demande-background.png) repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.page-id-10 { 
+	background: url(img/concept-background.png) repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.page-id-12 { 
+	background: url(img/souvenirs-background.png) repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.page-id-46 { 
+	background: url(img/apropos-background.png) repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
