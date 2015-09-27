@@ -2,7 +2,7 @@
 
 <video autoplay loop poster="ari-photo.jpg" id="bgvid">
 	<!--<source src="polina.webm" type="video/webm">-->
-	<source src="Ari.mp4" type="video/mp4">
+	<source src="video_promoV1.mp4" type="video/mp4">
 </video>
 
 	<div class="centered-content row">
