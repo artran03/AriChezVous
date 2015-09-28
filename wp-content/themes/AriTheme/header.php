@@ -13,17 +13,12 @@
 
 		<!-- container -->
 		<div class="container">
-		
-		<!-- Condition pour ne faire apparaître le header que sur les pages du site et non la page "Site en construction" -->
-			<?php if (is_page(10) OR is_page(8) OR is_page(14) OR is_page(12)){ ?>		
 
 			<!-- site-header -->
 			<header class="site-header">
 				<!--<div class="site-logo">
 					<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
 				</div> -->
-				
-					
 				<div class="row">
 					<div class="logo-site col-md-2">
 						<span class="helper"></span><a href="<?php echo home_url(); ?>"><img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/logo.png" class="attachment-full" alt="logo"></a>
@@ -39,9 +34,5 @@
 					</nav>
 					<!-- /Navigation Menu -->
 				</div>
-				
-				
 			</header>
 			<!-- /site-header -->
-			
-			<?php }?>
