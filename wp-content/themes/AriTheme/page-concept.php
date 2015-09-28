@@ -8,7 +8,7 @@ if (have_posts()) :
 
 	<h2><?php the_title(); ?></h2>
 	<p><?php the_content(); ?></p>
-	<p>Ceci est la page concept</p>
+	
 
 	<?php endwhile;
 

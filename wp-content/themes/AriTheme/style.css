@@ -76,10 +76,12 @@ div.container {
 	color: #000;
 }
 
-.site-header nav ul li.current-menu-item a:link,
+/*.site-header nav ul li.current-menu-item a:link,
 .site-header nav ul li.current-menu-item a:visited,
 .site-header nav ul li.current_page_item a:link,
-.site-header nav ul li.current_page_item a:visited
+.site-header nav ul li.current_page_item a:visited,*/
+.site-header nav ul li a,
+.site-header nav ul li.current-menu-item a
  {
 	/*background-color: #006ec3;
 	color: #fff;*/
@@ -95,23 +97,23 @@ div.container {
 
 .site-header div, .site-header nav { height: 100%; }
 
-li.demande-item.current_page_item a {
+li.demande-item a {
 	background: url(img/icone-demande.png) no-repeat center;
 }
 
-li.concept-item.current_page_item a {
+li.concept-item a {
 	background: url(img/icone-concept.png) no-repeat center;
 }
 
-li.souvenirs-item.current_page_item a {
+li.souvenirs-item a {
 	background: url(img/icone-souvenirs.png) no-repeat center;
 }
 
-li.apropos-item.current_page_item a {
+li.apropos-item a {
 	background: url(img/icone-apropos.png) no-repeat center;
 }
 
-li.livredor-item.current_page_item a {
+li.livredor-item a {
 	background: url(img/icone-livredor.png) no-repeat center;
 }
 
@@ -125,10 +127,10 @@ li.livredor-item.current_page_item a {
 .home-buttons { 
 	position: fixed;
     bottom: 0;
-    left: 0; 
+    left: 30; 
     width: 100%;
-    padding-bottom: 65px;
-}
+    padding-bottom: 180px;
+}*/
 
 .home-buttons div {
 	text-align: center;
@@ -166,7 +168,8 @@ li.livredor-item.current_page_item a {
 }
 
 /* Backgrounds */
-.page-id-30 { 
+
+.page-demande { 
 	background: url(img/demande-background.png) repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -174,7 +177,7 @@ li.livredor-item.current_page_item a {
     background-size: cover;
 }
 
-.page-id-10 { 
+.page-concept { 
 	background: url(img/concept-background.png) repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -182,7 +185,7 @@ li.livredor-item.current_page_item a {
     background-size: cover;
 }
 
-.page-id-12 { 
+.page-souvenirs { 
 	background: url(img/souvenirs-background.png) repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -190,8 +193,24 @@ li.livredor-item.current_page_item a {
     background-size: cover;
 }
 
-.page-id-46 { 
+.page-a-propos { 
 	background: url(img/apropos-background.png) repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.page-livre-dor { 
+	background: url(img/livredor-background.png) repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.page-construction { 
+	background: url(img/demande-background.png) repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -240,3 +259,27 @@ li.livredor-item.current_page_item a {
 
 #demande-form .left { text-align: right; padding-right: 1px!important; margin-bottom: 2px; }
 #demande-form .right { text-align: left;padding-left: 1px!important; margin-bottom: 2px; }
+
+/* Page Site en construction */
+
+#construction-content {
+	text-align: center;
+}
+
+#image-construction {
+	width: 40%;
+	height: 40%;
+}
+
+div.btn-valider input {
+	background: url(img/bouton-validez.png) no-repeat center center;
+	height: 50px;
+	font-size: 20px;
+	color: #FFF;
+	font-family: 'Lobster Two', cursive!important;
+	font-style: italic;
+}
+
+div.btn-valider { margin-top: 63px; }
+
+.ajax-loader { display: none; }
