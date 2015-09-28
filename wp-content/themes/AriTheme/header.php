@@ -6,6 +6,7 @@
 		<title><?php bloginfo('name'); ?></title>
 		<?php wp_head(); ?>
 		<link href='https://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+		<link rel="icon" type="image/png" sizes="64x64" href="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/logo-fav.png">
 	</head>
 
 	<body <?php body_class(); ?>>

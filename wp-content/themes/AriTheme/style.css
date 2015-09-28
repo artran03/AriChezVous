@@ -43,20 +43,33 @@ div.container {
 }
 
 /* header */
+
 .site-header {
 	width: 100%;
-	background: url(img/header-background.png) no-repeat center center;
-	background-size: 87%;
     height: 137px;
 	z-index: 100;
 	color: #000;
+}
+
+.blog.post-bonjour-tout-le-monde .site-header {
+	background: url(img/header-trans.png) no-repeat center center;
+	background-size: 87%;
+}
+
+.page-concept .site-header, 
+.page-demande .site-header, 
+.page-souvenirs .site-header, 
+.page-a-propos .site-header, 
+.page-livre-dor .site-header {
+	background: url(img/header-bg.png) no-repeat center center;
+	background-size: 87%;
 }
 
 /* Navigation Menus */
 .site-nav {
 	max-width: 920px;
     margin: 0 auto;
-	padding-top: 20px;
+	padding-top: 34px;
 }
 .site-nav ul { margin : 0; padding : 0; text-align: center; }
 .site-nav ul:before, .site-nav ul:after { content: ""; display: table; }
