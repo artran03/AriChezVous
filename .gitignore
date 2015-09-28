@@ -10,3 +10,6 @@ sitemap.xml.gz
 wp-content/cache/
 wp-content/backups/
 .DS_Store
+BDD/arichezvous.sql
+
+video_promoV1.mp4
