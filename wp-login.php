@@ -65,7 +65,7 @@ function login_header( $title = 'Log In', $message = '', $wp_error = '' ) {
 	<!--<![endif]-->
 	<head>
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-	<title><?php bloginfo('name'); ?> &rsaquo; <?php echo $title; ?></title>
+	<title><?php bloginfo('name'); ?></title>
 	<?php
 
 	wp_admin_css( 'login', true );
@@ -205,6 +205,9 @@ function login_header( $title = 'Log In', $message = '', $wp_error = '' ) {
 			color: #57BD8F;
 		}
 
+		.message {
+			display: none;
+		}
 	</style>
 
 	</head>
