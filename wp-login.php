@@ -146,10 +146,73 @@ function login_header( $title = 'Log In', $message = '', $wp_error = '' ) {
 	$classes = apply_filters( 'login_body_class', $classes, $action );
 
 	?>
+
+
+    <link href='https://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+
+	<style type="text/css">
+		body { 
+			font-size: 20px;
+			color: #000;
+			font-family: 'Lobster Two', cursive!important;
+			font-style: italic;
+			background: url(wp-content/themes/AriTheme/img/demande-background.png) repeat center center fixed;
+		    -webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+		    background-size: cover;
+		}
+
+		.login h1 a {
+		    background-image: url(wp-content/themes/AriTheme/img/logo.png)!important;
+		    background-size: 200px;
+		    width: 200px;
+		    height: 200px;
+		}
+
+		#login {
+			padding-top: 2%!important;
+		}
+
+		#loginform {
+			display: none;
+		}
+
+		#nav{
+			display: none;
+		}
+
+		#backtoblog {
+			display: none;
+		}
+
+		#loginform.show {
+			display: block!important;
+		}
+
+		#nav.show {
+			display: block!important;
+		}
+
+		#backtoblog.show {
+			display: block!important;
+		}
+
+		#connexionBtn {
+			position: fixed;
+			bottom: 0px;
+			right: 0px;
+			color: #57BD8F;
+		}
+
+	</style>
+
 	</head>
 	<body class="login <?php echo esc_attr( implode( ' ', $classes ) ); ?>">
 	<div id="login">
 		<h1><a href="<?php echo esc_url( $login_header_url ); ?>" title="<?php echo esc_attr( $login_header_title ); ?>" tabindex="-1"><?php bloginfo( 'name' ); ?></a></h1>
+		<h1>Coming soon !</h1>
+		<label id="connexionBtn">CONNEXION</label> 	
 	<?php
 
 	unset( $login_header_url, $login_header_title );
@@ -216,7 +279,7 @@ function login_footer($input_id = '') {
 
 	// Don't allow interim logins to navigate away from the page.
 	if ( ! $interim_login ): ?>
-	<p id="backtoblog"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( 'Are you lost?' ); ?>"><?php printf( __( '&larr; Back to %s' ), get_bloginfo( 'title', 'display' ) ); ?></a></p>
+	<p id="backtoblog" class=""><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( 'Are you lost?' ); ?>"><?php printf( __( '&larr; Back to %s' ), get_bloginfo( 'title', 'display' ) ); ?></a></p>
 	<?php endif; ?>
 
 	</div>
@@ -979,6 +1042,17 @@ try {
 } catch(e){}
 }());
 <?php } ?>
+
+//Connexion display
+var btn = document.getElementById("connexionBtn");
+btn.onclick = function() {
+
+	document.getElementById("loginform").className += " show";
+	document.getElementById("nav").className += " show";
+	document.getElementById("backtoblog").className = " show";
+
+};
+
 </script>
 
 <?php

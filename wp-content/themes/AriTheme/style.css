@@ -40,6 +40,7 @@ div.container {
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-top: 20px;
+	height: 100%;
 }
 
 /* header */
@@ -138,12 +139,17 @@ li.livredor-item a {
 }
 
 .home-buttons { 
-	position: fixed;
+	/*position: fixed;
     bottom: 0;
-    left: 30; 
+    left: 0; 
     width: 100%;
-    padding-bottom: 180px;
-}*/
+    padding-bottom: 65px;position: absolute;
+    bottom: 0px; */
+}
+
+.home-buttons img {
+	width: 80%;
+}
 
 .home-buttons div {
 	text-align: center;
@@ -157,9 +163,9 @@ li.livredor-item a {
 	vertical-align: middle;
 	width: 110px;
 	position: absolute;
-    top: 24px;
-    left: 160px;
-    width: 68%;
+    top: 0px;
+    left: 138px;
+    width: 90%;
     z-index: 99;
 }
 

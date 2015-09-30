@@ -1,4 +1,13 @@
-<?php get_header(); ?>
+<?php
+	/*if (($_SERVER['REMOTE_ADDR'] != '90.2.33.194'))
+	{ 
+		header("HTTP/1.0 302 Temporary redirect"); 
+		header('Location: /travaux.php'); 
+	}*/
+
+	get_header();
+?>
+
 
 <video autoplay loop poster="ari-photo.jpg" id="bgvid">
 	<!--<source src="polina.webm" type="video/webm">-->
@@ -13,7 +22,7 @@
 		<div class="demande-button col-md-4">
 			<a href="<?php echo home_url(); ?>/demande" role="button"><img src="./wp-content/themes/AriTheme/img/demande_bouton.png"></a>
 		</div>		
-		<!--<div class="col-md-4"><button id="stopPlayBtn" class="btn btn-info">PAUSE</button></div>-->
+		<div class="col-md-4"></div>
 		<div class="concept-button col-md-4">
 			<a href="<?php echo home_url(); ?>/concept" role="button"><img src="./wp-content/themes/AriTheme/img/concept_bouton.png"></a>
 		</div>
