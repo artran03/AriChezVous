@@ -19,11 +19,11 @@
 		<p class="slogan col-md-12"><?php /*bloginfo("description");*/?></p>-->
 	</div>
 	<div class="row home-buttons">
-		<div class="demande-button col-md-4">
+		<div class="demande-button col-md-5">
 			<a href="<?php echo home_url(); ?>/demande" role="button"><img src="./wp-content/themes/AriTheme/img/demande_bouton.png"></a>
 		</div>		
-		<div class="col-md-4"></div>
-		<div class="concept-button col-md-4">
+		<div class="col-md-2"></div>
+		<div class="concept-button col-md-5">
 			<a href="<?php echo home_url(); ?>/concept" role="button"><img src="./wp-content/themes/AriTheme/img/concept_bouton.png"></a>
 		</div>
 	</div>

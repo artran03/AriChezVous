@@ -145,10 +145,16 @@ li.livredor-item a {
     width: 100%;
     padding-bottom: 65px;position: absolute;
     bottom: 0px; */
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 40px;
 }
 
 .home-buttons img {
-	width: 80%;
+	width: 55%;
 }
 
 .home-buttons div {
