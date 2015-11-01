@@ -50,6 +50,11 @@ div.container {
     height: 137px;
 	z-index: 100;
 	color: #000;
+	margin-left: auto;
+    margin-right: auto;
+    /*margin-top: 10px;*/
+    margin-bottom: 0;
+    max-width: 85.5em;
 }
 
 .blog.post-bonjour-tout-le-monde .site-header {
@@ -170,7 +175,7 @@ li.livredor-item a {
 	width: 110px;
 	position: absolute;
     top: 0px;
-    left: 138px;
+    left: 65%;
     width: 90%;
     z-index: 99;
 }
@@ -308,3 +313,8 @@ div.btn-valider input {
 div.btn-valider { margin-top: 63px; }
 
 .ajax-loader { display: none; }
+
+
+@media (max-width: 1024px)  {
+	
+}

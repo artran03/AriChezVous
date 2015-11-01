@@ -12,19 +12,19 @@
 	<body <?php body_class(); ?>>
 
 		<!-- container -->
-		<div class="container">
+		<div class="">
 
 			<!-- site-header -->
-			<header class="site-header">
+			<div class="site-header">
 				<!--<div class="site-logo">
 					<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
 				</div> -->
 				<div class="row">
-					<div class="logo-site col-md-2">
+					<div class="logo-site col-xs-2 col-md-2 col-lg-2">
 						<span class="helper"></span><a href="<?php echo home_url(); ?>"><img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/logo.png" class="attachment-full" alt="logo"></a>
 					</div>
 					<!-- Navigation Menu -->
-					<nav class="site-nav col-md-10">
+					<nav class="site-nav col-xs-10 col-md-10 col-lg-10">
 						<?php
 							$args = array(
 								'theme_location' => 'primary'
@@ -32,7 +32,8 @@
 						?>
 						<?php wp_nav_menu( $args ); ?>
 					</nav>
+
+
 					<!-- /Navigation Menu -->
 				</div>
-			</header>
-			<!-- /site-header -->
+			</div>
