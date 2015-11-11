@@ -357,15 +357,19 @@ class WPCF7_ContactForm {
 			'_wpcf7_locale' => $this->locale,
 			'_wpcf7_unit_tag' => $this->unit_tag );
 
-		if ( WPCF7_VERIFY_NONCE )
+		if ( WPCF7_VERIFY_NONCE ) {
 			$hidden_fields['_wpnonce'] = wpcf7_create_nonce( $this->id );
+		}
+
+		$hidden_fields += (array) apply_filters(
+			'wpcf7_form_hidden_fields', array() );
 
 		$content = '';
 
 		foreach ( $hidden_fields as $name => $value ) {
-			$content .= '<input type="hidden"'
-				. ' name="' . esc_attr( $name ) . '"'
-				. ' value="' . esc_attr( $value ) . '" />' . "\n";
+			$content .= sprintf(
+				'<input type="hidden" name="%1$s" value="%2$s" />',
+				esc_attr( $name ), esc_attr( $value ) ) . "\n";
 		}
 
 		return '<div style="display: none;">' . "\n" . $content . '</div>' . "\n";
@@ -401,22 +405,7 @@ class WPCF7_ContactForm {
 
 		$atts = wpcf7_format_atts( $atts );
 
-		$output = sprintf( '<div id="msg-dialog" class="modal fade" role="dialog">
-		  	<div class="modal-dialog">
-			    <div class="modal-content">
-				    <div class="modal-header">
-				        <button type="button" class="close" data-dismiss="modal">&times;</button>
-				        <h4 class="modal-title">Modal Header</h4>
-				    </div>
-				    <div class="modal-body">
-				        <div id="responseMessage" %1$s>%2$s</div>
-				    </div>
-				    <div class="modal-footer">
-				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				    </div>
-			    </div>
-		  	</div>
-		</div>',
+		$output = sprintf( '<div %1$s>%2$s</div>',
 			$atts, esc_html( $content ) );
 
 		$output = apply_filters( 'wpcf7_form_response_output',
@@ -523,11 +512,13 @@ class WPCF7_ContactForm {
 			$this->scanned_form_tags = $scanned;
 		}
 
-		if ( empty( $scanned ) )
-			return null;
+		if ( empty( $scanned ) ) {
+			return array();
+		}
 
-		if ( ! is_array( $cond ) || empty( $cond ) )
+		if ( ! is_array( $cond ) || empty( $cond ) ) {
 			return $scanned;
+		}
 
 		for ( $i = 0, $size = count( $scanned ); $i < $size; $i++ ) {
 
@@ -830,15 +821,17 @@ function wpcf7_get_contact_form_by_old_id( $old_id ) {
 	$q = "SELECT post_id FROM $wpdb->postmeta WHERE meta_key = '_old_cf7_unit_id'"
 		. $wpdb->prepare( " AND meta_value = %d", $old_id );
 
-	if ( $new_id = $wpdb->get_var( $q ) )
+	if ( $new_id = $wpdb->get_var( $q ) ) {
 		return wpcf7_contact_form( $new_id );
+	}
 }
 
 function wpcf7_get_contact_form_by_title( $title ) {
 	$page = get_page_by_title( $title, OBJECT, WPCF7_ContactForm::post_type );
 
-	if ( $page )
+	if ( $page ) {
 		return wpcf7_contact_form( $page->ID );
+	}
 
 	return null;
 }
@@ -850,8 +843,9 @@ function wpcf7_get_current_contact_form() {
 }
 
 function wpcf7_is_posted() {
-	if ( ! $contact_form = wpcf7_get_current_contact_form() )
+	if ( ! $contact_form = wpcf7_get_current_contact_form() ) {
 		return false;
+	}
 
 	return $contact_form->is_posted();
 }
@@ -871,22 +865,25 @@ function wpcf7_get_hangover( $name, $default = null ) {
 }
 
 function wpcf7_get_validation_error( $name ) {
-	if ( ! $contact_form = wpcf7_get_current_contact_form() )
+	if ( ! $contact_form = wpcf7_get_current_contact_form() ) {
 		return '';
+	}
 
 	return $contact_form->validation_error( $name );
 }
 
 function wpcf7_get_message( $status ) {
-	if ( ! $contact_form = wpcf7_get_current_contact_form() )
+	if ( ! $contact_form = wpcf7_get_current_contact_form() ) {
 		return '';
+	}
 
 	return $contact_form->message( $status );
 }
 
 function wpcf7_scan_shortcode( $cond = null ) {
-	if ( ! $contact_form = wpcf7_get_current_contact_form() )
-		return null;
+	if ( ! $contact_form = wpcf7_get_current_contact_form() ) {
+		return array();
+	}
 
 	return $contact_form->form_scan_shortcode( $cond );
 }
@@ -902,8 +899,9 @@ function wpcf7_form_controls_class( $type, $default = '' ) {
 
 	$classes[] = 'wpcf7-' . $typebase;
 
-	if ( $required )
+	if ( $required ) {
 		$classes[] = 'wpcf7-validates-as-required';
+	}
 
 	$classes = array_unique( $classes );
 
