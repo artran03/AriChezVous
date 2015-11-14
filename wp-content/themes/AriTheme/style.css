@@ -272,6 +272,11 @@ li.livredor-item a {
     text-align: left;
 }
 
+#demande-form span.field-container.address {
+	width : 430px;
+	margin-bottom: 2px;
+}
+
 #demande-form span.field-container.date {
 	width : 430px;
 }
@@ -280,6 +285,9 @@ li.livredor-item a {
 	width : 150px;
 }
 
+#demande-form span.field-container.address input{
+	width : 300px;
+}
 
 #demande-form input {
 	width: 120px;
