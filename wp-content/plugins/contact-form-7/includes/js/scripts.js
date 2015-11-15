@@ -317,6 +317,24 @@
 			}
 		});
 	};
+	
+	// $.fn.wpcf7NotValidTip = function(message) {
+        // return this.each(function() {
+            // var into = $(this);
+
+            // $theParent = into.parent("span");
+            // $parentInp = $theParent.parent("input");
+			
+			// into.find(':input').css('background', '#d73333');
+
+            // into.find(':input').mouseover(function() {
+                // into.find(':input').css('background','#cccccc');
+            // });
+            // into.find(':input').focus(function() {
+                // into.find(':input').css('background','#cccccc');
+            // });
+        // });
+    // };
 
 	$.fn.wpcf7FadeOut = function() {
 		return this.each(function() {
