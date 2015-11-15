@@ -251,7 +251,7 @@ li.livredor-item a {
 
 #demande-form {
 	text-align: center;
-	padding-top: 310px;
+	padding-top: 280px;
 	background: url(img/form-frame.png) no-repeat center center;
 	height: 643px;
 }
@@ -318,7 +318,10 @@ div.btn-valider input {
 	font-style: italic;
 }
 
-div.btn-valider { margin-top: 63px; }
+div.btn-valider { 
+	margin-top: 35px;
+	margin-bottom:50px;
+}
 
 .ajax-loader { display: none; }
 
