@@ -6,6 +6,9 @@ function ariChezVous_resources() {
 
 add_action('wp_enqueue_scripts', 'ariChezVous_resources');
 
+// Pour assurer le support du datetimepicker sur tous les navigateurs
+add_filter( 'wpcf7_support_html5_fallback', '__return_true' );
+
 // Navigation Menus
 register_nav_menus(array(
 	'primary' => __('Primary Menu'),
