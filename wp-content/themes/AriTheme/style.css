@@ -200,60 +200,48 @@ li.livredor-item a {
 /* Backgrounds */
 
 .page-demande { 
-	background: url(img/demande-background.png) repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+	background: url(img/page-demande.png);
+	background-repeat: repeat;
+	background-size: 10%
 }
 
 .page-concept { 
-	background: url(img/concept-background.png) repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+	background: url(img/page-concept.png);
+	background-repeat: repeat;
+	background-size: 10%
 }
 
 .page-souvenirs { 
-	background: url(img/souvenirs-background.png) repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+	background: url(img/page-souvenirs.png);
+	background-repeat: repeat;
+	background-size: 10%
 }
 
 .page-a-propos { 
-	background: url(img/apropos-background.png) repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+	background: url(img/page-apropos.png);
+	background-repeat: repeat;
+	background-size: 10%
 }
 
 .page-livre-dor { 
-	background: url(img/livredor-background.png) repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+	background: url(img/page-livredor.png);
+	background-repeat: repeat;
+	background-size: 10%
 }
 
 .page-construction { 
-	background: url(img/demande-background.png) repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+	background: url(img/demande-background.png);
+	background-repeat: repeat;
+	background-size: 10%
 }
 
 /* End backgrounds */
 
 #demande-form {
 	text-align: center;
-	padding-top: 280px;
+	padding-top: 300px;
 	background: url(img/form-frame.png) no-repeat center center;
-	height: 643px;
+	height: 700px; 
 }
 
 #demande-form span {
@@ -319,7 +307,7 @@ div.btn-valider input {
 }
 
 div.btn-valider { 
-	margin-top: 35px;
+	margin-top: 45px;
 	margin-bottom:50px;
 }
 
