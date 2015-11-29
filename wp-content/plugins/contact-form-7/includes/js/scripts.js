@@ -299,42 +299,41 @@
 		});
 	};
 
-	$.fn.wpcf7NotValidTip = function(message) {
-		return this.each(function() {
-			var $into = $(this);
-
-			$into.find('span.wpcf7-not-valid-tip').remove();
-			$into.append('<span role="alert" class="wpcf7-not-valid-tip">' + message + '</span>');
-
-			if ($into.is('.use-floating-validation-tip *')) {
-				$('.wpcf7-not-valid-tip', $into).mouseover(function() {
-					$(this).wpcf7FadeOut();
-				});
-
-				$(':input', $into).focus(function() {
-					$('.wpcf7-not-valid-tip', $into).not(':hidden').wpcf7FadeOut();
-				});
-			}
-		});
-	};
-	
 	// $.fn.wpcf7NotValidTip = function(message) {
-        // return this.each(function() {
-            // var into = $(this);
+		// return this.each(function() {
+			// var $into = $(this);
 
-            // $theParent = into.parent("span");
-            // $parentInp = $theParent.parent("input");
+			// $into.find('span.wpcf7-not-valid-tip').remove();
+			// $into.append('<span role="alert" class="wpcf7-not-valid-tip">' + message + '</span>');
+
+			// if ($into.is('.use-floating-validation-tip *')) {
+				// $('.wpcf7-not-valid-tip', $into).mouseover(function() {
+					// $(this).wpcf7FadeOut();
+				// });
+
+				// $(':input', $into).focus(function() {
+					// $('.wpcf7-not-valid-tip', $into).not(':hidden').wpcf7FadeOut();
+				// });
+			// }
+		// });
+	// };
+	
+	$.fn.wpcf7NotValidTip = function(message) {
+        return this.each(function() {
+            var into = $(this);
+
+            $theParent = into.parent("span");
+            $parentInp = $theParent.parent("input");
 			
-			// into.find(':input').css('background', '#d73333');
+			into.find(':input').css('border','solid');
+			into.find(':input').css('border-color','red');
 
-            // into.find(':input').mouseover(function() {
-                // into.find(':input').css('background','#cccccc');
-            // });
-            // into.find(':input').focus(function() {
-                // into.find(':input').css('background','#cccccc');
-            // });
-        // });
-    // };
+            into.find(':input').focus(function() {
+				into.find(':input').css('border','none');
+                into.find(':input').css('background','#fff');
+            });
+        });
+    };
 
 	$.fn.wpcf7FadeOut = function() {
 		return this.each(function() {
