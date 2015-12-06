@@ -239,9 +239,11 @@ li.livredor-item a {
 
 #demande-form {
 	text-align: center;
-	padding-top: 300px;
-	background: url(img/form-frame.png) no-repeat center center;
-	height: 700px; 
+	padding-top: 350px;
+	background: url(img/cadre-formulaire-assenble-01.png) no-repeat center center;
+	/* background: url(img/form-frame.png) no-repeat center center; */
+	background-size: 95%;
+	/* height: 700px;  */
 }
 
 #demande-form span {
