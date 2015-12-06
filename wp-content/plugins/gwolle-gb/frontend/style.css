@@ -1,0 +1,244 @@
+
+/*
+ * CSS for the Frontend of Gwolle-GB Guestbook plugin
+ */
+
+
+#gwolle_gb {
+	clear: left;
+	text-align: center;
+}
+
+#gwolle_gb span {
+	display: inline;
+}
+
+/* Write button */
+
+#gwolle_gb_write_button {
+	margin: 20px 0 10px;
+}
+
+
+/* Write section */
+
+#gwolle_gb form#gwolle_gb_new_entry {
+	margin-top: 50px;
+	text-align: center;
+	background-image: url('../../../themes/AriTheme/img/background_form_livre_or_test.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+/* Messages / Notices */
+
+#gwolle_gb #gwolle_gb_messages {
+	border-left: 4px solid #7ad03a;
+	box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1);
+	padding: 1px 12px;
+	margin: 5px 0 15px;
+}
+#gwolle_gb #gwolle_gb_messages.error {
+	border-left: 4px solid #dd3d36;
+}
+
+#gwolle_gb .error p, div.updated p {
+	margin: 0.5em 0;
+	padding: 2px;
+}
+
+#gwolle_gb form#gwolle_gb_new_entry .input.error, /* recaptcha */
+#gwolle_gb form#gwolle_gb_new_entry input.error,
+#gwolle_gb form#gwolle_gb_new_entry textarea.error {
+	border: 1px solid #dd3d36;
+}
+
+#gwolle_gb .label,
+#gwolle_gb .input {
+	display: inline-block;
+	float: none;
+}
+#gwolle_gb .label {
+	width: 30%;
+}
+#gwolle_gb .input {
+	width: 40%;
+}
+
+#gwolle_gb .input input[type="text"],
+#gwolle_gb .input textarea {
+	width: 100%;
+	text-align: center;
+}
+#gwolle_gb .input textarea {
+	height: 150px;
+	text-align: center;
+	resize: none;
+}
+
+#gwolle_gb .input_button{
+	text-align: center;
+	margin-top: -30px;
+	font-size: 20px;
+	font-family: "Lobster Two",cursive !important;
+	font-style: italic;
+}
+
+#gwolle_gb .input_button input{
+	height: 50px;
+	width: 120px;
+	background: transparent;
+	border: none;
+	color: #FFF;
+	background : transparent url("../../../themes/AriTheme/img/bouton-validez.png") no-repeat scroll center center;
+}
+
+#gwolle_gb .gwolle_gb_content {
+}
+
+#gwolle_gb .gwolle_gb_author_name input{
+	border-right: 7px solid white;
+	border-left: 7px solid white;
+	border-top: 7px solid white;
+	border-bottom: none;
+	background-color: #e7e8e9;
+}
+
+#gwolle_gb .gwolle_gb_content textarea{
+	border-right: 7px solid white;
+	border-left: 7px solid white;
+	border-bottom: 7px solid white;
+	border-top: none;
+	background-color: #e7e8e9;
+}
+
+#gwolle_gb .clearBoth {
+	clear: both;
+}
+#gwolle_gb .h3{
+	text-align: center;
+}
+
+/* Page Navigation */
+
+#gwolle_gb .page-navigation {
+	width: 100%;
+	text-align: right;
+	padding: 8px 0;
+}
+#gwolle_gb .page-navigation a,
+#gwolle_gb .page-navigation span {
+	padding: 3px 5px;
+	margin: 2px;
+	color: #333;
+	background-color: #e6e6e6;
+	background-repeat: repeat-x;
+	background-image: -moz-linear-gradient(top, #f4f4f4, #e6e6e6);
+	background-image: -ms-linear-gradient(top, #f4f4f4, #e6e6e6);
+	background-image: -webkit-linear-gradient(top, #f4f4f4, #e6e6e6);
+	background-image: -o-linear-gradient(top, #f4f4f4, #e6e6e6);
+	background-image: linear-gradient(top, #f4f4f4, #e6e6e6);
+	border: 1px solid #d2d2d2;
+	border-radius: 2px;
+	box-shadow: 0 1px 2px rgba(64, 64, 64, 0.1);
+}
+/* Current page */
+#gwolle_gb .page-navigation span {
+	color: #666;
+}
+
+/* Read section */
+
+#gwolle_gb .admin-entry {
+	color: #333;
+	background-color: #e6e6e6;
+	background-repeat: repeat-x;
+	background-image: -moz-linear-gradient(top, #f4f4f4, #e6e6e6);
+	background-image: -ms-linear-gradient(top, #f4f4f4, #e6e6e6);
+	background-image: -webkit-linear-gradient(top, #f4f4f4, #e6e6e6);
+	background-image: -o-linear-gradient(top, #f4f4f4, #e6e6e6);
+	background-image: linear-gradient(top, #f4f4f4, #e6e6e6);
+	padding-left: 5px;
+}
+#gwolle_gb .admin-entry a {
+	color: #666;
+}
+#gwolle_gb .gb-entry {
+	padding: 10px 0;
+	background-image: url('../../../themes/AriTheme/img/background_content_livre_or.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	height:200px;
+}
+
+#gwolle_gb .gwolle_gb_first {
+}
+
+#gwolle_gb_entries{
+}
+
+#gwolle_gb .gb-entry .gb-author-info{
+	padding-top: 10px;
+	margin-top: 50px;
+	border-top: 7px solid white;
+	border-right: 7px solid white;
+	border-left: 7px solid white;
+	background-color: #e7e8e9;
+}
+#gwolle_gb .gb-entry .gb-entry-content {
+	padding-left: 10px;
+	border-bottom: 7px solid white;
+	border-right: 7px solid white;
+	border-left: 7px solid white;
+	background-color: #e7e8e9;
+	padding-bottom: 10px;
+	max-height: 100px;
+}
+#gwolle_gb .gb-entry .gb-author-info,
+#gwolle_gb .gb-entry .gb-entry-content {
+	display: block;
+	margin-left: 35%;
+	margin-right: 35%;
+}
+#gwolle_gb .gb-entry .gb-author-info .gb-author-avatar {
+	margin: 0 0 8px 0;
+}
+#gwolle_gb .gb-entry .gb-author-info .gb-author-name {
+	padding-left: 10px;
+	font-weight: bold;
+}
+
+
+/* Admin Reply */
+
+#gwolle_gb .gb-entry-admin_reply {
+	margin: 10px 0 0 40px;
+	padding: 4px 10px 4px 10px;
+	border-left: 1px dotted #999;
+}
+
+/* Widget */
+
+li.gwolle_gb_widget {
+	border-bottom: 1px dotted #999;
+	padding: 3px 0;
+	margin: 0;
+}
+
+p.gwolle_gb_link {
+	padding: 3px 0;
+}
+
+
+/* Admin Bar */
+#wpadminbar #wp-admin-bar-gwolle-gb .ab-icon::before {
+	content: "";
+	top: 3px;
+}
+
+@media screen and (max-width: 480px) {
+  html {
+      font-size: 10%;
+	}
+}
