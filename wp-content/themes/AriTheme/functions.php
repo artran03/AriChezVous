@@ -45,5 +45,24 @@ function add_slug_body_class( $classes ) {
 	}
 add_filter( 'body_class', 'add_slug_body_class' );
 
+
 // Pour assurer le support du datetimepicker sur tous les navigateurs
 add_filter( 'wpcf7_support_html5_fallback', '__return_true' );
+
+add_action( 'init', 'create_posttype' );
+function create_posttype() {
+  register_post_type( 'souvenirs',
+    array(
+      'labels' => array(
+        'name' => __( 'Souvenirs' ),
+        'singular_name' => __( 'Souvenir' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'souvenirs'),
+      'supports' => array( 'title', 'editor', 'thumbnail' )
+    )
+  );
+}
+
+add_theme_support('post-thumbnails');

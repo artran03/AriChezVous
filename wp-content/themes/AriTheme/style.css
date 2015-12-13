@@ -315,6 +315,52 @@ div.btn-valider {
 
 .ajax-loader { display: none; }
 
+/** PAGE SOUVENIRS **/
+
+.souvenirs-container {
+	width: 60%;
+	margin-top: 5%;
+}
+
+.souvenir .selfie-img img{
+	border-radius: 50%;
+	width: 175px;
+    height: 175px;
+    border: 10px solid #ffffff;
+    position: relative;
+    padding: 5px;
+    background-color: #000000
+}
+
+.souvenir .selfie-img {
+	cursor: pointer;
+}
+
+.souvenir .selfie-title {
+	padding: 25px;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.souvenir {
+	margin-bottom: 5%;
+	text-align: center;
+}
+
+.souvenir .selfie-title {
+	background: url(img/selfie-title-bg.png) no-repeat center center;
+}
+
+
+.souvenir-row {
+	background: url(img/bg-barre-souvenirs.png) no-repeat center center;
+	background-size: 100%;
+    background-position: 10% 27%;
+}
+
+.souvenir .modal-header {
+	border-bottom: none;
+}
 
 @media (max-width: 1024px)  {
 	
