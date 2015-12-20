@@ -348,20 +348,64 @@ div.btn-valider {
 }
 
 .souvenir .selfie-title {
-	background: url(img/selfie-title-bg.png) no-repeat center center;
+	background: white;
+	padding: 10px;
+}
+
+.souvenir .selfie-title-container {
+	margin-top: 19px;
+	padding-left: 30px;
+    padding-right: 30px;
 }
 
 
 .souvenir-row {
 	background: url(img/bg-barre-souvenirs.png) no-repeat center center;
 	background-size: 100%;
-    background-position: 10% 27%;
+    background-position: 10% 29%;
 }
 
 .souvenir .modal-header {
 	border-bottom: none;
 }
 
-@media (max-width: 1024px)  {
-	
+
+#two-per-div {
+	display: none;
+}
+
+#mobile-menu {
+	display: none;
+}
+
+@media all and (max-width: 1024px) {
+	#three-per-div {
+		display: none;
+	}
+
+	#two-per-div {
+		display: block!important;
+	}
+}
+
+@media all and (max-width: 768px) {
+	.souvenir-row{
+		background: none;
+	}
+
+	#mobile-menu {
+		display: block!important;
+	}
+
+	.site-header {
+		display: none;
+	}
+}
+
+#navbar li {
+	list-style-type: none;
+}
+
+#navbar ul {
+	padding: 0px;
 }
