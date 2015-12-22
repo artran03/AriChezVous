@@ -65,7 +65,7 @@ function login_header( $title = 'Log In', $message = '', $wp_error = '' ) {
 	<!--<![endif]-->
 	<head>
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-	<title><?php bloginfo('name'); ?> &rsaquo; <?php echo $title; ?></title>
+	<title><?php bloginfo('name'); ?></title>
 	<?php
 
 	wp_admin_css( 'login', true );
@@ -146,10 +146,76 @@ function login_header( $title = 'Log In', $message = '', $wp_error = '' ) {
 	$classes = apply_filters( 'login_body_class', $classes, $action );
 
 	?>
+
+
+    <link href='https://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+
+	<style type="text/css">
+		body {
+			font-size: 20px;
+			color: #000;
+			font-family: 'Lobster Two', cursive!important;
+			font-style: italic;
+			background: url(wp-content/themes/AriTheme/img/demande-background.png) repeat center center fixed;
+		    -webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+		    background-size: cover;
+		}
+
+		.login h1 a {
+		    background-image: url(wp-content/themes/AriTheme/img/logo.png)!important;
+		    background-size: 200px;
+		    width: 200px;
+		    height: 200px;
+		}
+
+		#login {
+			padding-top: 2%!important;
+		}
+
+		#loginform {
+			display: none;
+		}
+
+		#nav{
+			display: none;
+		}
+
+		#backtoblog {
+			display: none;
+		}
+
+		#loginform.show {
+			display: block!important;
+		}
+
+		#nav.show {
+			display: block!important;
+		}
+
+		#backtoblog.show {
+			display: block!important;
+		}
+
+		#connexionBtn {
+			position: fixed;
+			bottom: 0px;
+			right: 0px;
+			color: #57BD8F;
+		}
+
+		.message {
+			display: none;
+		}
+	</style>
+
 	</head>
 	<body class="login <?php echo esc_attr( implode( ' ', $classes ) ); ?>">
 	<div id="login">
 		<h1><a href="<?php echo esc_url( $login_header_url ); ?>" title="<?php echo esc_attr( $login_header_title ); ?>" tabindex="-1"><?php bloginfo( 'name' ); ?></a></h1>
+		<h1>Coming soon !</h1>
+		<label id="connexionBtn">CONNEXION</label>
 	<?php
 
 	unset( $login_header_url, $login_header_title );
@@ -216,7 +282,7 @@ function login_footer($input_id = '') {
 
 	// Don't allow interim logins to navigate away from the page.
 	if ( ! $interim_login ): ?>
-	<p id="backtoblog"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( 'Are you lost?' ); ?>"><?php printf( __( '&larr; Back to %s' ), get_bloginfo( 'title', 'display' ) ); ?></a></p>
+	<p id="backtoblog" class=""><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( 'Are you lost?' ); ?>"><?php printf( __( '&larr; Back to %s' ), get_bloginfo( 'title', 'display' ) ); ?></a></p>
 	<?php endif; ?>
 
 	</div>
@@ -241,9 +307,6 @@ function login_footer($input_id = '') {
 	<?php
 }
 
-/**
- * @since 3.0.0
- */
 function wp_shake_js() {
 	if ( wp_is_mobile() )
 		return;
@@ -258,9 +321,6 @@ addLoadEvent(function(){ var p=new Array(15,30,15,0,-15,-30,-15,0);p=p.concat(p.
 <?php
 }
 
-/**
- * @since 3.7.0
- */
 function wp_login_viewport_meta() {
 	?>
 	<meta name="viewport" content="width=device-width" />
@@ -363,7 +423,7 @@ function retrieve_password() {
 		require_once ABSPATH . WPINC . '/class-phpass.php';
 		$wp_hasher = new PasswordHash( 8, true );
 	}
-	$hashed = time() . ':' . $wp_hasher->HashPassword( $key );
+	$hashed = $wp_hasher->HashPassword( $key );
 	$wpdb->update( $wpdb->users, array( 'user_activation_key' => $hashed ), array( 'user_login' => $user_login ) );
 
 	$message = __('Someone requested that the password be reset for the following account:') . "\r\n\r\n";
@@ -528,11 +588,10 @@ case 'retrievepassword' :
 	}
 
 	if ( isset( $_GET['error'] ) ) {
-		if ( 'invalidkey' == $_GET['error'] ) {
-			$errors->add( 'invalidkey', __( 'Your password reset link appears to be invalid. Please request a new link below.' ) );
-		} elseif ( 'expiredkey' == $_GET['error'] ) {
-			$errors->add( 'expiredkey', __( 'Your password reset link has expired. Please request a new link below.' ) );
-		}
+		if ( 'invalidkey' == $_GET['error'] )
+			$errors->add( 'invalidkey', __( 'Sorry, that key does not appear to be valid.' ) );
+		elseif ( 'expiredkey' == $_GET['error'] )
+			$errors->add( 'expiredkey', __( 'Sorry, that key has expired. Please try again.' ) );
 	}
 
 	$lostpassword_redirect = ! empty( $_REQUEST['redirect_to'] ) ? $_REQUEST['redirect_to'] : '';
@@ -652,20 +711,16 @@ case 'rp' :
 <form name="resetpassform" id="resetpassform" action="<?php echo esc_url( network_site_url( 'wp-login.php?action=resetpass', 'login_post' ) ); ?>" method="post" autocomplete="off">
 	<input type="hidden" id="user_login" value="<?php echo esc_attr( $rp_login ); ?>" autocomplete="off" />
 
-	<p class="user-pass1-wrap">
-		<label for="pass1"><?php _e('New password') ?></label><br />
-		<div class="wp-pwd">
-			<span class="password-input-wrapper">
-				<input type="password" data-reveal="1" data-pw="<?php echo esc_attr( wp_generate_password( 16 ) ); ?>" name="pass1" id="pass1" class="input" size="20" value="" autocomplete="off" aria-describedby="pass-strength-result" />
-			</span>
-			<div id="pass-strength-result" class="hide-if-no-js" aria-live="polite"><?php _e( 'Strength indicator' ); ?></div>
-		</div>
+	<p>
+		<label for="pass1"><?php _e('New password') ?><br />
+		<input type="password" name="pass1" id="pass1" class="input" size="20" value="" autocomplete="off" /></label>
 	</p>
-	<p class="user-pass2-wrap">
-		<label for="pass2"><?php _e('Confirm new password') ?></label><br />
-		<input type="password" name="pass2" id="pass2" class="input" size="20" value="" autocomplete="off" />
+	<p>
+		<label for="pass2"><?php _e('Confirm new password') ?><br />
+		<input type="password" name="pass2" id="pass2" class="input" size="20" value="" autocomplete="off" /></label>
 	</p>
 
+	<div id="pass-strength-result" class="hide-if-no-js"><?php _e('Strength indicator'); ?></div>
 	<p class="description indicator-hint"><?php echo wp_get_password_hint(); ?></p>
 	<br class="clear" />
 
@@ -759,7 +814,7 @@ case 'register' :
 	 */
 	do_action( 'register_form' );
 	?>
-	<p id="reg_passmail"><?php _e( 'Registration confirmation will be e-mailed to you.' ); ?></p>
+	<p id="reg_passmail"><?php _e('A password will be e-mailed to you.') ?></p>
 	<br class="clear" />
 	<input type="hidden" name="redirect_to" value="<?php echo esc_attr( $redirect_to ); ?>" />
 	<p class="submit"><input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="<?php esc_attr_e('Register'); ?>" /></p>
@@ -990,6 +1045,17 @@ try {
 } catch(e){}
 }());
 <?php } ?>
+
+//Connexion display
+var btn = document.getElementById("connexionBtn");
+btn.onclick = function() {
+
+	document.getElementById("loginform").className += " show";
+	document.getElementById("nav").className += " show";
+	document.getElementById("backtoblog").className = " show";
+
+};
+
 </script>
 
 <?php
