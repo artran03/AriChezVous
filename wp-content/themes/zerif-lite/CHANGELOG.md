@@ -1,23 +1,5 @@
 
 
-### 1.8.3.1 - 14/12/2015
-
- Changes: 
-
-
- * Fixed #259, underline selected category item in menu
-
-
-### 1.8.3.0 - 27/11/2015
-
- Changes: 
-
-
- * git status! EDD style
- * Fixed #191 Printing style
- * Fixed #191 Printing style
-
-
 ### 1.8.2.9 - 19/11/2015
 
  Changes: 

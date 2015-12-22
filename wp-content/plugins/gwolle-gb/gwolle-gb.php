@@ -3,7 +3,7 @@
 Plugin Name: Gwolle Guestbook
 Plugin URI: http://zenoweb.nl
 Description: Gwolle Guestbook is not just another guestbook for WordPress. The goal is to provide an easy and slim way to integrate a guestbook into your WordPress powered site. Don't use your 'comment' section the wrong way - install Gwolle Guestbook and have a real guestbook.
-Version: 1.5.7
+Version: 1.5.5
 Author: Marcel Pol
 Author URI: http://zenoweb.nl
 License: GPLv2 or later
@@ -31,18 +31,18 @@ Domain Path: /lang/
 
 
 // Plugin Version
-define('GWOLLE_GB_VER', '1.5.7');
+define('GWOLLE_GB_VER', '1.5.5');
 
 
 /*
  * Todo List:
  *
  * - Entries Admin page, make columns sortable, add order parameters to get* functions.
- * - On Page editor, have a postbox with link to the guestbook admin entries.
  * - Fix Emoji for Admin_reply.
  * - When setting a max words for reading an entry, add a Readmore link with a JS event.
+ * - Do AJAX the proper way for CAPTCHA check.
+ * - Meta Key also saves the book_id, so we can use that in the links to the right guestbook.
  * - Fix leftover pagination issues.
- * - Think about using the message functions for admin pages too.
  *
  */
 
@@ -66,7 +66,7 @@ include_once( GWOLLE_GB_DIR . '/functions/class-entry.php' );
 
 // Functions for the frontend
 include_once( GWOLLE_GB_DIR . '/frontend/captcha-ajax.php' );
-include_once( GWOLLE_GB_DIR . '/frontend/shortcodes.php' );
+include_once( GWOLLE_GB_DIR . '/frontend/index.php' );
 include_once( GWOLLE_GB_DIR . '/frontend/pagination.php' );
 include_once( GWOLLE_GB_DIR . '/frontend/posthandling.php' );
 include_once( GWOLLE_GB_DIR . '/frontend/read.php' );
@@ -75,6 +75,7 @@ include_once( GWOLLE_GB_DIR . '/frontend/write.php' );
 
 // Functions and pages for the backend
 include_once( GWOLLE_GB_DIR . '/admin/ajax.php' );
+include_once( GWOLLE_GB_DIR . '/admin/installSplash.php' );
 include_once( GWOLLE_GB_DIR . '/admin/page-editor.php' );
 include_once( GWOLLE_GB_DIR . '/admin/page-entries.php' );
 include_once( GWOLLE_GB_DIR . '/admin/page-export.php' );
@@ -99,7 +100,6 @@ include_once( GWOLLE_GB_DIR . '/functions/get_entries.php' );
 include_once( GWOLLE_GB_DIR . '/functions/get_entry_count.php' );
 include_once( GWOLLE_GB_DIR . '/functions/log.php' );
 include_once( GWOLLE_GB_DIR . '/functions/mail.php' );
-include_once( GWOLLE_GB_DIR . '/functions/messages.php' );
 include_once( GWOLLE_GB_DIR . '/functions/misc.php' );
 
 // WordPress Hooks

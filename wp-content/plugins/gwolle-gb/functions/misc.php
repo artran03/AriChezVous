@@ -89,15 +89,8 @@ function gwolle_gb_get_author_name_html($entry) {
 		$author_name_html = $author_name;
 	}
 
-	if ( function_exists('bp_core_get_user_domain') ) {
-		// Link to Buddypress profile.
-		$author_website = trim( bp_core_get_user_domain( $author_id ) );
-		if ($author_website) {
-			$author_name_html = '<a href="' . $author_website . '" target="_blank"
-				title="' . __( 'Visit the profile of', 'gwolle-gb' ) . ' ' . $author_name . ': ' . $author_website . '">' . $author_name_html . '</a>';
-		}
-	} else if ( get_option('gwolle_gb-linkAuthorWebsite', 'true') === 'true' ) {
-		// Link to author website if set in options.
+	// Link the author website if set in options
+	if ( get_option('gwolle_gb-linkAuthorWebsite', 'true') === 'true' ) {
 		$author_website = trim( $entry->get_author_website() );
 		if ($author_website) {
 			$pattern = '/^http/';
@@ -108,9 +101,6 @@ function gwolle_gb_get_author_name_html($entry) {
 				title="' . __( 'Visit the website of', 'gwolle-gb' ) . ' ' . $author_name . ': ' . $author_website . '">' . $author_name_html . '</a>';
 		}
 	}
-
-	$author_name_html = apply_filters( 'gwolle_gb_author_name_html', $author_name_html );
-
 	return $author_name_html;
 }
 
@@ -254,10 +244,10 @@ function gwolle_gb_get_setting($request) {
 
 
 /*
- * Uses intermittent meta_key to determine the permalink. See hooks.php and below gwolle_gb_set_meta_keys().
+ * Uses intermittent meta_key to determine the permalink. See hooks.php
  * return (int) postid if found, else 0.
  */
-function gwolle_gb_get_postid( $book_id = 1 ) {
+function gwolle_gb_get_postid() {
 
 	$the_query = new WP_Query( array(
 		'post_type' => 'any',
@@ -266,10 +256,6 @@ function gwolle_gb_get_postid( $book_id = 1 ) {
 			array(
 				'key' => 'gwolle_gb_read',
 				'value' => 'true',
-			),
-			array(
-				'key' => 'gwolle_gb_book_id',
-				'value' => $book_id,
 			),
 		)
 	));
@@ -394,33 +380,4 @@ function gwolle_gb_touch_time( $entry ) {
 		</a>
 	</p>
 	<?php
-}
-
-
-/*
- * Set Meta_keys so we can find the post back.
- * Args: $shortcode, string with value 'write' or 'read'.
- *       $shortcode_atts, array with the shortcode attributes.
- *
- * Since 1.5.6
- */
-function gwolle_gb_set_meta_keys( $shortcode, $shortcode_atts ) {
-
-	if ( $shortcode = 'read' ) {
-		// Set a meta_key so we can find the post with the shortcode back.
-		$meta_value_read = get_post_meta( get_the_ID(), 'gwolle_gb_read', true );
-		if ( $meta_value_read != 'true' ) {
-			update_post_meta( get_the_ID(), 'gwolle_gb_read', 'true' );
-		}
-	}
-
-	$book_id = 1; // default
-	if ( isset($shortcode_atts['book_id']) ) {
-		$book_id = $shortcode_atts['book_id'];
-	}
-	$meta_value_book_id = get_post_meta( get_the_ID(), 'gwolle_gb_book_id', true );
-	if ( $meta_value_book_id != $book_id ) {
-		update_post_meta( get_the_ID(), 'gwolle_gb_book_id', $book_id );
-	}
-
 }

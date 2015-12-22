@@ -110,13 +110,6 @@
 			$(data.into).trigger('invalid.wpcf7'); // deprecated
 
 		} else if (1 == data.spam) {
-			$form.find('[name="g-recaptcha-response"]').each(function() {
-				if ('' == $(this).val()) {
-					var $recaptcha = $(this).closest('.wpcf7-form-control-wrap');
-					$recaptcha.wpcf7NotValidTip(_wpcf7.recaptchaEmpty);
-				}
-			});
-
 			$responseOutput.addClass('wpcf7-spam-blocked');
 			$form.addClass('spam');
 
@@ -306,24 +299,41 @@
 		});
 	};
 
+	// $.fn.wpcf7NotValidTip = function(message) {
+		// return this.each(function() {
+			// var $into = $(this);
+
+			// $into.find('span.wpcf7-not-valid-tip').remove();
+			// $into.append('<span role="alert" class="wpcf7-not-valid-tip">' + message + '</span>');
+
+			// if ($into.is('.use-floating-validation-tip *')) {
+				// $('.wpcf7-not-valid-tip', $into).mouseover(function() {
+					// $(this).wpcf7FadeOut();
+				// });
+
+				// $(':input', $into).focus(function() {
+					// $('.wpcf7-not-valid-tip', $into).not(':hidden').wpcf7FadeOut();
+				// });
+			// }
+		// });
+	// };
+	
 	$.fn.wpcf7NotValidTip = function(message) {
-		return this.each(function() {
-			var $into = $(this);
+        return this.each(function() {
+            var into = $(this);
 
-			$into.find('span.wpcf7-not-valid-tip').remove();
-			$into.append('<span role="alert" class="wpcf7-not-valid-tip">' + message + '</span>');
+            $theParent = into.parent("span");
+            $parentInp = $theParent.parent("input");
+			
+			into.find(':input').css('border','solid');
+			into.find(':input').css('border-color','red');
 
-			if ($into.is('.use-floating-validation-tip *')) {
-				$('.wpcf7-not-valid-tip', $into).mouseover(function() {
-					$(this).wpcf7FadeOut();
-				});
-
-				$(':input', $into).focus(function() {
-					$('.wpcf7-not-valid-tip', $into).not(':hidden').wpcf7FadeOut();
-				});
-			}
-		});
-	};
+            into.find(':input').focus(function() {
+				into.find(':input').css('border','none');
+                into.find(':input').css('background','#fff');
+            });
+        });
+    };
 
 	$.fn.wpcf7FadeOut = function() {
 		return this.each(function() {

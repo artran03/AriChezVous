@@ -791,7 +791,6 @@ jQuery( document ).ready( function() {
       var windowsWidth = window.innerWidth;
       var itemId = '#' + itemWrap.id;
       $( itemId ).children( 'li' ).each( function() {
-        if ( this.id == '' ) { return; }
         var max_deep = self.max_deep( '#'+this.id );
         var offsetLeft        = $( "#"+this.id ).offset().left;
         var submenuWidthItem  = $( "#"+this.id ).find( 'ul' ).width();

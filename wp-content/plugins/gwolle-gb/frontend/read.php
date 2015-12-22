@@ -11,7 +11,7 @@ if ( strpos($_SERVER['PHP_SELF'], basename(__FILE__) )) {
  * Reading mode of the guestbook frontend
  */
 
-function gwolle_gb_frontend_read( $shortcode_atts, $shortcode ) {
+function gwolle_gb_frontend_read( $shortcode_atts ) {
 
 	$output = '';
 

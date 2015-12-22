@@ -63,7 +63,7 @@ function gwolle_gb_get_entry_count($args) {
 			}
 		}
 	}
-	if ( isset( $args['book_id']) && ((int) $args['book_id']) > 0 ) {
+	if ( isset( $args['book_id']) ) {
 		$where .= "
 			AND
 			book_id = %d";
@@ -81,7 +81,18 @@ function gwolle_gb_get_entry_count($args) {
 				" . $where . "
 			;";
 
-	$sql = $wpdb->prepare( $sql, $values );
+	// If All is set, do not use $wpdb->prepare()
+	if ( isset($args['all']) ) {
+		if ( $args['all'] == 'all' ) {
+			$sql = "
+				SELECT
+					COUNT(id) AS count
+				FROM
+					" . $tablename . ";";
+		}
+	} else {
+		$sql = $wpdb->prepare( $sql, $values );
+	}
 
 	$data = $wpdb->get_results( $sql, ARRAY_A );
 

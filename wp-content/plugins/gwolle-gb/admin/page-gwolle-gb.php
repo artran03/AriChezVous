@@ -275,7 +275,7 @@ function gwolle_gb_overview_help_more() {
 
 function gwolle_gb_overview_thanks() {
 	echo '
-	<ul class="ul-disc">
+	<ul class="settings">
 		<li><a href="http://akismet.com/tos/" target="_blank">Akismet</a></li>
 		<li><a href="http://markitup.jaysalvat.com/" target="_blank">MarkItUp</a></li>
 		<li><a href="https://wordpress.org/plugins/really-simple-captcha/" target="_blank">Really Simple CAPTCHA plugin</a></li>
@@ -344,43 +344,47 @@ function gwolle_gb_welcome() {
 	}
 
 
-	add_meta_box('gwolle_gb_right_now', __('Welcome to the Guestbook!','gwolle-gb'), 'gwolle_gb_overview', 'gwolle_gb_welcome', 'left', 'core');
-	add_meta_box('gwolle_gb_notification', __('E-mail Notifications', 'gwolle-gb'), 'gwolle_gb_notification', 'gwolle_gb_welcome', 'left', 'core');
-	add_meta_box('gwolle_gb_donate', __('Review and Donate', 'gwolle-gb'), 'gwolle_gb_donate', 'gwolle_gb_welcome', 'left', 'core');
+	if (get_option('gwolle_gb_version', false) === false) {
+		gwolle_gb_installSplash();
+	} else {
+		add_meta_box('dashboard_right_now', __('Welcome to the Guestbook!','gwolle-gb'), 'gwolle_gb_overview', 'gwolle_gb_welcome', 'left', 'core');
+		add_meta_box('gwolle_gb_notification', __('E-mail Notifications', 'gwolle-gb'), 'gwolle_gb_notification', 'gwolle_gb_welcome', 'left', 'core');
+		add_meta_box('gwolle_gb_donate', __('Review and Donate', 'gwolle-gb'), 'gwolle_gb_donate', 'gwolle_gb_welcome', 'left', 'core');
 
-	add_meta_box('gwolle_gb_help', __('Help', 'gwolle-gb'), 'gwolle_gb_overview_help', 'gwolle_gb_welcome', 'right', 'core');
-	add_meta_box('gwolle_gb_help_more', __('Help', 'gwolle-gb'), 'gwolle_gb_overview_help_more', 'gwolle_gb_welcome', 'right', 'core');
-	add_meta_box('gwolle_gb_thanks', __('This plugin uses the following scripts and services:','gwolle-gb'), 'gwolle_gb_overview_thanks', 'gwolle_gb_welcome', 'right', 'core');
+		add_meta_box('gwolle_gb_help', __('Help', 'gwolle-gb'), 'gwolle_gb_overview_help', 'gwolle_gb_welcome', 'right', 'core');
+		add_meta_box('gwolle_gb_help_more', __('Help', 'gwolle-gb'), 'gwolle_gb_overview_help_more', 'gwolle_gb_welcome', 'right', 'core');
+		add_meta_box('gwolle_gb_thanks', __('This plugin uses the following scripts and services:','gwolle-gb'), 'gwolle_gb_overview_thanks', 'gwolle_gb_welcome', 'right', 'core');
 
-	?>
-	<div class="wrap gwolle_gb">
-		<div id="icon-gwolle-gb"><br /></div>
-		<h1><?php _e('Gwolle Guestbook', 'gwolle-gb'); ?></h1>
+		?>
+		<div class="wrap gwolle_gb">
+			<div id="icon-gwolle-gb"><br /></div>
+			<h1><?php _e('Gwolle Guestbook', 'gwolle-gb'); ?></h1>
 
-		<?php
-		if ( $saved ) {
-			echo '
-				<div id="message" class="updated fade notice is-dismissible">
-					<p>' . __('Changes saved.', 'gwolle-gb') . '</p>
-				</div>';
-		} ?>
+			<?php
+			if ( $saved ) {
+				echo '
+					<div id="message" class="updated fade notice is-dismissible">
+						<p>' . __('Changes saved.', 'gwolle-gb') . '</p>
+					</div>';
+			} ?>
 
-		<div id="dashboard-widgets-wrap" class="gwolle_gb_welcome">
-			<div id="dashboard-widgets" class="metabox-holder">
-				<div class="postbox-container">
-					<div id="normal-sortables" class="meta-box-sortables ui-sortable">
-						<?php do_meta_boxes('gwolle_gb_welcome', 'left', null); ?>
+			<div id="dashboard-widgets-wrap" class="gwolle_gb_welcome">
+				<div id="dashboard-widgets" class="metabox-holder">
+					<div class="postbox-container">
+						<div id="normal-sortables" class="meta-box-sortables ui-sortable">
+							<?php do_meta_boxes('gwolle_gb_welcome', 'left', null); ?>
+						</div>
 					</div>
-				</div>
-				<div class="postbox-container">
-					<div id="normal-sortables" class="meta-box-sortables ui-sortable">
-						<?php do_meta_boxes('gwolle_gb_welcome', 'right', ''); ?>
+					<div class="postbox-container">
+						<div id="normal-sortables" class="meta-box-sortables ui-sortable">
+							<?php do_meta_boxes('gwolle_gb_welcome', 'right', ''); ?>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<?php
+		<?php
+	}
 }
 
 

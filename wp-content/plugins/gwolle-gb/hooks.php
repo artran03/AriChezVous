@@ -226,6 +226,19 @@ function gwolle_gb_rss_head() {
 				<link rel="alternate" type="application/rss+xml" title="<?php esc_attr_e("Guestbook Feed", 'gwolle-gb'); ?>" href="<?php bloginfo('url'); ?>/?feed=gwolle_gb" />
 				<?php
 			}
+
+			// FIXME: Remove the next part of this function about a year after adding it in June 2015.
+			// It was only meant to be temporary for updating from old versions.
+			// Use the below function gwolle_gb_save_post as the real functionality.
+
+			// Also set a meta_key so we can find the post with the shortcode back.
+			$meta_value = get_post_meta( get_the_ID(), 'gwolle_gb_read', true );
+			if ( $meta_value != "true" ) {
+				update_post_meta( get_the_ID(), 'gwolle_gb_read', "true", true );
+			}
+		} else {
+			// Remove the meta_key in case it is set.
+			delete_post_meta( get_the_ID(), 'gwolle_gb_read' );
 		}
 	}
 }
@@ -233,29 +246,23 @@ add_action('wp_head', 'gwolle_gb_rss_head', 1);
 
 
 /*
- * Set meta_keys so we can find the post with the shortcode back.
+ * Set a meta_key so we can find the post with the shortcode back.
  */
 function gwolle_gb_save_post($id) {
 	if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
 
 	if ( function_exists('has_shortcode') ) {
 		$post = get_post( $id );
-
 		if ( has_shortcode( $post->post_content, 'gwolle_gb' ) || has_shortcode( $post->post_content, 'gwolle_gb_read' ) ) {
+
 			// Set a meta_key so we can find the post with the shortcode back.
 			$meta_value = get_post_meta( $id, 'gwolle_gb_read', true );
-			if ( $meta_value != 'true' ) {
-				update_post_meta( $id, 'gwolle_gb_read', 'true' );
+			if ( $meta_value != "true" ) {
+				update_post_meta( $id, 'gwolle_gb_read', "true", true );
 			}
 		} else {
 			// Remove the meta_key in case it is set.
 			delete_post_meta( $id, 'gwolle_gb_read' );
-		}
-
-		if ( has_shortcode( $post->post_content, 'gwolle_gb' ) || has_shortcode( $post->post_content, 'gwolle_gb_read' ) || has_shortcode( $post->post_content, 'gwolle_gb_write' ) ) {
-			// Nothing to do
-		} else {
-			delete_post_meta( $id, 'gwolle_gb_book_id' );
 		}
 	}
 }

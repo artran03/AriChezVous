@@ -29,8 +29,7 @@ function show_gwolle_gb( $atts ) {
  */
 
 function get_gwolle_gb( $atts ) {
-
-	$shortcode = 'gwolle_gb';
+	global $gwolle_gb_errors;
 
 	$shortcode_atts = shortcode_atts( array(
 		'book_id' => 1,
@@ -39,10 +38,6 @@ function get_gwolle_gb( $atts ) {
 	if ( $shortcode_atts['book_id'] == 'post_id' ) {
 		$shortcode_atts['book_id'] = get_the_ID();
 	}
-
-	// Set Meta_keys
-	//gwolle_gb_set_meta_keys( 'write', $shortcode_atts );
-	gwolle_gb_set_meta_keys( 'read', $shortcode_atts );
 
 	// Load Frontend CSS in Footer, only when it's active
 	wp_enqueue_style('gwolle_gb_frontend_css');
@@ -53,10 +48,31 @@ function get_gwolle_gb( $atts ) {
 	$output = '<div id="gwolle_gb">';
 
 	// Add the form
-	$output .= gwolle_gb_frontend_write( $shortcode_atts, $shortcode );
+	$output .= gwolle_gb_frontend_write( $shortcode_atts );
+
+	/*
+	 * Add CSS for showing the Form or the Button.
+	 */
+
+	if ( $gwolle_gb_errors ) {
+		// Errors, show the Form again, not the Button
+		$output .= '
+			<style type="text/css" scoped>
+				div#gwolle_gb_write_button { display:none; }
+			</style>
+		';
+	} else {
+		// No errors, just the Button, not the Form
+		$output .= '
+			<style type="text/css" scoped>
+				form#gwolle_gb_new_entry { display:none; }
+				div#gwolle_gb_new_entry { display:none; }
+			</style>
+		';
+	}
 
 	// Add the list of entries to show
-	$output .= gwolle_gb_frontend_read( $shortcode_atts, $shortcode );
+	$output .= gwolle_gb_frontend_read( $shortcode_atts );
 
 	$output .= '</div>';
 
@@ -69,8 +85,6 @@ add_shortcode( 'gwolle_gb', 'get_gwolle_gb' );
 /* Frontend function to show just the form */
 function get_gwolle_gb_write( $atts ) {
 
-	$shortcode = 'gwolle_gb_write';
-
 	$shortcode_atts = shortcode_atts( array(
 		'book_id' => 1,
 	), $atts );
@@ -78,9 +92,6 @@ function get_gwolle_gb_write( $atts ) {
 	if ( $shortcode_atts['book_id'] == 'post_id' ) {
 		$shortcode_atts['book_id'] = get_the_ID();
 	}
-
-	// Set Meta_keys
-	//gwolle_gb_set_meta_keys( 'write', $shortcode_atts );
 
 	// Load Frontend CSS in Footer, only when it's active
 	wp_enqueue_style('gwolle_gb_frontend_css');
@@ -91,9 +102,15 @@ function get_gwolle_gb_write( $atts ) {
 	$output = '<div id="gwolle_gb">';
 
 	// Add the form
-	$output .= gwolle_gb_frontend_write( $shortcode_atts, $shortcode );
+	$output .= gwolle_gb_frontend_write( $shortcode_atts );
 
 	$output .= '</div>';
+
+	$output .= '
+		<style type="text/css" scoped>
+			div#gwolle_gb_write_button { display:none; }
+		</style>
+	';
 
 	return $output;
 }
@@ -103,8 +120,6 @@ add_shortcode( 'gwolle_gb_write', 'get_gwolle_gb_write' );
 /* Frontend function to show just the list of entries */
 function get_gwolle_gb_read( $atts ) {
 
-	$shortcode = 'gwolle_gb_read';
-
 	$shortcode_atts = shortcode_atts( array(
 		'book_id' => 1,
 	), $atts );
@@ -112,9 +127,6 @@ function get_gwolle_gb_read( $atts ) {
 	if ( $shortcode_atts['book_id'] == 'post_id' ) {
 		$shortcode_atts['book_id'] = get_the_ID();
 	}
-
-	// Set Meta_keys
-	gwolle_gb_set_meta_keys( 'read', $shortcode_atts );
 
 	// Load Frontend CSS in Footer, only when it's active
 	wp_enqueue_style('gwolle_gb_frontend_css');
@@ -125,7 +137,7 @@ function get_gwolle_gb_read( $atts ) {
 	$output = '<div id="gwolle_gb">';
 
 	// Add the list of entries to show
-	$output .= gwolle_gb_frontend_read( $shortcode_atts, $shortcode );
+	$output .= gwolle_gb_frontend_read( $shortcode_atts );
 
 	$output .= '</div>';
 

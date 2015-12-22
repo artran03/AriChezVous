@@ -3,7 +3,7 @@ Contributors: Gwolle, mpol
 Tags: guestbook, guest book, comments, feedback, antispam, review, gastenboek, livre d'or, Gästebuch, libro de visitas, livro de visitas
 Requires at least: 3.7
 Tested up to: 4.4
-Stable tag: 1.5.7
+Stable tag: 1.5.5
 License: GPLv2 or later
 
 Gwolle Guestbook is the WordPress guestbook you've just been looking for. Beautiful and easy.
@@ -56,9 +56,29 @@ Import is supported from:
 * WordPress comments from a specific post, page or just all comments.
 * Gwolle Guestbook itself, with Export supported as well (CSV-file).
 
-= Translations =
 
-Translations can be added very easily through [GlotPress](https://translate.wordpress.org/projects/wp-plugins/gwolle-gb).
+= Languages =
+
+* Bulgarian, bg_BG, Kostadin Petrichkov
+* Czech, cs_CZ, Jan Korous
+* Danish, da_DK, [Bo Fischer Nielsen](http://bfn.dk)
+* German, de_DE, Jenny Gaulke and Eckhard Henkel
+* Greek, el, dbonovas
+* Spanish, es_ES, José Luis Sanz Ruiz
+* Finnish, fi, Ilkka Kivelä and Timo Hintsa
+* French, fr_FR, [Charles-Aurélien PONCET](http://www.brie-informatique.com/) and [Florence Bourmault-Gohin](http://www.mon-coin-de-bourgogne.fr)
+* Italian, it_IT, Mariachiara Corradini
+* Norwegian Bokmål, nb_NO, Bjørn Inge Vårvik
+* Dutch, nl_NL, [Marcel Pol](http://zenoweb.nl)
+* Polish, pl_PL, Andrzej Sobaniec
+* Portuguese, pt_BR, [Alexandre Rocha](http://alexandre-rocha.com)
+* Portuguese, pt_PT, Jose Quintas
+* Russian, ru_RU, zhonglyor
+* Slovak, sk_SK, Marcel Klacan
+* Swedish, sv_SE, [Roffe Bentsen](http://macodesign.se)
+* Traditional Chinese, zh_TW, Chun-I Lee
+
+Other languages can be added very easily through [GlotPress](https://translate.wordpress.org/projects/wp-plugins/gwolle-gb).
 You can start translating strings there for your locale. They need to be validated though, so if there's no validator yet,
 and you want to apply for being validator, please post it on the support forum. I will make a request on make/polyglots to
 have you added as validator for this plugin/locale.
@@ -405,28 +425,6 @@ But if you don't use standard comments, you can just as easily use the comment s
 
 
 == Changelog ==
-
-= 1.5.7 =
-* 2015-12-01
-* Fix for inline CSS.
-* Make Book_id column in Admin Entries clickable.
-* Remove installSplash.
-* Add shortcode as parameter to main frontend functions.
-* Rename frontend/index.php to frontend/shortcodes.php.
-
-= 1.5.6 =
-* 2015-11-29
-* Add functions for errors, messages and formdata, so we use less global vars.
-* Add filters for these functions.
-* Add filter for author_name_html.
-* Add author_origin to possible email fields.
-* Add Reply-To header to admin email.
-* Save book_id in Meta_key.
-* If possible, link to the correct guestbook/book_id.
-* Update headings for WordPress 4.4.
-* Small styling fixes for main admin page.
-* If BuddyPress is active, link author to its profile page.
-* Drop fr_FR, it is maintained at GlotPress.
 
 = 1.5.5 =
 * 2015-11-03
