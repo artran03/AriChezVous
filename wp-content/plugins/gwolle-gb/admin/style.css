@@ -20,14 +20,6 @@
 
 
 /* Welcome page */
-.gwolle_gb_welcome .table_content.gwolle_gb table {
-	margin-left: 10px;
-}
-
-.gwolle_gb_welcome .versions a.button {
-	margin-left: 10px;
-}
-
 body #dashboard-widgets .postbox#gwolle_gb_notification form p.submit {
 	margin: 1em 0;
 }
@@ -66,6 +58,9 @@ body #dashboard-widgets .postbox#gwolle_gb_notification form p.submit {
 }
 
 /* Table */
+#gwolle_gb_entries th {
+	white-space: nowrap;
+}
 .gwolle_gb td.entry-author-name{
 	word-break: break-word;
 }
@@ -101,6 +96,9 @@ body #dashboard-widgets .postbox#gwolle_gb_notification form p.submit {
 	background-image: linear-gradient(top, #f4f4f4, #e6e6e6);
 }
 
+span.book-icon a {
+	padding: 0 10px; /* Make it clickable */
+}
 
 /* Icons on entries.php and editor.php */
 .gwolle_gb td.entry-icons {

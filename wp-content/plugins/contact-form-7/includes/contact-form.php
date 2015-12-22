@@ -405,22 +405,7 @@ class WPCF7_ContactForm {
 
 		$atts = wpcf7_format_atts( $atts );
 
-		$output = sprintf( '<div id="msg-dialog" class="modal fade" role="dialog">
- 		  	<div class="modal-dialog">
- 			    <div class="modal-content">
- 				    <div class="modal-header">
- 				        <button type="button" class="close" data-dismiss="modal">&times;</button>
- 				        <h4 class="modal-title">Oups...</h4>
- 				    </div>
- 				    <div class="modal-body">
- 				        <div id="responseMessage" %1$s>%2$s</div>
- 				    </div>
- 				    <div class="modal-footer">
- 				        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
- 				    </div>
- 			    </div>
- 		  	</div>
- 		</div>',
+		$output = sprintf( '<div %1$s>%2$s</div>',
 			$atts, esc_html( $content ) );
 
 		$output = apply_filters( 'wpcf7_form_response_output',

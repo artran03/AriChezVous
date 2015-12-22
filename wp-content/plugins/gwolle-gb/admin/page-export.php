@@ -37,7 +37,7 @@ function gwolle_gb_page_export() {
 
 								<div id="gwolle_gb_export_postbox" class="postbox">
 									<div class="handlediv"></div>
-									<h3 class='hndle' title="<?php esc_attr_e('Click to open or close', 'gwolle-gb'); ?>"><?php _e('Export guestbook entries from Gwolle-GB', 'gwolle-gb'); ?></h3>
+									<h2 class='hndle' title="<?php esc_attr_e('Click to open or close', 'gwolle-gb'); ?>"><?php _e('Export guestbook entries from Gwolle-GB', 'gwolle-gb'); ?></h2>
 									<div class="inside">
 										<div>
 											<?php

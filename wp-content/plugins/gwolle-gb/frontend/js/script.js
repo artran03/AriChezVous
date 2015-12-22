@@ -14,8 +14,3 @@ jQuery(document).ready(function($) {
 	});
 });
 
-jQuery(window).bind("load", function() {
-   // code here
-	 jQuery("#gwolle_gb_new_entry").show();
-	 return false;
-});

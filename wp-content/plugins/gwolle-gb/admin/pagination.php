@@ -20,6 +20,11 @@ function gwolle_gb_pagination_admin( $pageNum, $countPages, $count, $show ) {
 
 	$entries_per_page = get_option('gwolle_gb-entries_per_page', 20);
 
+	$book_id = 0;
+	if ( isset( $_GET['book_id'] ) ) {
+		$book_id = (int) $_GET['book_id'];
+	}
+
 	// Calculate entry-args for query
 	if ($pageNum == 1 && $count[$show] > 0) {
 		$firstEntryNum = 1;
@@ -48,7 +53,7 @@ function gwolle_gb_pagination_admin( $pageNum, $countPages, $count, $show ) {
 		' ' . $firstEntryNum . ' &#8211; ' . $lastEntryNum . ' ' . __('of', 'gwolle-gb') . ' ' . $count[$show] . '</span>
 		';
 	if ($pageNum > 1) {
-		$pagination .= '<a class="first page-numbers" href="admin.php?page=' . GWOLLE_GB_FOLDER . '/entries.php&show=' . $show . '&pageNum=' . round($pageNum - 1) . '">&laquo;</a>';
+		$pagination .= '<a class="first page-numbers" href="admin.php?page=' . GWOLLE_GB_FOLDER . '/entries.php&show=' . $show . '&pageNum=' . round($pageNum - 1) . '&book_id=' . $book_id . '">&laquo;</a>';
 	}
 
 	if ($pageNum < 5) {
@@ -61,7 +66,7 @@ function gwolle_gb_pagination_admin( $pageNum, $countPages, $count, $show ) {
 			if ($i == $pageNum) {
 				$pagination .= '<span class="page-numbers current">' . $i . '</span>';
 			} else {
-				$pagination .= '<a class="page-numbers" href="admin.php?page=' . GWOLLE_GB_FOLDER . '/entries.php&show=' . $show . '&pageNum=' . $i . '">' . $i . '</a>';
+				$pagination .= '<a class="page-numbers" href="admin.php?page=' . GWOLLE_GB_FOLDER . '/entries.php&show=' . $show . '&pageNum=' . $i . '&book_id=' . $book_id . '">' . $i . '</a>';
 			}
 		}
 
@@ -71,7 +76,7 @@ function gwolle_gb_pagination_admin( $pageNum, $countPages, $count, $show ) {
 			$pagination .= '<span class="page-numbers dots">...</span>';
 		}
 	} elseif ($pageNum >= 5) {
-		$pagination .= '<a class="page-numbers" href="admin.php?page=' . GWOLLE_GB_FOLDER . '/entries.php&show=' . $show . '&pageNum=1">1</a>';
+		$pagination .= '<a class="page-numbers" href="admin.php?page=' . GWOLLE_GB_FOLDER . '/entries.php&show=' . $show . '&pageNum=1&book_id=' . $book_id . '">1</a>';
 		if ($countPages > 5) {
 			$pagination .= '<span class="page-numbers dots">...</span>';
 		}
@@ -86,7 +91,7 @@ function gwolle_gb_pagination_admin( $pageNum, $countPages, $count, $show ) {
 			if ($i == $pageNum) {
 				$pagination .= '<span class="page-numbers current">' . $i . '</span>';
 			} else {
-				$pagination .= '<a class="page-numbers" href="admin.php?page=' . GWOLLE_GB_FOLDER . '/entries.php&show=' . $show . '&pageNum=' . $i . '">' . $i . '</a>';
+				$pagination .= '<a class="page-numbers" href="admin.php?page=' . GWOLLE_GB_FOLDER . '/entries.php&show=' . $show . '&pageNum=' . $i . '&book_id=' . $book_id . '">' . $i . '</a>';
 			}
 		}
 		if ($pageNum == $countPages) {
@@ -100,9 +105,9 @@ function gwolle_gb_pagination_admin( $pageNum, $countPages, $count, $show ) {
 			$highDotsMade = true;
 		}
 		if ( isset($highDotsMade) ) {
-			$pagination .= '<a class="page-numbers" href="admin.php?page=' . GWOLLE_GB_FOLDER . '/entries.php&show=' . $show . '&pageNum=' . $countPages . '">' . $countPages . '</a>';
+			$pagination .= '<a class="page-numbers" href="admin.php?page=' . GWOLLE_GB_FOLDER . '/entries.php&show=' . $show . '&pageNum=' . $countPages . '&book_id=' . $book_id . '">' . $countPages . '</a>';
 		}
-		$pagination .= '<a class="last page-numbers" href="admin.php?page=' . GWOLLE_GB_FOLDER . '/entries.php&show=' . $show . '&pageNum=' . round($pageNum + 1) . '">&raquo;</a>';
+		$pagination .= '<a class="last page-numbers" href="admin.php?page=' . GWOLLE_GB_FOLDER . '/entries.php&show=' . $show . '&pageNum=' . round($pageNum + 1) . '&book_id=' . $book_id . '">&raquo;</a>';
 	}
 
 	$pagination .= "</div>";

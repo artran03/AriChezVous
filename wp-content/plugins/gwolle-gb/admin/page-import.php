@@ -360,7 +360,7 @@ function gwolle_gb_page_import() {
 
 						<div id="dmsdiv" class="postbox">
 							<div class="handlediv"></div>
-							<h3 class='hndle' title="<?php esc_attr_e('Click to open or close', 'gwolle-gb'); ?>"><?php _e('Import guestbook entries from DMSGuestbook', 'gwolle-gb'); ?></h3>
+							<h2 class='hndle' title="<?php esc_attr_e('Click to open or close', 'gwolle-gb'); ?>"><?php _e('Import guestbook entries from DMSGuestbook', 'gwolle-gb'); ?></h2>
 							<div class="inside">
 								<form name="gwolle_gb_import_dms" id="gwolle_gb_import_dms" method="POST" action="#" accept-charset="UTF-8">
 									<input type="hidden" name="gwolle_gb_page" value="gwolle_gb_import" />
@@ -427,7 +427,7 @@ function gwolle_gb_page_import() {
 
 						<div id="wp_comm_div" class="postbox">
 							<div class="handlediv"></div>
-							<h3 class='hndle' title="<?php esc_attr_e('Click to open or close', 'gwolle-gb'); ?>"><?php _e('Import guestbook entries from WordPress comments', 'gwolle-gb'); ?></h3>
+							<h2 class='hndle' title="<?php esc_attr_e('Click to open or close', 'gwolle-gb'); ?>"><?php _e('Import guestbook entries from WordPress comments', 'gwolle-gb'); ?></h2>
 							<div class="inside">
 								<form name="gwolle_gb_import_wp" id="gwolle_gb_import_wp" method="POST" action="#" accept-charset="UTF-8">
 									<input type="hidden" name="gwolle_gb_page" value="gwolle_gb_import" />
@@ -548,7 +548,7 @@ function gwolle_gb_page_import() {
 
 						<div id="gwollediv" class="postbox">
 							<div class="handlediv"></div>
-							<h3 class='hndle' title="<?php esc_attr_e('Click to open or close', 'gwolle-gb'); ?>"><?php _e('Import guestbook entries from Gwolle-GB', 'gwolle-gb'); ?></h3>
+							<h2 class='hndle' title="<?php esc_attr_e('Click to open or close', 'gwolle-gb'); ?>"><?php _e('Import guestbook entries from Gwolle-GB', 'gwolle-gb'); ?></h2>
 							<div class="inside">
 								<form name="gwolle_gb_import_gwolle" id="gwolle_gb_import_gwolle" method="POST" action="#" accept-charset="UTF-8" enctype="multipart/form-data">
 									<input type="hidden" name="gwolle_gb_page" value="gwolle_gb_import" />

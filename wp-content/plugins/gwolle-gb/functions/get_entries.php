@@ -92,7 +92,7 @@ function gwolle_gb_get_entries($args = array()) {
 			}
 		}
 	}
-	if ( isset( $args['book_id']) ) {
+	if ( isset( $args['book_id']) && ((int) $args['book_id']) > 0 ) {
 		$where .= "
 			AND
 			book_id = %d";

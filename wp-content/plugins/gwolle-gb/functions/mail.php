@@ -29,7 +29,7 @@ function gwolle_gb_mail_moderators( $entry ) {
 		@ini_set('sendmail_from', get_bloginfo('admin_mail'));
 
 		// Set the Mail Content
-		$mailTags = array('user_email', 'user_name', 'status', 'entry_management_url', 'blog_name', 'blog_url', 'wp_admin_url', 'entry_content', 'author_ip');
+		$mailTags = array( 'user_email', 'user_name', 'status', 'entry_management_url', 'blog_name', 'blog_url', 'wp_admin_url', 'entry_content', 'author_ip', 'author_origin' );
 		$mail_body = gwolle_gb_sanitize_output( get_option( 'gwolle_gb-adminMailContent', false ) );
 		if (!$mail_body) {
 				$mail_body = __("
@@ -60,13 +60,17 @@ Entry content:
 		} else {
 			$header .= "From: " . gwolle_gb_format_values_for_mail(get_bloginfo('name')) . " <" . get_bloginfo('admin_email') . ">\r\n";
 		}
-		$header .= "Content-Type: text/plain; charset=UTF-8\r\n"; // Encoding of the mail
+		$header .= "Content-Type: text/plain; charset=UTF-8\r\n"; // Encoding of the mail.
+		$author_email = $entry->get_author_email();
+		if ( $author_email ) {
+			$header .= 'Reply-To: "' . gwolle_gb_format_values_for_mail($entry->get_author_name()) . '" <' . $author_email . ">\r\n"; // Set Reply-To for easy answering.
+		}
 
 		// Replace the tags from the mailtemplate with real data from the website and entry
 		$info['user_name'] = gwolle_gb_sanitize_output( $entry->get_author_name() );
-		$info['user_email'] = $entry->get_author_email();
+		$info['user_email'] = $author_email;
 		$info['blog_name'] = get_bloginfo('name');
-		$postid = gwolle_gb_get_postid();
+		$postid = gwolle_gb_get_postid( (int) $entry->get_book_id() );
 		if ( $postid ) {
 			$info['blog_url'] = get_bloginfo('wpurl') . '?p=' . $postid;
 		} else {
@@ -76,6 +80,7 @@ Entry content:
 		$info['entry_management_url'] = admin_url( '/admin.php?page=' . GWOLLE_GB_FOLDER . '/editor.php&entry_id=' . $entry->get_id() );
 		$info['entry_content'] = gwolle_gb_format_values_for_mail(gwolle_gb_sanitize_output( $entry->get_content() ));
 		$info['author_ip'] = $_SERVER['REMOTE_ADDR'];
+		$info['author_origin'] = $entry->get_author_origin();
 		if ( $entry->get_ischecked() ) {
 			$info['status'] = __('Checked', 'gwolle-gb');
 		} else {
@@ -144,7 +149,7 @@ Entry content:
 			$info['user_name'] = gwolle_gb_sanitize_output( $entry->get_author_name() );
 			$info['user_email'] = $entry->get_author_email();
 			$info['blog_name'] = get_bloginfo('name');
-			$postid = gwolle_gb_get_postid();
+			$postid = gwolle_gb_get_postid( (int) $entry->get_book_id() );
 			if ( $postid ) {
 				$info['blog_url'] = get_bloginfo('wpurl') . '?p=' . $postid;
 			} else {
@@ -207,7 +212,7 @@ Admin Reply:
 		$info['user_name'] = gwolle_gb_sanitize_output( $entry->get_author_name() );
 		$info['user_email'] = $entry->get_author_email();
 		$info['blog_name'] = get_bloginfo('name');
-		$postid = gwolle_gb_get_postid();
+		$postid = gwolle_gb_get_postid( (int) $entry->get_book_id() );
 		if ( $postid ) {
 			$info['blog_url'] = get_bloginfo('wpurl') . '?p=' . $postid;
 		} else {

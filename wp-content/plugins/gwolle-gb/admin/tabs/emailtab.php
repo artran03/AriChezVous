@@ -138,7 +138,7 @@ Entry content:
 				<span class="setting-description">
 					<?php _e('You can set the content of the mail that a notification subscriber gets on new entries. The following tags are supported:', 'gwolle-gb');
 					echo '<br />';
-					$mailTags = array('user_email', 'user_name', 'entry_management_url', 'blog_name', 'blog_url', 'wp_admin_url', 'entry_content', 'status', 'author_ip');
+					$mailTags = array( 'user_email', 'user_name', 'entry_management_url', 'blog_name', 'blog_url', 'wp_admin_url', 'entry_content', 'status', 'author_ip', 'author_origin' );
 					for ($i = 0; $i < count($mailTags); $i++) {
 						if ($i != 0) {
 							echo ', ';
