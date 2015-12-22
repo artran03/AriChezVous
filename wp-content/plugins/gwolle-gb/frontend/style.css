@@ -51,7 +51,7 @@
 #gwolle_gb form#gwolle_gb_new_entry .input.error, /* recaptcha */
 #gwolle_gb form#gwolle_gb_new_entry input.error,
 #gwolle_gb form#gwolle_gb_new_entry textarea.error {
-	border: 1px solid #dd3d36;
+	border: 2px solid #dd3d36;
 }
 
 #gwolle_gb .label,
@@ -152,7 +152,6 @@
 
 #gwolle_gb .admin-entry {
 	color: #333;
-	background-color: #e6e6e6;
 	background-repeat: repeat-x;
 	background-image: -moz-linear-gradient(top, #f4f4f4, #e6e6e6);
 	background-image: -ms-linear-gradient(top, #f4f4f4, #e6e6e6);
@@ -237,8 +236,31 @@ p.gwolle_gb_link {
 	top: 3px;
 }
 
-@media screen and (max-width: 480px) {
-  html {
-      font-size: 10%;
+@media screen and (max-width: 768px) {
+	#gwolle_gb .label {
+		width: 100%;
+	}
+	#gwolle_gb .input {
+		width: 100%;
+	}
+
+	#gwolle_gb form#gwolle_gb_new_entry {
+		margin-top: 150px;
+		background: none;
+		/*position: fixed;*/
+		width: 100%;
+	}
+
+	#gwolle_gb .gb-entry {
+		padding: 10px 0;
+		width: 100%;
+		background: none;
+	}
+
+	#gwolle_gb .gb-entry .gb-author-info,
+	#gwolle_gb .gb-entry .gb-entry-content {
+		display: block;
+		margin-left: 0%;
+		margin-right: 0%;
 	}
 }
