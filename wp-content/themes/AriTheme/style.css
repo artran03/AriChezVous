@@ -7,11 +7,11 @@ Version : 1.0
 
 #wpadminbar { display: none; }
 
-html, body { 
-	height: 100%!important; 
+html, body {
+	height: 100%!important;
 }
 
-body { 
+body {
 	/*font-family: Arial, sans-serif;*/
 	font-size: 14px;
 	color: #FFF;
@@ -62,10 +62,10 @@ div.container {
 	background-size: 87%;
 }
 
-.page-concept .site-header, 
-.page-demande .site-header, 
-.page-souvenirs .site-header, 
-.page-a-propos .site-header, 
+.page-concept .site-header,
+.page-demande .site-header,
+.page-souvenirs .site-header,
+.page-a-propos .site-header,
 .page-livre-dor .site-header {
 	background: url(img/header-bg.png) no-repeat center center;
 	background-size: 87%;
@@ -81,7 +81,7 @@ div.container {
 .site-nav ul:before, .site-nav ul:after { content: ""; display: table; }
 .site-nav ul:after { clear: both; }
 .site-nav ul { *zoom: 1; }
-.site-nav ul li { 
+.site-nav ul li {
 	list-style: none;
 	display: inline-block;
 }
@@ -107,9 +107,9 @@ div.container {
 	background-position: center -2px;
 }
 
-.site-header nav ul li a { 
-    padding-top: 49px!important; 
-	font-size: 18px; 
+.site-header nav ul li a {
+    padding-top: 49px!important;
+	font-size: 18px;
 	font-weight: bold;
 }
 
@@ -118,22 +118,27 @@ div.container {
 
 li.demande-item a {
 	background: url(img/icone-demande.png) no-repeat center;
+	background-size: 54%;
 }
 
 li.concept-item a {
 	background: url(img/icone-concept.png) no-repeat center;
+	background-size: 54%;
 }
 
 li.souvenirs-item a {
 	background: url(img/icone-souvenirs.png) no-repeat center;
+	background-size: 49%;
 }
 
 li.apropos-item a {
 	background: url(img/icone-apropos.png) no-repeat center;
+	background-size: 38%;
 }
 
 li.livredor-item a {
 	background: url(img/icone-livredor.png) no-repeat center;
+	background-size: 48%;
 }
 
 /* footer */
@@ -143,10 +148,10 @@ li.livredor-item a {
 	display: none;
 }
 
-.home-buttons { 
+.home-buttons {
 	/*position: fixed;
     bottom: 0;
-    left: 0; 
+    left: 0;
     width: 100%;
     padding-bottom: 65px;position: absolute;
     bottom: 0px; */
@@ -170,7 +175,7 @@ li.livredor-item a {
 	text-align: center;
 }
 
-.logo-site img { 
+.logo-site img {
 	vertical-align: middle;
 	width: 110px;
 	position: absolute;
@@ -199,37 +204,37 @@ li.livredor-item a {
 
 /* Backgrounds */
 
-.page-demande { 
+.page-demande {
 	background: url(img/page-demande.png);
 	background-repeat: repeat;
 	background-size: 10%
 }
 
-.page-concept { 
+.page-concept {
 	background: url(img/page-concept.png);
 	background-repeat: repeat;
 	background-size: 10%
 }
 
-.page-souvenirs { 
+.page-souvenirs {
 	background: url(img/page-souvenirs.png);
 	background-repeat: repeat;
 	background-size: 10%
 }
 
-.page-a-propos { 
+.page-a-propos {
 	background: url(img/page-apropos.png);
 	background-repeat: repeat;
 	background-size: 10%
 }
 
-.page-livre-dor { 
+.page-livre-dor {
 	background: url(img/page-livredor.png);
 	background-repeat: repeat;
 	background-size: 10%
 }
 
-.page-construction { 
+.page-construction {
 	background: url(img/demande-background.png);
 	background-repeat: repeat;
 	background-size: 10%
@@ -308,7 +313,7 @@ div.btn-valider input {
 	font-style: italic;
 }
 
-div.btn-valider { 
+div.btn-valider {
 	margin-top: 45px;
 	margin-bottom:50px;
 }
@@ -388,6 +393,8 @@ div.btn-valider {
 	}
 }
 
+/** MENU MOBILE **/
+
 @media all and (max-width: 768px) {
 	.souvenir-row{
 		background: none;
@@ -404,8 +411,41 @@ div.btn-valider {
 
 #navbar li {
 	list-style-type: none;
+	height: 50px;
+}
+
+#navbar li a {
+	height: 100%;
+  display: inline-block;
+  padding-top: 15px;
+  padding-left: 69px;
 }
 
 #navbar ul {
 	padding: 0px;
+}
+
+#navbar li.demande-item a {
+	background: url(img/icone-demande.png) no-repeat left;
+	background-size: 53%;
+}
+
+#navbar li.concept-item a {
+	background: url(img/icone-concept.png) no-repeat left;
+	background-size: 48%;
+}
+
+#navbar li.souvenirs-item a {
+	background: url(img/icone-souvenirs.png) no-repeat left;
+	background-size: 47%;
+}
+
+#navbar li.apropos-item a {
+	background: url(img/icone-apropos.png) no-repeat left;
+	background-size: 41%;
+}
+
+#navbar li.livredor-item a {
+	background: url(img/icone-livredor.png) no-repeat left;
+	background-size: 47%;
 }
