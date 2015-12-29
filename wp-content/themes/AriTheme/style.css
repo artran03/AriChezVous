@@ -288,6 +288,7 @@ li.livredor-item a {
 	width: 120px;
 	border : none;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	outline: none;
 }
 
 #demande-form .left { text-align: right; padding-right: 1px!important; margin-bottom: 2px; }
