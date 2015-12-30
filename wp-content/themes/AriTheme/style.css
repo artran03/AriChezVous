@@ -207,37 +207,37 @@ li.livredor-item a {
 .page-demande {
 	background: url(img/page-demande.png);
 	background-repeat: repeat;
-	background-size: 10%
+	background-size: 5%
 }
 
 .page-concept {
 	background: url(img/page-concept.png);
 	background-repeat: repeat;
-	background-size: 10%
+	background-size: 5%
 }
 
 .page-souvenirs {
 	background: url(img/page-souvenirs.png);
 	background-repeat: repeat;
-	background-size: 10%
+	background-size: 5%
 }
 
 .page-a-propos {
 	background: url(img/page-apropos.png);
 	background-repeat: repeat;
-	background-size: 10%
+	background-size: 5%
 }
 
 .page-livre-dor {
 	background: url(img/page-livredor.png);
 	background-repeat: repeat;
-	background-size: 10%
+	background-size: 5%
 }
 
 .page-construction {
 	background: url(img/demande-background.png);
 	background-repeat: repeat;
-	background-size: 10%
+	background-size: 5%
 }
 
 /* End backgrounds */
@@ -309,7 +309,7 @@ li.livredor-item a {
 	}
 	
 	#demande-form input {
-		width: 100px;
+		width: 90px;
 	}
 	
 	#demande-form span.field-container.address {
