@@ -407,6 +407,50 @@ div.btn-valider {
 	.site-header {
 		display: none;
 	}
+
+	#two-per-div {
+		margin-top: 21%;
+	}
+
+	#mobile-menu .container {
+		padding-top: 0px!important;
+	}
+
+	#logo-mobile {
+		position: absolute;
+		top: 0;
+		left: 12px;
+	}
+
+	.navbar-header {
+		padding-top: 10px;
+    padding-bottom: 10px;
+	}
+
+	.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff!important;
+	}
+
+	.navbar-default .navbar-toggle {
+    border-color: #000;
+	}
+
+	.navbar-toggle {
+		background-color: #000!important;
+	}
+
+	.navbar a {
+		color: #000;
+	}
+
+	#navbar li {
+		height: 41px!important;
+	}
+
+	#navbar li a {
+		padding-top: 11px!important;
+    padding-left: 50px!important;
+	}
 }
 
 #navbar li {
@@ -427,25 +471,25 @@ div.btn-valider {
 
 #navbar li.demande-item a {
 	background: url(img/icone-demande.png) no-repeat left;
-	background-size: 53%;
+	background-size: 36%;
 }
 
 #navbar li.concept-item a {
 	background: url(img/icone-concept.png) no-repeat left;
-	background-size: 48%;
+	background-size: 37%;
 }
 
 #navbar li.souvenirs-item a {
 	background: url(img/icone-souvenirs.png) no-repeat left;
-	background-size: 47%;
+	background-size: 34%;
 }
 
 #navbar li.apropos-item a {
 	background: url(img/icone-apropos.png) no-repeat left;
-	background-size: 41%;
+	background-size: 28%;
 }
 
 #navbar li.livredor-item a {
 	background: url(img/icone-livredor.png) no-repeat left;
-	background-size: 47%;
+	background-size: 33%;
 }

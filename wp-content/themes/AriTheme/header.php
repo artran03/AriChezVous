@@ -41,6 +41,7 @@
 			<nav id="mobile-menu" class="navbar navbar-default navbar-fixed-top">
 		      <div class="container">
 		        <div class="navbar-header">
+							<a class="navbar-brand" href="<?php echo home_url(); ?>"><img id="logo-mobile" src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/logo.png" width=70 class="attachment-full" alt="logo"></a>
 		          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 		            <span class="sr-only">Toggle navigation</span>
 		            <span class="icon-bar"></span>
