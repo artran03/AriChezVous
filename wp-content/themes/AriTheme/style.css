@@ -363,6 +363,13 @@ div.btn-valider {
     padding-right: 30px;
 }
 
+.souvenir .acv-number {
+	font-size: 14px;
+}
+
+.souvenir .acv-place {
+	font-size: 16px;
+}
 
 .souvenir-row {
 	background: url(img/bg-barre-souvenirs.png) no-repeat center center;

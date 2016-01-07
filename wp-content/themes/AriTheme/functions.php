@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 function ariChezVous_resources() {
 	wp_enqueue_style('style', get_stylesheet_uri());
@@ -66,3 +66,35 @@ function create_posttype() {
 }
 
 add_theme_support('post-thumbnails');
+
+add_action('add_meta_boxes','initialisation_metaboxes');
+function initialisation_metaboxes(){
+	//on utilise la fonction add_metabox() pour initialiser une metabox
+  add_meta_box('id_acv_number', 'Définir le numéro du #AriChezVous', 'meta_function_number', 'souvenirs', 'normal', 'high');
+	add_meta_box('id_acv_place', 'Définir le lieu du #AriChezVous', 'meta_function_place', 'souvenirs', 'normal', 'high');
+}
+
+function meta_function_number($post){
+  // on récupère la valeur actuelle pour la mettre dans le champ
+  $val = get_post_meta($post->ID,'_acv_number',true);
+  echo '<label for="lbl_acv_number">AriChezVous Number : </label>';
+  echo '<input id="acv_number" type="text" name="acv_number" value="'.$val.'" />';
+}
+
+function meta_function_place($post){
+  // on récupère la valeur actuelle pour la mettre dans le champ
+  $val = get_post_meta($post->ID,'_acv_place',true);
+  echo '<label for="lbl_acv_place">Lieu : </label>';
+  echo '<input id="acv_place" type="text" name="acv_place" value="'.$val.'" />';
+}
+
+add_action('save_post','save_metaboxes');
+function save_metaboxes($post_ID){
+  // si la metabox est définie, on sauvegarde sa valeur
+  if(isset($_POST['acv_number'])){
+    update_post_meta($post_ID,'_acv_number', esc_html($_POST['acv_number']));
+  }
+	if(isset($_POST['acv_place'])){
+    update_post_meta($post_ID,'_acv_place', esc_html($_POST['acv_place']));
+  }
+}
