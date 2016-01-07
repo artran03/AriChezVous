@@ -17,12 +17,14 @@
 jQuery(window).bind("load", function() {
    // code here
 	 jQuery("#gwolle_gb_new_entry").show();
+	 if(jQuery(window).width() >= 768){
 	 jQuery('.gb-entry').each(function(i, obj) {
 		 var totalHeight = jQuery('.gb-entry-count_'+(i+1)).height();
 		 var contentHeight = jQuery('.gb-entry-count_'+(i+1)).find('.gb-entry-content').height();
 		 var marginTop = (totalHeight-(contentHeight+30))/2;
 		 jQuery('.gb-entry-count_'+(i+1)).find('.gb-entry-content').css('margin-top',marginTop-20);
 	 });
+	  }
 	 jQuery("#gwolle_gb_messages").hide();
 	 if (jQuery("#gwolle_gb_messages") != '')
 	 {
@@ -34,16 +36,16 @@ jQuery(window).bind("load", function() {
 	 return false;
 });
 
-jQuery(window).resize(function(){
-	if (jQuery(window).width() <= 768){
-		jQuery('.gb-entry').each(function(i, obj) {
-			var contentHeight = jQuery('.gb-entry-count_'+(i+1)).find('.gb-entry-content').height();
-			var authorHeight = jQuery('.gb-entry-count_'+(i+1)).find('.gb-author-info').height();
-			var marginTop = 10;
-			var height = contentHeight + authorHeight;
-			console.log(height);
-			jQuery('.gb-entry-count_'+(i+1)).find('.gb-entry-content').css('margin-top',marginTop);
-			jQuery('.gb-entry-count_'+(i+1)).find('.gb-entry-content').css('height',height);
-		});
-	}
-});
+// jQuery(window).resize(function(){
+// 	if (jQuery(window).width() <= 768){
+// 		jQuery('.gb-entry').each(function(i, obj) {
+// 			var contentHeight = jQuery('.gb-entry-count_'+(i+1)).find('.gb-entry-content').height();
+// 			var authorHeight = jQuery('.gb-entry-count_'+(i+1)).find('.gb-author-info').height();
+// 			var marginTop = 10;
+// 			var height = contentHeight + authorHeight;
+// 			console.log(height);
+// 			jQuery('.gb-entry-count_'+(i+1)).find('.gb-entry-content').css('margin-top',marginTop);
+// 			jQuery('.gb-entry-count_'+(i+1)).find('.gb-entry-content').css('height',height);
+// 		});
+// 	}
+// });

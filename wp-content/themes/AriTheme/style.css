@@ -395,6 +395,10 @@ div.btn-valider {
 	margin-top: 50px;
 }
 
+#cadre.last {
+	margin-bottom: 50px;
+}
+
 #texte {
 	width:83%;
 	line-height: 2em;
@@ -491,6 +495,37 @@ div.btn-valider {
 	#navbar li a {
 		padding-top: 11px!important;
     padding-left: 50px!important;
+	}
+
+	#cadre {
+		width: 100%;
+		padding-top: 11px;
+		margin-top: 0px;
+	}
+
+	#cadre.first {
+		margin-top: 50px;
+	}
+
+	#texte {
+		width:100%;
+		line-height: 2em;
+		margin-left : auto;
+		margin-right : auto;
+		background: none;
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-top: 10px;
+		padding-bottom: 5px;
+	}
+
+	.concept-texte {
+		font-size: 15px;
+		color: #000000;
+		font-family: 'Arial', cursive!important;
+		font-style : normal;
+		height: auto;
+		width: auto;
 	}
 }
 

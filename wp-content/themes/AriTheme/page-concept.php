@@ -28,7 +28,7 @@ if (have_posts()) :
 	</div>
 	</div>
 
-	<div id="cadre">
+	<div id="cadre" class="last">
 	<div id="texte">
 	<h1>Comment je gère le voisinage ?</h1>
 	<p class="concept-texte">Pas de souci ! Premièrement nous venons sans sono ! Cela limite considérablement le volume sonore. D'autre part, nous essayons toujours de faire notre concert assez tôt pour ne pas jouer en pleine nuit ! En général on débute à 20h30/21h. Puis sinon tu peux les inviter !</p>

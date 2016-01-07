@@ -261,6 +261,7 @@ p.gwolle_gb_link {
 		padding: 10px 0;
 		width: 100%;
 		background: none;
+		height:auto;
 	}
 
 	#gwolle_gb .gb-entry .gb-entry-content {
