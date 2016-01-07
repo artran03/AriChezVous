@@ -380,7 +380,41 @@ div.btn-valider {
 .souvenir .modal-header {
 	border-bottom: none;
 }
+/* Page Concept */
 
+#cadre {
+	background: url(img/background_content.png) no-repeat top center;
+	padding-top: 11px;
+	width:900px;
+	margin-left : auto;
+	margin-right : auto;
+	margin-top: 50px;
+}
+
+#cadre.first {
+	margin-top: 50px;
+}
+
+#texte {
+	width:83%;
+	line-height: 2em;
+	margin-left : auto;
+	margin-right : auto;
+	background: white;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.concept-texte {
+	font-size: 12px;
+	color: #000000;
+	font-family: 'Arial', cursive!important;
+	font-style : normal;
+	height: auto;
+	width: auto;
+}
 
 #two-per-div {
 	display: none;
