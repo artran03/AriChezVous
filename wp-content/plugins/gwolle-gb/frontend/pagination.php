@@ -19,6 +19,7 @@ function gwolle_gb_pagination_frontend( $pageNum, $countPages ) {
 	$permalink = get_permalink(get_the_ID());
 
 	$pagination = '<div class="page-navigation">';
+	// $pagination .= '<button id="button_pagination">Charger la suite</button>';
 	if ($pageNum > 1) {
 		$pagination .= '<a href="' . add_query_arg( 'pageNum', round($pageNum - 1), $permalink ) . '" title="' . __('Previous page', 'gwolle-gb') . '">&laquo;</a>';
 	}
@@ -94,4 +95,3 @@ function gwolle_gb_pagination_frontend( $pageNum, $countPages ) {
 	}
 
 }
-

@@ -17,6 +17,7 @@
 
 #gwolle_gb_write_button {
 	margin: 20px 0 10px;
+	display: none;
 }
 
 
@@ -51,7 +52,7 @@
 #gwolle_gb form#gwolle_gb_new_entry .input.error, /* recaptcha */
 #gwolle_gb form#gwolle_gb_new_entry input.error,
 #gwolle_gb form#gwolle_gb_new_entry textarea.error {
-	border: 1px solid #dd3d36;
+	border: 2px solid #dd3d36;
 }
 
 #gwolle_gb .label,
@@ -98,17 +99,17 @@
 }
 
 #gwolle_gb .gwolle_gb_author_name input{
-	border-right: 7px solid white;
-	border-left: 7px solid white;
-	border-top: 7px solid white;
+	border-right: 9px solid white;
+	border-left: 9px solid white;
+	border-top: 9px solid white;
 	border-bottom: none;
 	background-color: #e7e8e9;
 }
 
 #gwolle_gb .gwolle_gb_content textarea{
-	border-right: 7px solid white;
-	border-left: 7px solid white;
-	border-bottom: 7px solid white;
+	border-right: 9px solid white;
+	border-left: 9px solid white;
+	border-bottom: 9px solid white;
 	border-top: none;
 	background-color: #e7e8e9;
 }
@@ -124,7 +125,7 @@
 
 #gwolle_gb .page-navigation {
 	width: 100%;
-	text-align: right;
+	text-align: center;
 	padding: 8px 0;
 }
 #gwolle_gb .page-navigation a,
@@ -152,7 +153,6 @@
 
 #gwolle_gb .admin-entry {
 	color: #333;
-	background-color: #e6e6e6;
 	background-repeat: repeat-x;
 	background-image: -moz-linear-gradient(top, #f4f4f4, #e6e6e6);
 	background-image: -ms-linear-gradient(top, #f4f4f4, #e6e6e6);
@@ -179,33 +179,38 @@
 }
 
 #gwolle_gb .gb-entry .gb-author-info{
-	padding-top: 10px;
-	margin-top: 50px;
-	border-top: 7px solid white;
-	border-right: 7px solid white;
-	border-left: 7px solid white;
+	border-bottom: 9px solid white;
+	border-right: 9px solid white;
+	border-left: 9px solid white;
 	background-color: #e7e8e9;
+	padding-top: 10px;
+	font-weight: normal;
+	height: 50px;
+	max-width: 600px;
 }
 #gwolle_gb .gb-entry .gb-entry-content {
-	padding-left: 10px;
-	border-bottom: 7px solid white;
-	border-right: 7px solid white;
-	border-left: 7px solid white;
+	padding-top: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-top: 9px solid white;
+	border-right: 9px solid white;
+	border-left: 9px solid white;
 	background-color: #e7e8e9;
-	padding-bottom: 10px;
 	max-height: 100px;
+	max-width: 600px;
+	font-size: 16px;
+	font-weight: bold;
 }
 #gwolle_gb .gb-entry .gb-author-info,
 #gwolle_gb .gb-entry .gb-entry-content {
 	display: block;
-	margin-left: 35%;
-	margin-right: 35%;
+	margin-left: auto;
+	margin-right: auto;
 }
 #gwolle_gb .gb-entry .gb-author-info .gb-author-avatar {
 	margin: 0 0 8px 0;
 }
 #gwolle_gb .gb-entry .gb-author-info .gb-author-name {
-	padding-left: 10px;
 	font-weight: bold;
 }
 
@@ -237,8 +242,41 @@ p.gwolle_gb_link {
 	top: 3px;
 }
 
-@media screen and (max-width: 480px) {
-  html {
-      font-size: 10%;
+@media screen and (max-width: 768px) {
+	#gwolle_gb .label {
+		width: 100%;
 	}
+	#gwolle_gb .input {
+		width: 100%;
+	}
+
+	#gwolle_gb form#gwolle_gb_new_entry {
+		margin-top: 150px;
+		background: none;
+		/*position: fixed;*/
+		width: 100%;
+	}
+
+	#gwolle_gb .gb-entry {
+		padding: 10px 0;
+		width: 100%;
+		background: none;
+	}
+
+	#gwolle_gb .gb-entry .gb-entry-content {
+		max-height: 150px;
+	}
+
+	#gwolle_gb .gb-entry .gb-author-info,
+	#gwolle_gb .gb-entry .gb-entry-content {
+		display: block;
+		margin-left: 0%;
+		margin-right: 0%;
+	}
+
+	#gwolle_gb_write_button {
+		margin: 100px 0 10px;
+		display: inline-block;;
+	}
+
 }

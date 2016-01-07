@@ -79,7 +79,7 @@ function gwolle_gb_frontend_read( $shortcode_atts ) {
 
 	/* Page navigation on top */
 	$pagination = gwolle_gb_pagination_frontend( $pageNum, $countPages );
-	$output .= $pagination;
+	// $output .= $pagination;
 
 
 	/* Entries from the template */
@@ -135,4 +135,3 @@ function gwolle_gb_frontend_read( $shortcode_atts ) {
 
 	return $output;
 }
-

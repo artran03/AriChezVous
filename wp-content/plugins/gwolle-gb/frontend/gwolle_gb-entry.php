@@ -55,46 +55,38 @@ if ( !function_exists('gwolle_gb_entry_template') ) {
 		// Use this filter to just add something
 		$entry_output .= apply_filters( 'gwolle_gb_entry_read_add_before', '', $entry );
 
-		// Author Info
-		$entry_output .= '<div class="gb-author-info">';
-
 		// Author Avatar
-		if ( isset($read_setting['read_avatar']) && $read_setting['read_avatar']  === 'true' ) {
-			$avatar = get_avatar( $entry->get_author_email(), 32, '', $entry->get_author_name() );
-			if ($avatar) {
-				$entry_output .= '<span class="gb-author-avatar">' . $avatar . '</span>';
-			}
-		}
+		// if ( isset($read_setting['read_avatar']) && $read_setting['read_avatar']  === 'true' ) {
+		// 	$avatar = get_avatar( $entry->get_author_email(), 32, '', $entry->get_author_name() );
+		// 	if ($avatar) {
+		// 		$entry_output .= '<span class="gb-author-avatar">' . $avatar . '</span>';
+		// 	}
+		// }
 
-		// Author Name
-		if ( isset($read_setting['read_name']) && $read_setting['read_name']  === 'true' ) {
-			$author_name_html = gwolle_gb_get_author_name_html($entry);
-			$entry_output .= '<span class="gb-author-name">' . $author_name_html . '</span>';
-		}
+
 
 		// Author Origin
-		if ( isset($read_setting['read_city']) && $read_setting['read_city']  === 'true' ) {
-			$origin = $entry->get_author_origin();
-			if ( strlen(str_replace(' ', '', $origin)) > 0 ) {
-				$entry_output .= '<span class="gb-author-origin"> ' . __('from', 'gwolle-gb') . ' ' . gwolle_gb_sanitize_output($origin) . '</span>';
-			}
-		}
+		// if ( isset($read_setting['read_city']) && $read_setting['read_city']  === 'true' ) {
+		// 	$origin = $entry->get_author_origin();
+		// 	if ( strlen(str_replace(' ', '', $origin)) > 0 ) {
+		// 		$entry_output .= '<span class="gb-author-origin"> ' . __('from', 'gwolle-gb') . ' ' . gwolle_gb_sanitize_output($origin) . '</span>';
+		// 	}
+		// }
 
 		// Entry Date and Time
-		if ( ( isset($read_setting['read_datetime']) && $read_setting['read_datetime']  === 'true' ) || ( isset($read_setting['read_date']) && $read_setting['read_date']  === 'true' ) ) {
-			$entry_output .= '<span class="gb-datetime">
-						<span class="gb-date"> ';
-			if ( isset($read_setting['read_name']) && $read_setting['read_name']  === 'true' ) {
-				$entry_output .= __('wrote on', 'gwolle-gb') . ' ';
-			}
-			$entry_output .= date_i18n( get_option('date_format'), $entry->get_datetime() ) . '</span>';
-			if ( isset($read_setting['read_datetime']) && $read_setting['read_datetime']  === 'true' ) {
-				$entry_output .= '<span class="gb-time"> ' . __('on', 'gwolle-gb') . ' ' . trim(date_i18n( get_option('time_format'), $entry->get_datetime() )) . '</span>';
-			}
-			$entry_output .= ':</span> ';
-		}
+		// if ( ( isset($read_setting['read_datetime']) && $read_setting['read_datetime']  === 'true' ) || ( isset($read_setting['read_date']) && $read_setting['read_date']  === 'true' ) ) {
+		// 	$entry_output .= '<span class="gb-datetime">
+		// 				<span class="gb-date"> ';
+		// 	if ( isset($read_setting['read_name']) && $read_setting['read_name']  === 'true' ) {
+		// 		$entry_output .= __('wrote on', 'gwolle-gb') . ' ';
+		// 	}
+		// 	$entry_output .= date_i18n( get_option('date_format'), $entry->get_datetime() ) . '</span>';
+		// 	if ( isset($read_setting['read_datetime']) && $read_setting['read_datetime']  === 'true' ) {
+		// 		$entry_output .= '<span class="gb-time"> ' . __('on', 'gwolle-gb') . ' ' . trim(date_i18n( get_option('time_format'), $entry->get_datetime() )) . '</span>';
+		// 	}
+		// 	$entry_output .= ':</span> ';
+		// }
 
-		$entry_output .= '</div>'; // <div class="gb-author-info">
 
 		// Main Content
 		if ( isset($read_setting['read_content']) && $read_setting['read_content']  === 'true' ) {
@@ -119,11 +111,12 @@ if ( !function_exists('gwolle_gb_entry_template') ) {
 			$entry_output .= $entry_content;
 
 
-			// Edit Link for Moderators
-			if ( function_exists('current_user_can') && current_user_can('moderate_comments') ) {
-				$entry_output .= '
-					<a class="gwolle_gb_edit_link" href="' . admin_url('admin.php?page=' . GWOLLE_GB_FOLDER . '/editor.php&amp;entry_id=' . $entry->get_id() ) . '" title="' . __('Edit entry', 'gwolle-gb') . '">' . __('Edit', 'gwolle-gb') . '</a>';
-			}
+			// // Edit Link for Moderators
+			// if ( function_exists('current_user_can') && current_user_can('moderate_comments') ) {
+			// 	$entry_output .= '
+			// 		<a class="gwolle_gb_edit_link" href="' . admin_url('admin.php?page=' . GWOLLE_GB_FOLDER . '/editor.php&amp;entry_id=' . $entry->get_id() ) . '" title="' . __('Edit entry', 'gwolle-gb') . '">' . __('Edit', 'gwolle-gb') . '</a>';
+			// }
+
 
 			// Use this filter to just add something
 			$entry_output .= apply_filters( 'gwolle_gb_entry_read_add_content', '', $entry );
@@ -178,6 +171,15 @@ if ( !function_exists('gwolle_gb_entry_template') ) {
 			}
 		}
 
+		// Author Info
+		$entry_output .= '<div class="gb-author-info">';
+		// Author Name
+		if ( isset($read_setting['read_name']) && $read_setting['read_name']  === 'true' ) {
+			$author_name_html = gwolle_gb_get_author_name_html($entry);
+			$entry_output .= '<span class="gb-author-name">' . $author_name_html . '</span>';
+		}
+		$entry_output .= '</div>'; // <div class="gb-author-info">
+
 		// Use this filter to just add something
 		$entry_output .= apply_filters( 'gwolle_gb_entry_read_add_after', '', $entry );
 
@@ -191,5 +193,3 @@ if ( !function_exists('gwolle_gb_entry_template') ) {
 		return $entry_output;
 	}
 }
-
-
