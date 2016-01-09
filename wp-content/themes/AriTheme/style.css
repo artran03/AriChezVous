@@ -267,7 +267,7 @@ li.livredor-item a {
 }
 
 #demande-form input {
-	width: 110px;
+	width: 120px;
 	border : none;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	outline: none;
@@ -340,7 +340,7 @@ div.btn-valider input {
 }
 
 div.btn-valider {
-	margin-top: 45px;
+	margin-top: 55px;
 	margin-bottom:50px;
 }
 

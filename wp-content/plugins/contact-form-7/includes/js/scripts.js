@@ -325,9 +325,10 @@
             $theParent = into.parent("span");
             $parentInp = $theParent.parent("input");
 			
-			into.find(':input').css('border','solid');
+			into.find(':input').css('border-bottom','solid');
 			into.find(':input').css('border-color','red');
-
+			into.find(':input').css('border-width','2px');
+			
             into.find(':input').focus(function() {
 				into.find(':input').css('border','none');
                 into.find(':input').css('background','#fff');
