@@ -302,6 +302,7 @@ li.livredor-item a {
  @media all and (max-width: 500px) {
 	 #demande-form span {
 		font-size: 12px;
+		background-size: 400%;
 	}
 
 	#demande-form span.field-container {
