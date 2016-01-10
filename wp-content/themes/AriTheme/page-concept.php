@@ -28,11 +28,18 @@ if (have_posts()) :
 	</div>
 	</div>
 
-	<div id="cadre" class="last">
+	<div id="cadre">
 	<div id="texte">
 	<h1>Comment je gère le voisinage ?</h1>
 	<p class="concept-texte">Pas de souci ! Premièrement nous venons sans sono ! Cela limite considérablement le volume sonore. D'autre part, nous essayons toujours de faire notre concert assez tôt pour ne pas jouer en pleine nuit ! En général on débute à 20h30/21h. Puis sinon tu peux les inviter !</p>
 	</div>
+	</div>
+
+	<div id="cadre" class="last">
+	<div id="texte">
+	<h1>Et si j'ai encore des questions ?</h1>
+	<p class="concept-texte">Tu peux nous contacter par mail via <a href="mailto:ariofficiel.booking@gmail.com">ariofficiel.booking@gmail.com</a> !</p>
+</div>
 	</div>
 	<?php endwhile;
 

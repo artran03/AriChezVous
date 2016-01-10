@@ -143,9 +143,11 @@ li.livredor-item a {
 
 /* footer */
 .site-footer {
-	margin-top: 20px;
-	border-top: 2px solid #999;
-	display: none;
+	margin-top: 10px;
+}
+
+#icones-social{
+	text-align: center;
 }
 
 .home-buttons {
@@ -290,11 +292,11 @@ li.livredor-item a {
 	width : 300px;
 }
 
-#demande-form .left { 
+#demande-form .left {
 	text-align: right;
 	padding-right: 1px;
 }
-	
+
 #demande-form .right {
 	text-align: left;
 	padding-left: 1px;
@@ -309,11 +311,11 @@ li.livredor-item a {
 	#demande-form span.field-container {
 		width: 170px;
 	}
-	
+
 	#demande-form input {
 		width: 90px;
 	}
-	
+
 	#demande-form span.field-container.address {
 		width : 344px;
 	}
