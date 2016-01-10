@@ -1,12 +1,4 @@
 	<footer class="site-footer">
-			<nav class="site-nav">
-				<?php
-					$args = array(
-						'theme_location' => 'footer'
-					);
-				?>
-				<?php wp_nav_menu( $args ); ?>
-			</nav>
 			<div id="icones-social">
 					<a href="http://www.twitter.com/officiel_ari" title="Suivez-moi sur twitter !" target="_blank">
 						<img src="<?php echo home_url();?>/wp-content/themes/AriTheme/img/twitter.png" />
