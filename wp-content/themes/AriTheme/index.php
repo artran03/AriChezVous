@@ -1,8 +1,8 @@
 <?php
 	/*if (($_SERVER['REMOTE_ADDR'] != '90.2.33.194'))
-	{ 
-		header("HTTP/1.0 302 Temporary redirect"); 
-		header('Location: /travaux.php'); 
+	{
+		header("HTTP/1.0 302 Temporary redirect");
+		header('Location: /travaux.php');
 	}*/
 
 	get_header();
@@ -21,13 +21,17 @@
 	<div class="row home-buttons">
 		<div class="demande-button col-md-5">
 			<a href="<?php echo home_url(); ?>/demande" role="button"><img src="./wp-content/themes/AriTheme/img/demande_bouton.png"></a>
-		</div>		
+		</div>
 		<div class="col-md-2"></div>
 		<div class="concept-button col-md-5">
 			<a href="<?php echo home_url(); ?>/concept" role="button"><img src="./wp-content/themes/AriTheme/img/concept_bouton.png"></a>
 		</div>
 	</div>
-
+	<div class="footer-home">
+		<?php
+		get_footer();
+		?>
+	</div>
 <script type="text/javascript">
 var vid = document.getElementById("bgvid");
 var pauseButton = document.querySelector("#stopPlayBtn");
@@ -38,11 +42,11 @@ function vidFade() {
 
 vid.addEventListener('ended', function()
 {
-// only functional if "loop" is removed 
+// only functional if "loop" is removed
 vid.pause();
 // to capture IE10
 vidFade();
-}); 
+});
 
 
 pauseButton.addEventListener("click", function() {
@@ -57,5 +61,3 @@ pauseButton.addEventListener("click", function() {
 })
 
 </script>
-
-

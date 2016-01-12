@@ -146,8 +146,18 @@ li.livredor-item a {
 	margin-top: 10px;
 }
 
+.footer-home{
+	position: fixed;
+  bottom: 0;
+}
+
 #icones-social{
 	text-align: center;
+	margin-bottom: 30px;
+}
+
+#icones-social a{
+	text-decoration: none;
 }
 
 .home-buttons {
