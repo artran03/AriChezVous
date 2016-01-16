@@ -384,6 +384,7 @@ li.livredor-item a:hover {
 div.btn-valider input {
 	background: url(img/bouton-validez.png) no-repeat center center;
 	height: 50px;
+	width: 120px !important;
 	font-size: 20px;
 	color: #FFF;
 	font-family: 'Lobster Two', cursive!important;
