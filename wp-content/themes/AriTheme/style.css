@@ -350,7 +350,12 @@ li.livredor-item a:hover {
 	padding-left: 1px;
 }
 
- @media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
+	 #demande-form {
+		padding-top: 380px;
+		background-position-y: 140px;
+	}
+
 	 #demande-form span {
 		font-size: 12px;
 		background-size: 400%;
