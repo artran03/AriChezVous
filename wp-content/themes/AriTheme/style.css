@@ -176,11 +176,33 @@ li.livredor-item a {
 }
 
 .home-buttons img {
-	width: 55%;
+	width: 30%;
 }
 
 .home-buttons div {
 	text-align: center;
+}
+
+.home-btn {
+	background: url(img/background-bouton-accueil.png) no-repeat center;
+	background-size: 100%;
+	height: 78px;
+  display: inline-block;
+  padding: 10px;
+  width: 49%;
+}
+
+.home-btn > img,
+.home-btn > span {
+  vertical-align: middle;
+}
+
+.home-btn span {
+	display: inline-block;
+	width: 132px;
+  font-size: 18px;
+  font-style: normal;
+  color: #000;
 }
 
 .logo-site {
@@ -219,37 +241,35 @@ li.livredor-item a {
 .page-demande {
 	background: url(img/page-demande.png);
 	background-repeat: repeat;
-	background-size: 5%
 }
 
 .page-concept {
 	background: url(img/page-concept.png);
 	background-repeat: repeat;
-	background-size: 5%
 }
 
 .page-souvenirs {
 	background: url(img/page-souvenirs.png);
 	background-repeat: repeat;
-	background-size: 5%
 }
 
 .page-a-propos {
 	background: url(img/page-apropos.png);
 	background-repeat: repeat;
-	background-size: 5%
 }
 
 .page-livre-dor {
 	background: url(img/page-livredor.png);
 	background-repeat: repeat;
-	background-size: 5%
 }
 
 .page-construction {
 	background: url(img/demande-background.png);
 	background-repeat: repeat;
-	background-size: 5%
+}
+
+.page-demande, .page-concept, .page-a-propos, .page-souvenirs, .page-livre-dor, .page-construction {
+	background-size: 5%;
 }
 
 /* End backgrounds */
@@ -377,7 +397,7 @@ div.btn-valider {
 	margin-top: 5%;
 }
 
-.souvenir .selfie-img img{
+.souvenir .selfie-img .main-img img{
 	border-radius: 50%;
 	width: 175px;
     height: 175px;
@@ -390,6 +410,19 @@ div.btn-valider {
 .souvenir .selfie-img {
 	cursor: pointer;
 }
+
+.souvenir .selfie-img:hover .play-icon{
+	display: block;
+	position: absolute;
+	top: 25%;
+	left : 45%;
+}
+
+.souvenir .play-icon {
+	display: none;
+}
+
+
 
 .souvenir .selfie-title {
 	padding: 25px;
@@ -430,6 +463,24 @@ div.btn-valider {
 .souvenir .modal-header {
 	border-bottom: none;
 }
+
+.wp-pagenavi { text-align: center; }
+
+.wp-pagenavi a,
+.wp-pagenavi span {
+	width: 22px;
+	height: 22px;
+	padding: 7px;
+	margin: 5px;
+	background: url(img/bouton-pagination.png) no-repeat center;
+	color: #FFFFFF;
+	border: none!important;
+}
+
+.wp-pagenavi .current { color: grey; }
+
+.wp-pagenavi .pages { display : none; }
+
 /* Page Concept */
 
 #cadre {
@@ -577,6 +628,10 @@ div.btn-valider {
 		height: auto;
 		width: auto;
 	}
+
+	.page-demande, .page-concept, .page-a-propos, .page-souvenirs, .page-livre-dor, .page-construction {
+		background-size: 14%;
+	}
 }
 
 #navbar li {
@@ -690,16 +745,19 @@ body.page-livre-dor #navbar li.livredor-item a{
 #photo-ari {
 	background: url(img/Ari1.JPG) no-repeat center;
 	background-size: 200%;
+	background-position: 45% 50%;
 }
 
 #photo-ari:hover {
 	background: url(img/Ari2.JPG) no-repeat center;
 	background-size: 225%;
+	background-position: 45% 30%;
 }
 
 #photo-perrine {
 	background: url(img/Perrine1.JPG) no-repeat center;
 	background-size: 200%;
+	background-position: 47% 61%;
 }
 
 #photo-perrine:hover {
@@ -714,21 +772,25 @@ body.page-livre-dor #navbar li.livredor-item a{
 #photo-arthur:hover {
 	background: url(img/Arthur3.JPG) no-repeat center;
 	background-size: 200%;
+	background-position: 50% 70%;
 }
 
 #photo-amine {
 	background: url(img/Amine1.JPG) no-repeat center;
-	background-size: 200%;
+	background-size: 213%;
+	background-position: 55% 77%;
 }
 
 #photo-amine:hover {
 	background: url(img/Amine2.JPG) no-repeat center;
-	background-size: 225%;
+	background-size: 215%;
+	background-position: 55% 70%;
 }
 
 #photo-alex {
 	background: url(img/Alex1.JPG) no-repeat center;
 	background-size: 200%;
+	background-position: 53% 47%;
 }
 
 #photo-alex:hover {

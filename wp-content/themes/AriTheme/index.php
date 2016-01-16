@@ -19,12 +19,18 @@
 		<p class="slogan col-md-12"><?php /*bloginfo("description");*/?></p>-->
 	</div>
 	<div class="row home-buttons">
-		<div class="demande-button col-md-5">
-			<a href="<?php echo home_url(); ?>/demande" role="button"><img src="./wp-content/themes/AriTheme/img/demande_bouton.png"></a>
+		<div class="concept-button col-md-5">
+				<a class="home-btn" href="<?php echo home_url(); ?>/concept" role="button">
+						<img src="./wp-content/themes/AriTheme/img/icone-concept.png" width="30">
+						<span>Le concept Ari Chez Vous</span>
+				</a>
 		</div>
 		<div class="col-md-2"></div>
-		<div class="concept-button col-md-5">
-			<a href="<?php echo home_url(); ?>/concept" role="button"><img src="./wp-content/themes/AriTheme/img/concept_bouton.png"></a>
+		<div class="demande-button col-md-5">
+				<a class="home-btn" href="<?php echo home_url(); ?>/demande" role="button">
+						<img src="./wp-content/themes/AriTheme/img/icone-demande.png" width="30">
+						<span>J'veux du smile dans mon salon !</span>
+				</a>
 		</div>
 	</div>
 	<div class="footer-home">

@@ -20,7 +20,7 @@ get_header();
 
 <div id="three-per-div" class="container-fluid souvenirs-container">
 <?php
-	$loop = new WP_Query( array( 'post_type' => 'souvenirs', 'posts_per_page' => 10 ) );
+	$loop = new WP_Query( array( 'post_type' => 'souvenirs', 'posts_per_page' => 9, 'paged' => get_query_var('paged') ) );
 	if (have_posts()) :
 	$i=0; // counter
 	while($loop->have_posts()) : $loop->the_post();
@@ -29,7 +29,10 @@ get_header();
 		<div class="row souvenir-row">
 		<?php } ?>
 		<div class="souvenir col-lg-4 col-md-4 col-sm-6 col-xs-6">
-			<div id="<?php echo get_the_ID(); ?>" class="selfie-img"><?php the_post_thumbnail(); ?></div>
+			<div id="<?php echo get_the_ID(); ?>" class="selfie-img">
+				<div class="main-img"><?php the_post_thumbnail(); ?></div>
+				<img class="play-icon" src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/control_play.png" />
+			</div>
 			<div class="selfie-title-container">
 				<div class="selfie-title">
 					<div class="acv-number">AriChezVous #<?php echo get_post_meta($post->ID,'_acv_number',true); ?></div>
@@ -76,13 +79,16 @@ get_header();
 		</div>
 		<?php } ?>
 
-<?php endif; ?>
+<?php endif;
+wp_pagenavi( array( 'query' => $loop ) );
+wp_reset_postdata();
+?>
 
 </div>
 
 <div id="two-per-div" class="container-fluid souvenirs-container">
 <?php
-	$loop = new WP_Query( array( 'post_type' => 'souvenirs', 'posts_per_page' => 10 ) );
+	$loop = new WP_Query( array( 'post_type' => 'souvenirs', 'posts_per_page' => 3, 'paged' => get_query_var('paged') ) );
 	if (have_posts()) :
 	$i=0; // counter
 	while($loop->have_posts()) : $loop->the_post();
@@ -91,11 +97,16 @@ get_header();
 		<div class="row souvenir-row">
 		<?php } ?>
 		<div class="souvenir col-lg-4 col-md-6 col-sm-6 col-xs-12">
-			<div id="<?php echo get_the_ID(); ?>" class="selfie-img"><?php the_post_thumbnail(); ?></div>
+			<div id="<?php echo get_the_ID(); ?>" class="selfie-img">
+				<div class="main-img"><?php the_post_thumbnail(); ?></div>
+				<img class="play-icon" src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/control_play.png" />
+			</div>
 			<div class="selfie-title-container">
-				<div class="acv-number">AriChezVous #<?php echo get_post_meta($post->ID,'_acv_number',true); ?></div>
-				<div><?php the_title(); ?></div>
-				<div class="acv-place"><?php echo get_post_meta($post->ID,'_acv_place',true); ?></div>
+				<div class="selfie-title">
+					<div class="acv-number">AriChezVous #<?php echo get_post_meta($post->ID,'_acv_number',true); ?></div>
+					<div><?php the_title(); ?></div>
+					<div class="acv-place"><?php echo get_post_meta($post->ID,'_acv_place',true); ?></div>
+				</div>
 			</div>
 			<!-- Modal -->
 		      <div class="modal fade" id="modal<?php echo get_the_ID(); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -135,7 +146,10 @@ get_header();
 		</div>
 		<?php } ?>
 
-<?php endif; ?>
+<?php endif;
+wp_pagenavi( array( 'query' => $loop ) );
+wp_reset_postdata();
+ ?>
 
 </div>
 
