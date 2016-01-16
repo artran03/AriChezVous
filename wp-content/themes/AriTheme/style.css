@@ -120,9 +120,17 @@ li.demande-item a {
 	background: url(img/icone-demande.png) no-repeat center;
 	background-size: 54%;
 }
+li.demande-item a:hover {
+	background: url(img/icone-demande-couleur.png) no-repeat center;
+	background-size: 54%;
+}
 
 li.concept-item a {
 	background: url(img/icone-concept.png) no-repeat center;
+	background-size: 54%;
+}
+li.concept-item a:hover {
+	background: url(img/icone-concept-couleur.png) no-repeat center;
 	background-size: 54%;
 }
 
@@ -130,14 +138,26 @@ li.souvenirs-item a {
 	background: url(img/icone-souvenirs.png) no-repeat center;
 	background-size: 49%;
 }
+li.souvenirs-item a:hover {
+	background: url(img/icone-souvenirs-couleur.png) no-repeat center;
+	background-size: 49%;
+}
 
 li.apropos-item a {
 	background: url(img/icone-apropos.png) no-repeat center;
 	background-size: 38%;
 }
+li.apropos-item a:hover {
+	background: url(img/icone-apropos-couleur.png) no-repeat center;
+	background-size: 38%;
+}
 
 li.livredor-item a {
 	background: url(img/icone-livredor.png) no-repeat center;
+	background-size: 48%;
+}
+li.livredor-item a:hover {
+	background: url(img/icone-livredor-couleur.png) no-repeat center;
 	background-size: 48%;
 }
 
