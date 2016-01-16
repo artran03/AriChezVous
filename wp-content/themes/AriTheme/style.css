@@ -388,6 +388,11 @@ div.btn-valider input {
 	font-style: italic;
 }
 
+div.btn-valider input:hover {
+	background: url(img/bouton-validez-inverse.png) no-repeat center center;
+	color: #000;
+}
+
 div.btn-valider {
 	margin-top: 45px;
 	margin-bottom:45px;
