@@ -95,17 +95,19 @@ div.container {
 	padding: 0px 40px 0px 40px;
 	text-decoration: none;
 	color: #000;
-	background-position: center -2px;
+	background-position: center 0px;
 }
 
 .site-header nav ul li a,
 .site-header nav ul li.current-menu-item a
  {
-	background-position: center -2px;
+	/*background-color: #006ec3;
+	color: #fff;*/
+	background-position: center 0px;
 }
 
 .site-header nav ul li a {
-    padding-top: 49px!important;
+  padding-top: 54px!important;
 	font-size: 18px;
 	font-weight: bold;
 }
@@ -560,6 +562,22 @@ div.btn-valider {
 	}
 }
 
+@media all and (min-width: 768px) and (max-width: 980px) {
+	.site-header nav ul li a:link,
+	.site-header nav ul li a:visited {
+		display: block;
+		padding: 40px 24px 0px!important;
+		text-decoration: none;
+		color: #000;
+		font-size: 15px!important;
+	}
+
+	.site-header nav ul li a, .site-header nav ul li.current-menu-item a
+	{
+		background-position: center 3px!important;
+	}
+}
+
 /** MENU MOBILE **/
 
 @media all and (max-width: 768px) {
@@ -679,12 +697,12 @@ div.btn-valider {
 
 body.page-demande li.demande-item a{
 	background: url(img/icone-demande-couleur.png) no-repeat left;
-	background-size: 54%;	
+	background-size: 54%;
 }
 
 body.page-demande #navbar li.demande-item a{
 	background: url(img/icone-demande-couleur.png) no-repeat left;
-	background-size: 36%;	
+	background-size: 36%;
 }
 
 #navbar li.concept-item a {
@@ -694,12 +712,12 @@ body.page-demande #navbar li.demande-item a{
 
 body.page-concept li.concept-item a{
 	background: url(img/icone-concept-couleur.png) no-repeat left;
-	background-size: 54%;	
+	background-size: 54%;
 }
 
 body.page-concept #navbar li.concept-item a{
 	background: url(img/icone-concept-couleur.png) no-repeat left;
-	background-size: 36%;	
+	background-size: 36%;
 }
 
 #navbar li.souvenirs-item a {
@@ -709,12 +727,12 @@ body.page-concept #navbar li.concept-item a{
 
 body.page-souvenirs li.souvenirs-item a{
 	background: url(img/icone-souvenirs-couleur.png) no-repeat left;
-	background-size: 49%;	
+	background-size: 49%;
 }
 
 body.page-souvenirs #navbar li.souvenirs-item a{
 	background: url(img/icone-souvenirs-couleur.png) no-repeat left;
-	background-size: 36%;	
+	background-size: 36%;
 }
 
 #navbar li.apropos-item a {
@@ -724,12 +742,12 @@ body.page-souvenirs #navbar li.souvenirs-item a{
 
 body.page-a-propos li.apropos-item a{
 	background: url(img/icone-apropos-couleur.png) no-repeat left;
-	background-size: 38%;	
+	background-size: 38%;
 }
 
 body.page-a-propos #navbar li.apropos-item a{
 	background: url(img/icone-apropos-couleur.png) no-repeat left;
-	background-size: 36%;	
+	background-size: 36%;
 }
 
 #navbar li.livredor-item a {
@@ -739,12 +757,12 @@ body.page-a-propos #navbar li.apropos-item a{
 
 body.page-livre-dor li.livredor-item a{
 	background: url(img/icone-livredor-couleur.png) no-repeat left;
-	background-size: 48%;	
+	background-size: 48%;
 }
 
 body.page-livre-dor #navbar li.livredor-item a{
 	background: url(img/icone-livredor-couleur.png) no-repeat left;
-	background-size: 36%;	
+	background-size: 36%;
 }
 
 
