@@ -88,22 +88,19 @@ div.container {
 
 /* Site Header Menu */
 .site-header nav ul li a:link,
-.site-header nav ul li a:visited {
+.site-header nav ul li a:hover,
+.site-header nav ul li a:visited
+ {
 	display: block;
-	padding: 10px 40px;
+	padding: 0px 40px 0px 40px;
 	text-decoration: none;
 	color: #000;
+	background-position: center -2px;
 }
 
-/*.site-header nav ul li.current-menu-item a:link,
-.site-header nav ul li.current-menu-item a:visited,
-.site-header nav ul li.current_page_item a:link,
-.site-header nav ul li.current_page_item a:visited,*/
 .site-header nav ul li a,
 .site-header nav ul li.current-menu-item a
  {
-	/*background-color: #006ec3;
-	color: #fff;*/
 	background-position: center -2px;
 }
 
@@ -112,7 +109,6 @@ div.container {
 	font-size: 18px;
 	font-weight: bold;
 }
-
 
 .site-header div, .site-header nav { height: 100%; }
 
