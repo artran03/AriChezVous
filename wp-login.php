@@ -169,7 +169,14 @@ function login_header( $title = 'Log In', $message = '', $wp_error = '' ) {
 
  		#login {
  			padding-top: 2%!important;
+			width: 359px!important
  		}
+
+		#login h1 {
+			font-weight: normal;
+	    font-style: normal;
+	    line-height: 1;
+		}
 
  		#loginform {
  			display: none;
@@ -207,7 +214,7 @@ function login_header( $title = 'Log In', $message = '', $wp_error = '' ) {
 	<body class="login <?php echo esc_attr( implode( ' ', $classes ) ); ?>">
 	<div id="login">
 		<h1><a href="<?php echo esc_url( $login_header_url ); ?>" title="<?php echo esc_attr( $login_header_title ); ?>" tabindex="-1"><?php bloginfo( 'name' ); ?></a></h1>
-		<h1>Coming soon !</h1>
+		<h1>Arichezvous.com ouvre ses portes le 7 février !</h1>
  		<label id="connexionBtn">CONNEXION</label>
 	<?php
 
