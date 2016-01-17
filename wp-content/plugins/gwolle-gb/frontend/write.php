@@ -85,6 +85,23 @@ function gwolle_gb_frontend_write( $shortcode_atts ) {
 		$output .= "</div>";
 	 }
 
+	 $popuptitle = 'Merci ...';
+
+	 if(strpos($gwolle_gb_messages,'signature') !== false && strpos($gwolle_gb_messages,'doux') !== false)
+	 {
+		$popuptitle = 'Oups ...';
+	  $gwolle_gb_messages ='<p class="error_fields"><strong>Ni les mots doux, ni le nom .. Quelle tristesse.</strong></p>';
+	 }
+
+	 if(strpos($gwolle_gb_messages,'signature') !== false)
+	 {
+		 $popuptitle = 'Oups ...';
+	 }
+	 if(strpos($gwolle_gb_messages,'doux') !== false)
+	 {
+		 $popuptitle = 'Oups ...';
+	 }
+
 	 $output .= '<div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
@@ -92,7 +109,9 @@ function gwolle_gb_frontend_write( $shortcode_atts ) {
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title"></h4>
+        <h4 class="modal-title">';
+				$output .= $popuptitle;
+				$output .= '</h4>
       </div>
       <div class="modal-body">
         <p>';
@@ -100,7 +119,7 @@ function gwolle_gb_frontend_write( $shortcode_atts ) {
 				$output .= '</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
       </div>
     </div>
   </div>

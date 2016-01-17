@@ -196,13 +196,13 @@ function gwolle_gb_frontend_posthandling() {
 		/* If there are errors, stop here and return false */
 		if ( is_array( $gwolle_gb_error_fields ) && !empty( $gwolle_gb_error_fields ) ) {
 			// There was no data filled in, even though that was mandatory.
-			$gwolle_gb_messages .= '<p class="error_fields"><strong>' . __('There were errors submitting your guestbook entry.', 'gwolle-gb') . '</strong></p>';
+			// $gwolle_gb_messages .= '<p class="error_fields"><strong>' . __('There were errors submitting your guestbook entry.', 'gwolle-gb') . '</strong></p>';
 
 			if ( isset($gwolle_gb_error_fields) ) {
 				foreach ( $gwolle_gb_error_fields as $field ) {
 					switch ( $field ) {
 						case 'name':
-							$gwolle_gb_messages .= '<p class="error_fields"><strong>' . __('Your name is not filled in, even though it is mandatory.', 'gwolle-gb') . '</strong></p>';
+							$gwolle_gb_messages .= '<p class="error_fields"><strong>Des mots aussi beaux, ça mérite une signature non ?</strong></p>';
 							break;
 						case 'author_origin':
 							$gwolle_gb_messages .= '<p class="error_fields"><strong>' . __('Your origin is not filled in, even though it is mandatory.', 'gwolle-gb') . '</strong></p>';
@@ -214,7 +214,7 @@ function gwolle_gb_frontend_posthandling() {
 							$gwolle_gb_messages .= '<p class="error_fields"><strong>' . __('Your website is not filled in, even though it is mandatory.', 'gwolle-gb') . '</strong></p>';
 							break;
 						case 'content':
-							$gwolle_gb_messages .= '<p class="error_fields"><strong>' . __('There is no message, even though it is mandatory.', 'gwolle-gb') . '</strong></p>';
+							$gwolle_gb_messages .= '<p class="error_fields"><strong>Tu as oublié les mots doux :) !</strong></p>';
 							break;
 						case 'antispam':
 							$gwolle_gb_messages .= '<p class="error_fields"><strong>' . __('The anti-spam question was not answered correctly, even though it is mandatory.', 'gwolle-gb') . '</strong></p>';
@@ -339,9 +339,9 @@ function gwolle_gb_frontend_posthandling() {
 		//if ( WP_DEBUG ) { echo "save: "; var_dump($save); }
 		if ( $save ) {
 			// We have been saved to the Database
-			$gwolle_gb_messages .= '<p class="entry_saved">' . __('Thank you for your entry.','gwolle-gb') . '</p>';
+			$gwolle_gb_messages .= '<p class="entry_saved">Merci pour ton message !</p>';
 			if ( $entry->get_ischecked() == 0 ) {
-				$gwolle_gb_messages .= '<p>' . __('We will review it and unlock it in a short while.','gwolle-gb') . '</p>';
+				$gwolle_gb_messages .= '<p>Il apparaîtra bientôt sur le site !</p>';
 			}
 		}
 
@@ -373,4 +373,3 @@ function gwolle_gb_frontend_posthandling() {
 
 	}
 }
-
