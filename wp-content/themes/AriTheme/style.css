@@ -646,11 +646,11 @@ div.btn-valider {
 	#cadre {
 		width: 100%;
 		padding-top: 11px;
-		margin-top: 0px;
+		margin-top: 20px;
 	}
 
 	#cadre.first {
-		margin-top: 50px;
+		margin-top: 100px;
 	}
 
 	#texte {
@@ -663,6 +663,8 @@ div.btn-valider {
 		padding-right: 30px;
 		padding-top: 10px;
 		padding-bottom: 5px;
+		border: 9px solid white;
+		background-color: #e7e8e9;
 	}
 
 	.concept-texte {
