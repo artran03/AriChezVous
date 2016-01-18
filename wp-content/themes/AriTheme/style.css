@@ -706,6 +706,7 @@ div.btn-valider {
 body.page-demande li.demande-item a{
 	background: url(img/icone-demande-couleur.png) no-repeat left;
 	background-size: 54%;
+	text-decoration: underline !important;
 }
 
 body.page-demande #navbar li.demande-item a{
@@ -721,6 +722,7 @@ body.page-demande #navbar li.demande-item a{
 body.page-concept li.concept-item a{
 	background: url(img/icone-concept-couleur.png) no-repeat left;
 	background-size: 54%;
+	text-decoration: underline !important;
 }
 
 body.page-concept #navbar li.concept-item a{
@@ -736,6 +738,7 @@ body.page-concept #navbar li.concept-item a{
 body.page-souvenirs li.souvenirs-item a{
 	background: url(img/icone-souvenirs-couleur.png) no-repeat left;
 	background-size: 49%;
+	text-decoration: underline !important;
 }
 
 body.page-souvenirs #navbar li.souvenirs-item a{
@@ -751,6 +754,7 @@ body.page-souvenirs #navbar li.souvenirs-item a{
 body.page-a-propos li.apropos-item a{
 	background: url(img/icone-apropos-couleur.png) no-repeat left;
 	background-size: 38%;
+	text-decoration: underline !important;
 }
 
 body.page-a-propos #navbar li.apropos-item a{
@@ -766,6 +770,7 @@ body.page-a-propos #navbar li.apropos-item a{
 body.page-livre-dor li.livredor-item a{
 	background: url(img/icone-livredor-couleur.png) no-repeat left;
 	background-size: 48%;
+	text-decoration: underline !important;
 }
 
 body.page-livre-dor #navbar li.livredor-item a{
