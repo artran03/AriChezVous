@@ -402,6 +402,7 @@ class WPCF7_ContactForm {
 			}
 		} else {
 			$class .= ' wpcf7-display-none';
+			$popupTitle = 'Super !';
 		}
 
 		$atts = array(
