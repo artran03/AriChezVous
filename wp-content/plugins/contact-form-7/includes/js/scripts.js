@@ -82,6 +82,10 @@
 		}
 
 		var $responseOutput = $form.find('div.wpcf7-response-output');
+		
+		// Permet de changer le titre de la popup en fct du retour ajax de la validation du form
+		var popupTitleHtmlObject = $("#msg-dialog").find(".modal-title");
+		var popupTitle = 'Oups...';
 
 		$form.wpcf7ClearResponseOutput();
 
@@ -120,6 +124,8 @@
 			$responseOutput.addClass('wpcf7-mail-sent-ok');
 			$form.addClass('sent');
 
+			popupTitle = 'Super !';
+			
 			if (data.onSentOk) {
 				$.each(data.onSentOk, function(i, n) { eval(n) });
 			}
@@ -134,6 +140,8 @@
 			$(data.into).trigger('wpcf7:mailfailed');
 			$(data.into).trigger('mailfailed.wpcf7'); // deprecated
 		}
+		
+		popupTitleHtmlObject.html(popupTitle);
 
 		if (data.onSubmit) {
 			$.each(data.onSubmit, function(i, n) { eval(n) });
