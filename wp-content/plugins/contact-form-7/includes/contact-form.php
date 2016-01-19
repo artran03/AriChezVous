@@ -379,6 +379,7 @@ class WPCF7_ContactForm {
 		$class = 'wpcf7-response-output';
 		$role = '';
 		$content = '';
+		$popupTitle = 'Oups...';
 
 		if ( $this->is_posted() ) { // Post response output for non-AJAX
 			$role = 'alert';
@@ -388,12 +389,16 @@ class WPCF7_ContactForm {
 
 			if ( $submission->is( 'validation_failed' ) ) {
 				$class .= ' wpcf7-validation-errors';
+				$popupTitle = 'Oups...';
 			} elseif ( $submission->is( 'spam' ) ) {
 				$class .= ' wpcf7-spam-blocked';
+				$popupTitle = 'Oups...';
 			} elseif ( $submission->is( 'mail_sent' ) ) {
 				$class .= ' wpcf7-mail-sent-ok';
+				$popupTitle = 'Super !';
 			} elseif ( $submission->is( 'mail_failed' ) ) {
 				$class .= ' wpcf7-mail-sent-ng';
+				$popupTitle = 'Oups...';
 			}
 		} else {
 			$class .= ' wpcf7-display-none';
@@ -410,7 +415,7 @@ class WPCF7_ContactForm {
  			    <div class="modal-content">
  				    <div class="modal-header">
  				        <button type="button" class="close" data-dismiss="modal">&times;</button>
- 				        <h4 class="modal-title">Oups...</h4>
+ 				        <h4 class="modal-title">%3$s</h4>
  				    </div>
  				    <div class="modal-body">
  				        <div id="responseMessage" %1$s>%2$s</div>
@@ -421,7 +426,7 @@ class WPCF7_ContactForm {
  			    </div>
  		  	</div>
  		</div>',
-			$atts, esc_html( $content ) );
+			$atts, esc_html( $content ), $popupTitle );
 
 		$output = apply_filters( 'wpcf7_form_response_output',
 			$output, $class, $content, $this );
