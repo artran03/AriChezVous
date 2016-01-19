@@ -167,6 +167,7 @@ li.livredor-item a:hover {
 .footer-home{
 	position: fixed;
   bottom: 0;
+	width: 100%;
 }
 
 #icones-social{
@@ -647,6 +648,9 @@ div.btn-valider {
 		width: 100%;
 		padding-top: 11px;
 		margin-top: 20px;
+	  padding-left: 5%;
+		padding-right: 5%;
+		background: none;
 	}
 
 	#cadre.first {
@@ -661,7 +665,7 @@ div.btn-valider {
 		background: none;
 		padding-left: 30px;
 		padding-right: 30px;
-		padding-top: 10px;
+		padding-top: none;
 		padding-bottom: 5px;
 		border: 9px solid white;
 		background-color: #e7e8e9;

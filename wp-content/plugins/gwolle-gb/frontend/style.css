@@ -244,15 +244,16 @@ p.gwolle_gb_link {
 	}
 
 	#gwolle_gb form#gwolle_gb_new_entry {
-		margin-top: 150px;
+		margin-top: 110px;
 		background: none;
 		/*position: fixed;*/
-		width: 100%;
+		padding-left: 5%;
+		padding-right: 5%;
 	}
 
 	#gwolle_gb .gb-entry {
-		padding: 10px 0;
-		width: 100%;
+		padding-left: 5%;
+		padding-right: 5%;
 		background: none;
 		height:auto;
 	}
