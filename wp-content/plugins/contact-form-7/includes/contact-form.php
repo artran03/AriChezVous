@@ -379,7 +379,7 @@ class WPCF7_ContactForm {
 		$class = 'wpcf7-response-output';
 		$role = '';
 		$content = '';
-		$popupTitle = 'Oups...';
+		$popupTitle = 'Super !';
 
 		if ( $this->is_posted() ) { // Post response output for non-AJAX
 			$role = 'alert';
@@ -402,7 +402,7 @@ class WPCF7_ContactForm {
 			}
 		} else {
 			$class .= ' wpcf7-display-none';
-			$popupTitle = 'Super !';
+			$popupTitle = 'Oups...';
 		}
 
 		$atts = array(
