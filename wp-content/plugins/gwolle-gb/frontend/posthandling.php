@@ -214,7 +214,7 @@ function gwolle_gb_frontend_posthandling() {
 							$gwolle_gb_messages .= '<p class="error_fields"><strong>' . __('Your website is not filled in, even though it is mandatory.', 'gwolle-gb') . '</strong></p>';
 							break;
 						case 'content':
-							$gwolle_gb_messages .= '<p class="error_fields"><strong>Tu as oublié les mots doux :) !</strong></p>';
+							$gwolle_gb_messages .= '<p class="error_fields"><strong>Tu as oublié les mots doux '.$gwolle_gb_data['author_name'].' :) !</strong></p>';
 							break;
 						case 'antispam':
 							$gwolle_gb_messages .= '<p class="error_fields"><strong>' . __('The anti-spam question was not answered correctly, even though it is mandatory.', 'gwolle-gb') . '</strong></p>';
@@ -339,7 +339,7 @@ function gwolle_gb_frontend_posthandling() {
 		//if ( WP_DEBUG ) { echo "save: "; var_dump($save); }
 		if ( $save ) {
 			// We have been saved to the Database
-			$gwolle_gb_messages .= '<p class="entry_saved">Merci pour ton message !</p>';
+			$gwolle_gb_messages .= '<p class="entry_saved">Merci pour ton message '.$gwolle_gb_data['author_name'].' !</p>';
 			if ( $entry->get_ischecked() == 0 ) {
 				$gwolle_gb_messages .= '<p>Il apparaîtra bientôt sur le site !</p>';
 			}
