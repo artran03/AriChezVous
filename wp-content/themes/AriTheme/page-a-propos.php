@@ -2,7 +2,7 @@
 
 <div id="acv-members" class="container-fluid">
   <div class="row">
-    <div class="acv-member col-md-4 col-md-offset-4">
+    <div class="acv-member col-md-6 col-md-offset-3">
       <div id="photo-ari" class="member-photo">
         &nbsp;
       </div>
@@ -16,7 +16,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="acv-member col-md-4 col-md-offset-2">
+    <div class="acv-member col-md-6">
       <div id="photo-perrine" class="member-photo">
         &nbsp;
       </div>
@@ -33,7 +33,7 @@
         </span>
       </div>
     </div>
-    <div class="acv-member col-md-4">
+    <div class="acv-member col-md-6">
       <div id="photo-arthur" class="member-photo">
         &nbsp;
       </div>
@@ -51,8 +51,8 @@
       </div>
     </div>
   </div>
-  <div class="row" style=" margin-top: 2%;">
-    <div class="acv-member col-md-4 col-md-offset-2">
+  <div class="row" style=" margin-top: 19px;">
+    <div class="acv-member col-md-6">
       <div id="photo-amine" class="member-photo">
         &nbsp;
       </div>
@@ -69,7 +69,7 @@
         </span>
       </div>
     </div>
-    <div class="acv-member col-md-4">
+    <div class="acv-member col-md-6">
       <div id="photo-alex" class="member-photo">
         &nbsp;
       </div>

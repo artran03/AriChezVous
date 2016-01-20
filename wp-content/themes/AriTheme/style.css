@@ -786,16 +786,24 @@ body.page-livre-dor #navbar li.livredor-item a{
 /* PAGE A PROPOS */
 
 #acv-members {
-	height: 490px;
+	height: 511px;
 	padding-top: 24px;
 	margin-top: 7%;
 	background: url(img/background-apropos.png) no-repeat center;
-	background-size: 70%;
-	background-position: 48% center;
+	background-size: 66%;
+	background-position: 48% -39%;
+}
+
+#acv-members .row {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 57.5em;
 }
 
 .acv-member {
-	height: 116px;
+	height: 110px;
 }
 
 #photo-ari {
