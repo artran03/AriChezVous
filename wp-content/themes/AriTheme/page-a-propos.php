@@ -67,7 +67,7 @@
       </div>
     </div>
   </div>
-  <div class="row amine-alex-part">
+  <div class="row amine-alex-part" style="margin-top: 23px;">
     <div class="acv-member col-sm-6 col-md-6">
       <div id="photo-amine" class="member-photo">
         &nbsp;
