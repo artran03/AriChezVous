@@ -18,7 +18,7 @@
 		<!--<div class="main-logo col-md-12"><?php /*echo wp_get_attachment_image( 41, 'medium' ); */?></div>
 		<p class="slogan col-md-12"><?php /*bloginfo("description");*/?></p>-->
 	</div>
-	<div class="row home-buttons">
+	<div class="home-buttons">
 		<div class="concept-button col-md-5">
 				<a class="home-btn" href="<?php echo home_url(); ?>/concept" role="button">
 						<img src="./wp-content/themes/AriTheme/img/icone-concept.png" width="30">
