@@ -2,7 +2,7 @@
 
 <div id="acv-members" class="container-fluid">
   <div class="row">
-    <div class="acv-member col-md-6 col-md-offset-3">
+    <div class="acv-member col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3">
       <div id="photo-ari" class="member-photo">
         &nbsp;
       </div>
@@ -16,7 +16,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="acv-member col-md-6">
+    <div class="acv-member col-sm-6 col-md-6">
       <div id="photo-perrine" class="member-photo">
         &nbsp;
       </div>
@@ -28,12 +28,20 @@
       <div class="additional-info"><span>(Design & Illustrations)</span></div>
       <div class="social-net-links">
         <span>
-          <a href="#"><img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/mail-01.png" width="25"/></a>
-          <a href="#"><img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/linkedin-logo-01.png" width="25"/></a>
+          <a href="#">
+            <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/mail-01.png" width="25"
+            onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/bouton_mail-02.png';"
+            onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/mail-01.png';"/>
+          </a>
+          <a href="#">
+            <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/linkedin-logo-01.png" width="25"
+            onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/bouton_linkedin-02.png';"
+            onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/linkedin-logo-01.png';"/>
+          </a>
         </span>
       </div>
     </div>
-    <div class="acv-member col-md-6">
+    <div class="acv-member col-sm-6 col-md-6">
       <div id="photo-arthur" class="member-photo">
         &nbsp;
       </div>
@@ -45,14 +53,22 @@
       <div class="additional-info"><span>(Conception & Développement)</span></div>
       <div class="social-net-links">
         <span>
-          <a href="mailto:arthur.tran91@gmail.com"><img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/mail-01.png" width="25"/></a>
-          <a href="https://www.linkedin.com/in/arthur-tran-77196955"><img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/linkedin-logo-01.png" width="25"/></a>
+          <a href="mailto:arthur.tran91@gmail.com">
+            <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/mail-01.png" width="25"
+            onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/bouton_mail-02.png';"
+            onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/mail-01.png';"/>
+          </a>
+          <a href="https://www.linkedin.com/in/arthur-tran-77196955">
+            <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/linkedin-logo-01.png" width="25"
+            onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/bouton_linkedin-02.png';"
+            onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/linkedin-logo-01.png';"/>
+          </a>
         </span>
       </div>
     </div>
   </div>
-  <div class="row" style=" margin-top: 23px;">
-    <div class="acv-member col-md-6">
+  <div class="row amine-alex-part">
+    <div class="acv-member col-sm-6 col-md-6">
       <div id="photo-amine" class="member-photo">
         &nbsp;
       </div>
@@ -64,12 +80,20 @@
       <div class="additional-info"><span>(Conception & Développement)</span></div>
       <div class="social-net-links">
         <span>
-          <a href="#"><img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/mail-01.png" width="25"/></a>
-          <a href="#"><img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/linkedin-logo-01.png" width="25"/></a>
+          <a href="#">
+            <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/mail-01.png" width="25"
+            onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/bouton_mail-02.png';"
+            onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/mail-01.png';"/>
+          </a>
+          <a href="#">
+            <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/linkedin-logo-01.png" width="25"
+            onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/bouton_linkedin-02.png';"
+            onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/linkedin-logo-01.png';"/>
+          </a>
         </span>
       </div>
     </div>
-    <div class="acv-member col-md-6">
+    <div class="acv-member col-sm-6 col-md-6">
       <div id="photo-alex" class="member-photo">
         &nbsp;
       </div>
@@ -81,8 +105,16 @@
       <div class="additional-info"><span>(Conception & Développement)</span></div>
       <div class="social-net-links">
         <span>
-          <a href="#"><img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/mail-01.png" width="25"/></a>
-          <a href="#"><img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/linkedin-logo-01.png" width="25"/></a>
+          <a href="#">
+            <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/mail-01.png" width="25"
+            onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/bouton_mail-02.png';"
+            onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/mail-01.png';"/>
+          </a>
+          <a href="#">
+            <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/linkedin-logo-01.png" width="25"
+            onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/bouton_linkedin-02.png';"
+            onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/linkedin-logo-01.png';"/>
+          </a>
         </span>
       </div>
     </div>

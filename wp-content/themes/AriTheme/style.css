@@ -444,8 +444,8 @@ div.btn-valider {
 .souvenir .selfie-img:hover .play-icon{
 	display: block;
 	position: absolute;
-	top: 25%;
-	left : 45%;
+	top: 24%;
+	left : 41%;
 }
 
 .souvenir .play-icon {
@@ -585,6 +585,42 @@ div.btn-valider {
 	}
 }
 
+@media all and (min-width: 768px) and (max-width: 850px) {
+	#acv-members {
+    height: 453px!important;
+    margin-top: 2%!important;
+    width: 55.0em!important;
+	}
+
+	.additional-info span {
+    font-size: 15px!important;
+	}
+
+	.acv-member {
+    height: 97px!important;
+	}
+
+	.member-function {
+    font-size: 18px!important;
+	}
+
+	.member-name {
+    font-size: 21px!important;
+	}
+
+	.name-func {
+    margin-top: 5%!important;
+	}
+
+	.member-photo {
+    width: 88px!important;
+    height: 88px!important;
+    margin-top: 16px!important;
+    margin-left: 14px!important;
+	}
+
+}
+
 /** MENU MOBILE **/
 
 @media all and (max-width: 768px) {
@@ -683,6 +719,59 @@ div.btn-valider {
 	.page-demande, .page-concept, .page-a-propos, .page-souvenirs, .page-livre-dor, .page-construction {
 		background-size: 14%;
 	}
+
+	#acv-members {
+		height: 100%!important;
+    width: 37.5em!important;
+		background: none!important;
+		margin-top: 11%!important;
+	}
+
+	.acv-member {
+		background: url(img/panneau-seul-01.png) no-repeat center;
+		background-size: 90%;
+		height: 155px!important;
+		padding-top: 26px;
+    padding-left: 50px!important;
+	}
+
+	.amine-alex-part {
+		margin-top: 0px!important;
+	}
+}
+
+@media all and (max-width: 530px) {
+
+	#acv-members {
+		width: 29.0em!important;
+		margin-top: 12%!important;
+	}
+
+	.acv-member {
+		padding-top: 15px!important;
+    padding-left: 28px!important;
+		height: 134px!important;
+	}
+
+	.member-photo {
+    width: 84px!important;
+    height: 84px!important;
+    margin-top: 18px!important;
+    margin-left: 14px;
+	}
+
+	.member-name {
+    font-size: 19px!important;
+	}
+
+	.member-function {
+    font-size: 20px!important;
+	}
+
+	.additional-info span {
+    font-size: 14px!important;
+	}
+
 }
 
 #navbar li {
@@ -863,6 +952,10 @@ body.page-livre-dor #navbar li.livredor-item a{
 	background-size: 200%;
 }
 
+.amine-alex-part {
+	margin-top: 23px;
+}
+
 .member-name {
 	font-weight: bold;
 	font-size: 23px;
@@ -901,6 +994,10 @@ body.page-livre-dor #navbar li.livredor-item a{
 
 .social-net-links {
 	margin-top: 5px;
+}
+
+.social-net-links a:hover {
+	text-decoration: none;
 }
 
 .name-func {
