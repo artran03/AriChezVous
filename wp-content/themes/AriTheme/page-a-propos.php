@@ -51,7 +51,7 @@
       </div>
     </div>
   </div>
-  <div class="row" style=" margin-top: 19px;">
+  <div class="row" style=" margin-top: 23px;">
     <div class="acv-member col-md-6">
       <div id="photo-amine" class="member-photo">
         &nbsp;
