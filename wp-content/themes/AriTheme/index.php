@@ -21,14 +21,14 @@
 	<div class="home-buttons">
 		<div class="concept-button col-md-5">
 				<a class="home-btn" href="<?php echo home_url(); ?>/concept" role="button">
-						<img src="./wp-content/themes/AriTheme/img/icone-concept.png" width="30">
+						<img id="img-btn-concept" src="./wp-content/themes/AriTheme/img/icone-concept.png" width="30">
 						<span>Le concept Ari Chez Vous</span>
 				</a>
 		</div>
 		<div class="col-md-2"></div>
 		<div class="demande-button col-md-5">
 				<a class="home-btn" href="<?php echo home_url(); ?>/demande" role="button">
-						<img src="./wp-content/themes/AriTheme/img/icone-demande.png" width="30">
+						<img id="img-btn-demande" src="./wp-content/themes/AriTheme/img/icone-demande.png" width="30">
 						<span>J'veux du smile dans mon salon !</span>
 				</a>
 		</div>
@@ -39,6 +39,24 @@
 		?>
 	</div>
 <script type="text/javascript">
+jQuery(document).ready(function(){
+	jQuery('.concept-button .home-btn').mouseover(function() {
+			jQuery('#img-btn-concept').attr('src','./wp-content/themes/AriTheme/img/icone-concept-couleur.png');
+			console.log('test');
+	});
+	jQuery('.concept-button .home-btn').mouseout(function() {
+			jQuery('#img-btn-concept').attr('src','./wp-content/themes/AriTheme/img/icone-concept.png');
+			console.log('test');
+	});
+	jQuery('.demande-button .home-btn').mouseover(function() {
+			jQuery('#img-btn-demande').attr('src','./wp-content/themes/AriTheme/img/icone-demande-couleur.png');
+			console.log('test');
+	});
+	jQuery('.demande-button .home-btn').mouseout(function() {
+			jQuery('#img-btn-demande').attr('src','./wp-content/themes/AriTheme/img/icone-demande.png');
+			console.log('test');
+	});
+});
 var vid = document.getElementById("bgvid");
 var pauseButton = document.querySelector("#stopPlayBtn");
 
@@ -65,5 +83,6 @@ pauseButton.addEventListener("click", function() {
     pauseButton.innerHTML = "Paused";
   }
 })
+
 
 </script>

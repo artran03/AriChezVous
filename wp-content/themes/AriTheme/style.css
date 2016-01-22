@@ -203,12 +203,28 @@ li.livredor-item a:hover {
 }
 
 .home-btn {
-	background: url(img/background-bouton-accueil.png) no-repeat center;
+		background: url(img/background-bouton-accueil.png) no-repeat center;
     background-size: 90%;
     height: 78px;
     display: inline-block;
     padding: 14px;
     width: 260px;
+		text-decoration: none!important;
+}
+
+.concept-button .home-btn:hover {
+		background: url(img/cadre-concept.png) no-repeat center;
+		background-size: 90%;
+}
+
+.demande-button .home-btn:hover {
+		background: url(img/cadre-demande.png) no-repeat center;
+		background-size: 90%;
+}
+
+.demande-button .home-btn:hover span,
+.concept-button .home-btn:hover span {
+		color: white;
 }
 
 .home-btn > img,
