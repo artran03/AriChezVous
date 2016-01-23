@@ -190,8 +190,10 @@ li.livredor-item a:hover {
     position: absolute;
     bottom: 0;
     left: 0;
+		right: 0;
     width: 100%;
     margin-bottom: 40px;
+		max-width: 85.5em;
 }
 
 .home-buttons img {
@@ -692,7 +694,7 @@ div.btn-valider {
 	}
 
 	#navbar li a {
-		padding-top: 11px!important;
+		padding-top: 7px!important;
     padding-left: 50px!important;
 	}
 
@@ -798,6 +800,7 @@ div.btn-valider {
 #navbar li a {
 	height: 100%;
   display: inline-block;
+	font-size: 19px;
   padding-top: 15px;
   padding-left: 69px;
 }
