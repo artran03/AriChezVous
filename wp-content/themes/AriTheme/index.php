@@ -42,19 +42,15 @@
 jQuery(document).ready(function(){
 	jQuery('.concept-button .home-btn').mouseover(function() {
 			jQuery('#img-btn-concept').attr('src','./wp-content/themes/AriTheme/img/icone-concept-couleur.png');
-			console.log('test');
 	});
 	jQuery('.concept-button .home-btn').mouseout(function() {
 			jQuery('#img-btn-concept').attr('src','./wp-content/themes/AriTheme/img/icone-concept.png');
-			console.log('test');
 	});
 	jQuery('.demande-button .home-btn').mouseover(function() {
 			jQuery('#img-btn-demande').attr('src','./wp-content/themes/AriTheme/img/icone-demande-couleur.png');
-			console.log('test');
 	});
 	jQuery('.demande-button .home-btn').mouseout(function() {
 			jQuery('#img-btn-demande').attr('src','./wp-content/themes/AriTheme/img/icone-demande.png');
-			console.log('test');
 	});
 });
 var vid = document.getElementById("bgvid");
