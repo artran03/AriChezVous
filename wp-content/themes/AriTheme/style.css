@@ -405,6 +405,10 @@ li.livredor-item a:hover {
 	}
 }
 
+body {
+    overflow-x:hidden;
+}
+
 div.btn-valider input {
 	background: url(img/bouton-validez.png) no-repeat center center;
 	height: 50px;
