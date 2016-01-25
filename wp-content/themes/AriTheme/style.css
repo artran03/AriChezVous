@@ -516,6 +516,10 @@ div.btn-valider {
 	border-bottom: none;
 }
 
+.modal iframe {
+	width : 100%!important;
+}
+
 .wp-pagenavi { text-align: center; }
 
 .wp-pagenavi a,
