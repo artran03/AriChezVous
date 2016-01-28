@@ -10,10 +10,8 @@
 
 
 <video autoplay loop poster="ari-photo.jpg" id="bgvid">
-	<!--<source src="polina.webm" type="video/webm">-->
 	<source src="video_promoV1.mp4" type="video/mp4">
 </video>
-
 	<div class="centered-content row">
 		<!--<div class="main-logo col-md-12"><?php /*echo wp_get_attachment_image( 41, 'medium' ); */?></div>
 		<p class="slogan col-md-12"><?php /*bloginfo("description");*/?></p>-->

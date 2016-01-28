@@ -110,6 +110,10 @@ div.container {
   padding-top: 54px!important;
 	font-size: 18px;
 	font-weight: bold;
+	-webkit-transition: color .6s, background .6s, transform .4s ease-in;
+  -moz-transition: color .6s, background .6s transform .4s ease-in;
+  -o-transition: color .6s, background .6s transform .4s ease-in;
+  transition: color .6s, background .6s transform .4s ease-in;
 }
 
 .site-header div, .site-header nav { height: 100%; }
@@ -121,6 +125,8 @@ li.demande-item a {
 li.demande-item a:hover {
 	background: url(img/icone-demande-couleur.png) no-repeat center;
 	background-size: 54%;
+	color: #56BE90 !important;
+	transform: scale(1.1);
 }
 
 li.concept-item a {
@@ -130,6 +136,8 @@ li.concept-item a {
 li.concept-item a:hover {
 	background: url(img/icone-concept-couleur.png) no-repeat center;
 	background-size: 54%;
+	color: #12A99E !important;
+	transform: scale(1.1);
 }
 
 li.souvenirs-item a {
@@ -139,6 +147,8 @@ li.souvenirs-item a {
 li.souvenirs-item a:hover {
 	background: url(img/icone-souvenirs-couleur.png) no-repeat center;
 	background-size: 49%;
+	color: #F3785E !important;
+	transform: scale(1.1);
 }
 
 li.apropos-item a {
@@ -148,6 +158,8 @@ li.apropos-item a {
 li.apropos-item a:hover {
 	background: url(img/icone-apropos-couleur.png) no-repeat center;
 	background-size: 38%;
+	color: #0083AD !important;
+	transform: scale(1.1);
 }
 
 li.livredor-item a {
@@ -157,6 +169,8 @@ li.livredor-item a {
 li.livredor-item a:hover {
 	background: url(img/icone-livredor-couleur.png) no-repeat center;
 	background-size: 48%;
+	color: #8B64AA !important;
+	transform: scale(1.1);
 }
 
 /* footer */
@@ -167,7 +181,10 @@ li.livredor-item a:hover {
 .footer-home{
 	position: fixed;
   bottom: 0;
-	width: 100%;
+	width: 200px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 #icones-social{
@@ -214,14 +231,22 @@ li.livredor-item a:hover {
 		text-decoration: none!important;
 }
 
+.concept-button .home-btn, .demande-button .home-btn {
+	webkit-transition: background .3s, transform .3s ease-in;
+  -moz-transition: background .3s, transform .3s ease-in;
+  -o-transition: background .3s, transform .3s ease-in;
+  transition: background .3s, transform .3s ease-in;
+}
 .concept-button .home-btn:hover {
 		background: url(img/cadre-concept.png) no-repeat center;
 		background-size: 90%;
+		transform: scale(1.1);
 }
 
 .demande-button .home-btn:hover {
 		background: url(img/cadre-demande.png) no-repeat center;
 		background-size: 90%;
+		transform: scale(1.1);
 }
 
 .demande-button .home-btn:hover span,
@@ -250,10 +275,19 @@ li.livredor-item a:hover {
 	vertical-align: middle;
 	width: 110px;
 	position: absolute;
-    top: 0px;
-    left: 65%;
-    width: 90%;
-    z-index: 99;
+  top: 0px;
+  left: 65%;
+  width: 90%;
+  z-index: 99;
+	-webkit-transition: transform .4s ease-in;
+  -moz-transition: transform .4s ease-in;
+  -o-transition: transform .4s ease-in;
+  transition: transform .4s ease-in;
+
+}
+
+.logo-site img:hover {
+	transform: scale(1.1);
 }
 
 .helper {
@@ -821,6 +855,7 @@ div.btn-valider {
 #navbar li.demande-item a {
 	background: url(img/icone-demande.png) no-repeat left;
 	background-size: 36%;
+	transition: background-color 1s;
 }
 
 body.page-demande li.demande-item a{
