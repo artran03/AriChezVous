@@ -20,7 +20,10 @@
 		<div class="concept-button col-md-4">
 				<a class="home-btn" href="<?php echo home_url(); ?>/concept" role="button">
 						<img id="img-btn-concept" src="./wp-content/themes/AriTheme/img/icone-concept.png" width="30">
-						<span>Le concept Ari Chez Vous</span>
+						<span>
+							<span>Le concept</span>
+							<span>Ari Chez Vous</span>
+						</span>
 				</a>
 		</div>
 		<div class="col-md-4"></div>

@@ -110,10 +110,10 @@ div.container {
   padding-top: 54px!important;
 	font-size: 18px;
 	font-weight: bold;
-	-webkit-transition: color .6s, background .6s, transform .4s ease-in;
-  -moz-transition: color .6s, background .6s transform .4s ease-in;
-  -o-transition: color .6s, background .6s transform .4s ease-in;
-  transition: color .6s, background .6s transform .4s ease-in;
+	-webkit-transition: color .4s, background .4s, transform .2s ease-in;
+  -moz-transition: color .4s, background .4s transform .2s ease-in;
+  -o-transition: color .4s, background .4s transform .2s ease-in;
+  transition: color .4s, background .4s transform .2s ease-in;
 }
 
 .site-header div, .site-header nav { height: 100%; }
