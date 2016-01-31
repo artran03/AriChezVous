@@ -95,6 +95,11 @@
 	background : transparent url("../../../themes/AriTheme/img/bouton-validez.png") no-repeat scroll center center;
 }
 
+#gwolle_gb .input_button input:hover {
+	background : transparent url("../../../themes/AriTheme/img/bouton-validez-inverse.png") no-repeat scroll center center;
+	color: #000;
+}
+
 #gwolle_gb .gwolle_gb_content {
 }
 
