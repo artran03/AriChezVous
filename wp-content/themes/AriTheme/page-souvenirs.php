@@ -97,7 +97,7 @@ wp_reset_postdata();
         <div class="souvenir col-lg-4 col-md-6 col-sm-6 col-xs-12">
             <div id="<?php echo get_the_ID(); ?>-small" class="selfie-img">
                 <div class="main-img"><?php the_post_thumbnail(); ?></div>
-                <img class="play-icon" src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/control_play.png" />
+                <img class="play-icon" src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/bouton-play.png" width="50"/>
             </div>
             <div class="selfie-title-container">
                 <div class="selfie-title">

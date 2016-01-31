@@ -835,6 +835,45 @@ div.btn-valider {
 
 }
 
+@media all and (max-width: 400px) {
+
+	#acv-members {
+		width: 100%!important;
+		margin-top: 12%!important;
+	}
+
+	.acv-member {
+		padding-top: 15px!important;
+    padding-left: 28px!important;
+		height: 134px!important;
+	}
+
+	.member-photo {
+    width: 72px!important;
+    height: 73px!important;
+    margin-top: 23px!important;
+    margin-left: 14px;
+	}
+
+	.member-name {
+    font-size: 18px!important;
+	}
+
+	.member-function {
+    font-size: 17px!important;
+	}
+
+	.additional-info span {
+    font-size: 13px!important;
+	}
+
+	.name-func {
+    margin-top: 5%!important;
+	}
+}
+
+}
+
 #navbar li {
 	list-style-type: none;
 	height: 50px;
