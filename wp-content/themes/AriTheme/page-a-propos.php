@@ -34,9 +34,9 @@
             onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/mail-01.png';"/>
           </a>
           <a href="#">
-            <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/linkedin-logo-01.png" width="25"
-            onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/bouton_linkedin-02.png';"
-            onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/linkedin-logo-01.png';"/>
+            <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/logo-perrine.png" width="23"
+            onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-perrine-hover.png';"
+            onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-perrine.png';"/>
           </a>
         </span>
       </div>
