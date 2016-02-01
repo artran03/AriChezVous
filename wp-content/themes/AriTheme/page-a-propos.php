@@ -29,9 +29,9 @@
       <div class="social-net-links">
         <span>
           <a href="#">
-            <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/mail-01.png" width="25"
-            onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/bouton_mail-02.png';"
-            onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/mail-01.png';"/>
+            <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/logo-mail.png" width="23"
+            onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-mail-hover.png';"
+            onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-mail.png';"/>
           </a>
           <a href="#">
             <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/logo-perrine.png" width="23"
@@ -54,14 +54,14 @@
       <div class="social-net-links">
         <span>
           <a href="mailto:arthur.tran91@gmail.com">
-            <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/mail-01.png" width="25"
-            onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/bouton_mail-02.png';"
-            onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/mail-01.png';"/>
+            <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/logo-mail.png" width="23"
+            onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-mail-hover.png';"
+            onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-mail.png';"/>
           </a>
           <a href="https://www.linkedin.com/in/arthur-tran-77196955">
-            <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/linkedin-logo-01.png" width="25"
-            onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/bouton_linkedin-02.png';"
-            onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/linkedin-logo-01.png';"/>
+            <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/logo-linkedin.png" width="23"
+            onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-linkedin-hover.png';"
+            onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-linkedin.png';"/>
           </a>
         </span>
       </div>
@@ -81,14 +81,14 @@
       <div class="social-net-links">
         <span>
           <a href="#">
-            <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/mail-01.png" width="25"
-            onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/bouton_mail-02.png';"
-            onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/mail-01.png';"/>
+            <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/logo-mail.png" width="23"
+            onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-mail-hover.png';"
+            onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-mail.png';"/>
           </a>
           <a href="#">
-            <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/linkedin-logo-01.png" width="25"
-            onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/bouton_linkedin-02.png';"
-            onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/linkedin-logo-01.png';"/>
+            <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/logo-linkedin.png" width="23"
+            onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-linkedin-hover.png';"
+            onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-linkedin.png';"/>
           </a>
         </span>
       </div>
@@ -106,14 +106,14 @@
       <div class="social-net-links">
         <span>
           <a href="#">
-            <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/mail-01.png" width="25"
-            onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/bouton_mail-02.png';"
-            onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/mail-01.png';"/>
+            <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/logo-mail.png" width="23"
+            onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-mail-hover.png';"
+            onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-mail.png';"/>
           </a>
           <a href="#">
-            <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/linkedin-logo-01.png" width="25"
-            onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/bouton_linkedin-02.png';"
-            onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/linkedin-logo-01.png';"/>
+            <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/logo-linkedin.png" width="23"
+            onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-linkedin-hover.png';"
+            onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-linkedin.png';"/>
           </a>
         </span>
       </div>
