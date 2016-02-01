@@ -213,10 +213,12 @@ function login_header( $title = 'Log In', $message = '', $wp_error = '' ) {
 		    font-family: sans-serif;
 		    color: #fff;
 		    display: inline-block;
-		    font-weight: 100;
+		    font-weight: normal;;
 		    text-align: center;
 		    font-size: 30px;
 				margin-top: 70px;
+				margin-left: auto;
+  			margin-right: auto;
 		}
 
 		#clockdiv > div{
@@ -234,8 +236,35 @@ function login_header( $title = 'Log In', $message = '', $wp_error = '' ) {
 		}
 
 		.smalltext{
-		    padding-top: 5px;
-		    font-size: 16px;
+				padding-top: 5px;
+				font-size: 16px;
+		}
+
+		@media all and (max-width: 530px) {
+			#clockdiv{
+				font-size: 15px;
+				width: 100%;
+			}
+
+			#login {
+	 			padding-top: 2%!important;
+				width: 300px!important
+	 		}
+
+			.login h1 a {
+					background-image: url(wp-content/themes/AriTheme/img/logo.png)!important;
+					background-size: 100px;
+					width: 100px;
+					height: 100px;
+			}
+
+			#login h1 {
+				font-size:30px;
+			}
+
+			.smalltext{
+			    font-size: 10px;
+			}
 		}
 
  	</style>
