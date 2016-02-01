@@ -60,3 +60,13 @@
 		        </div><!--/.nav-collapse -->
 		      </div>
     		</nav>
+				<script type="text/javascript">
+				jQuery.noConflict();
+				jQuery(function($) {
+				$(document).click(function(e) {
+    				if (!$(e.target).is('a')) {
+        			$('.collapse').collapse('hide');
+    			}
+				});
+			});
+				</script>
