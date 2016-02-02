@@ -518,13 +518,15 @@ div.btn-valider {
 }
 
 .souvenir {
-	margin-bottom: 5%;
+	padding-bottom: 5%;
 	text-align: center;
+	background: url(img/vertical-line-bg.png) no-repeat center center;
 }
 
 .souvenir .selfie-title {
 	background: white;
 	padding: 10px;
+	margin: 0 auto;
 }
 
 .souvenir .selfie-title-container {
@@ -544,7 +546,7 @@ div.btn-valider {
 .souvenir-row {
 	background: url(img/bg-barre-souvenirs.png) no-repeat center center;
 	background-size: 100%;
-    background-position: 10% 29%;
+    background-position: 10% 25%;
 }
 
 .souvenir .modal-header {
@@ -555,7 +557,11 @@ div.btn-valider {
 	width : 100%!important;
 }
 
-.wp-pagenavi { text-align: center; }
+.wp-pagenavi {
+	text-align: center;
+	margin-top: 25px;
+  margin-bottom: 10px;
+}
 
 .wp-pagenavi a,
 .wp-pagenavi span {

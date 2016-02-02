@@ -86,7 +86,7 @@ wp_reset_postdata();
 
 <div id="two-per-div" class="container-fluid souvenirs-container">
     <?php
-    $loop = new WP_Query( array( 'post_type' => 'souvenirs', 'posts_per_page' => 3, 'paged' => get_query_var('paged') ) );
+    $loop = new WP_Query( array( 'post_type' => 'souvenirs', 'posts_per_page' => 8, 'paged' => get_query_var('paged') ) );
     if (have_posts()) :
     $i=0; // counter
     while($loop->have_posts()) : $loop->the_post();
