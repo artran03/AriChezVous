@@ -500,7 +500,7 @@ div.btn-valider {
 .souvenir .selfie-img:hover .play-icon{
 	display: block;
 	position: absolute;
-	top: 24%;
+	top: 20%;
 	left : 41%;
 }
 
@@ -532,7 +532,8 @@ div.btn-valider {
 .souvenir .selfie-title-container {
 	margin-top: 19px;
 	padding-left: 30px;
-    padding-right: 30px;
+  padding-right: 30px;
+	height: 118px;
 }
 
 .souvenir .acv-number {
