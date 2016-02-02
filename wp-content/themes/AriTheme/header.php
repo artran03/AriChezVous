@@ -67,6 +67,10 @@
 					if (!$(e.target).is('a')) {
 					$('.collapse').collapse('hide');
 				}});
+				$(document).scroll(function(e){
+					if (!$(e.target).is('a')) {
+					$('.collapse').collapse('hide');
+				}});
 				$(document).click(function(e) {
     				if (!$(e.target).is('a')) {
         			$('.collapse').collapse('hide');
