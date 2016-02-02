@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
 <html <?php language_attributes(); ?>>
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>">
