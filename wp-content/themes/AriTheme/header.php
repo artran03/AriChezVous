@@ -63,6 +63,10 @@
 				<script type="text/javascript">
 				jQuery.noConflict();
 				jQuery(function($) {
+				$(document).bind('touchstart', function(e){
+					if (!$(e.target).is('a')) {
+					$('.collapse').collapse('hide');
+				}});
 				$(document).click(function(e) {
     				if (!$(e.target).is('a')) {
         			$('.collapse').collapse('hide');
