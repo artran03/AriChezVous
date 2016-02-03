@@ -30,8 +30,18 @@ video#bgvid {
 	z-index: -100;
 	-webkit-transform: translateX(-50%) translateY(-50%);
 	transform: translateX(-50%) translateY(-50%);
-	/*background: url(Ari.jpg) no-repeat;*/
 	background-size: cover;
+}
+
+iframe#bgvidyoutube {
+	margin: 100px auto;
+	display: none;
+}
+
+.home.blog{
+	background: url(img/page-demande.png);
+	background-size: 5%;
+	background-repeat: repeat;
 }
 
 /* General layout */
@@ -47,14 +57,14 @@ div.container {
 
 .site-header {
 	width: 100%;
-    height: 137px;
+	height: 137px;
 	z-index: 100;
 	color: #000;
 	margin-left: auto;
-    margin-right: auto;
-    /*margin-top: 10px;*/
-    margin-bottom: 0;
-    max-width: 85.5em;
+	margin-right: auto;
+	/*margin-top: 10px;*/
+	margin-bottom: 0;
+	max-width: 85.5em;
 }
 
 .blog.post-bonjour-tout-le-monde .site-header {
@@ -74,7 +84,7 @@ div.container {
 /* Navigation Menus */
 .site-nav {
 	max-width: 920px;
-    margin: 0 auto;
+	margin: 0 auto;
 	padding-top: 34px;
 }
 .site-nav ul { margin : 0; padding : 0; text-align: center; }
@@ -90,7 +100,7 @@ div.container {
 .site-header nav ul li a:link,
 .site-header nav ul li a:hover,
 .site-header nav ul li a:visited
- {
+{
 	display: block;
 	padding: 0px 40px 0px 40px;
 	text-decoration: none;
@@ -100,20 +110,20 @@ div.container {
 
 .site-header nav ul li a,
 .site-header nav ul li.current-menu-item a
- {
+{
 	/*background-color: #006ec3;
 	color: #fff;*/
 	background-position: center 0px;
 }
 
 .site-header nav ul li a {
-  padding-top: 54px!important;
+	padding-top: 54px!important;
 	font-size: 18px;
 	font-weight: bold;
 	-webkit-transition: color .4s, background .4s, transform .2s ease-in;
-  -moz-transition: color .4s, background .4s, transform .2s ease-in;
-  -o-transition: color .4s, background .4s, transform .2s ease-in;
-  transition: color .4s, background .4s, transform .2s ease-in;
+	-moz-transition: color .4s, background .4s, transform .2s ease-in;
+	-o-transition: color .4s, background .4s, transform .2s ease-in;
+	transition: color .4s, background .4s, transform .2s ease-in;
 }
 
 .site-header div, .site-header nav { height: 100%; }
@@ -180,11 +190,11 @@ li.livredor-item a:hover {
 
 .footer-home{
 	position: fixed;
-  bottom: 0;
+	bottom: 0;
 	width: 200px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
 }
 
 #icones-social{
@@ -198,19 +208,19 @@ li.livredor-item a:hover {
 
 .home-buttons {
 	/*position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding-bottom: 65px;position: absolute;
-    bottom: 0px; */
-    margin: 0 auto;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-		right: 0;
-    width: 100%;
-    margin-bottom: 40px;
-		max-width: 85.5em;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding-bottom: 65px;position: absolute;
+	bottom: 0px; */
+	margin: 0 auto;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	margin-bottom: 40px;
+	max-width: 85.5em;
 }
 
 .home-buttons img {
@@ -222,49 +232,49 @@ li.livredor-item a:hover {
 }
 
 .home-btn {
-		background: url(img/background-bouton-accueil.png) no-repeat center;
-    background-size: 90%;
-    height: 78px;
-    display: inline-block;
-    padding: 14px;
-    width: 260px;
-		text-decoration: none!important;
+	background: url(img/background-bouton-accueil.png) no-repeat center;
+	background-size: 90%;
+	height: 78px;
+	display: inline-block;
+	padding: 14px;
+	width: 260px;
+	text-decoration: none!important;
 }
 
 .concept-button .home-btn, .demande-button .home-btn {
 	webkit-transition: background .3s, transform .3s ease-in;
-  -moz-transition: background .3s, transform .3s ease-in;
-  -o-transition: background .3s, transform .3s ease-in;
-  transition: background .3s, transform .3s ease-in;
+	-moz-transition: background .3s, transform .3s ease-in;
+	-o-transition: background .3s, transform .3s ease-in;
+	transition: background .3s, transform .3s ease-in;
 }
 .concept-button .home-btn:hover {
-		background: url(img/cadre-concept.png) no-repeat center;
-		background-size: 90%;
-		transform: scale(1.1);
+	background: url(img/cadre-concept.png) no-repeat center;
+	background-size: 90%;
+	transform: scale(1.1);
 }
 
 .demande-button .home-btn:hover {
-		background: url(img/cadre-demande.png) no-repeat center;
-		background-size: 90%;
-		transform: scale(1.1);
+	background: url(img/cadre-demande.png) no-repeat center;
+	background-size: 90%;
+	transform: scale(1.1);
 }
 
 .demande-button .home-btn:hover span,
 .concept-button .home-btn:hover span {
-		color: white;
+	color: white;
 }
 
 .home-btn > img,
 .home-btn > span {
-  vertical-align: middle;
+	vertical-align: middle;
 }
 
 .home-btn span {
 	display: inline-block;
 	width: 132px;
-  font-size: 18px;
-  font-style: normal;
-  color: #000;
+	font-size: 18px;
+	font-style: normal;
+	color: #000;
 }
 
 .logo-site {
@@ -275,14 +285,14 @@ li.livredor-item a:hover {
 	vertical-align: middle;
 	width: 110px;
 	position: absolute;
-  top: 0px;
-  left: 65%;
-  width: 90%;
-  z-index: 99;
+	top: 0px;
+	left: 65%;
+	width: 90%;
+	z-index: 99;
 	-webkit-transition: transform .4s ease-in;
-  -moz-transition: transform .4s ease-in;
-  -o-transition: transform .4s ease-in;
-  transition: transform .4s ease-in;
+	-moz-transition: transform .4s ease-in;
+	-o-transition: transform .4s ease-in;
+	transition: transform .4s ease-in;
 
 }
 
@@ -291,9 +301,9 @@ li.livredor-item a:hover {
 }
 
 .helper {
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
 }
 
 .centered-content div, .centered-content p {
@@ -302,9 +312,9 @@ li.livredor-item a:hover {
 
 .slogan {
 	margin-top: 11px;
-    color: #fff;
-    font-weight: bold;
-    font-size: 24px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 24px;
 }
 
 /* Backgrounds */
@@ -360,14 +370,14 @@ li.livredor-item a:hover {
 
 #demande-form span.field-container {
 	display: inline-block;
-    height: 55px;
-    padding-left: 13px;
-    padding-top: 13px;
-    padding-bottom: 13px;
-    background-color: #fff;
-    width: 213px;
-    text-align: left;
-		margin: 1px;
+	height: 55px;
+	padding-left: 13px;
+	padding-top: 13px;
+	padding-bottom: 13px;
+	background-color: #fff;
+	width: 213px;
+	text-align: left;
+	margin: 1px;
 }
 
 #demande-form input {
@@ -404,12 +414,12 @@ li.livredor-item a:hover {
 }
 
 @media all and (max-width: 768px) {
-	 #demande-form {
+	#demande-form {
 		padding-top: 380px;
 		background-position-y: 140px;
 	}
 
-	 #demande-form span {
+	#demande-form span {
 		font-size: 12px;
 		background-size: 400%;
 	}
@@ -440,7 +450,7 @@ li.livredor-item a:hover {
 }
 
 body {
-    overflow-x:hidden;
+	overflow-x:hidden;
 }
 
 div.btn-valider input {
@@ -486,11 +496,11 @@ div.btn-valider {
 .souvenir .selfie-img .main-img img{
 	border-radius: 50%;
 	width: 175px;
-    height: 175px;
-    border: 10px solid #ffffff;
-    position: relative;
-    padding: 5px;
-    background-color: #000000
+	height: 175px;
+	border: 10px solid #ffffff;
+	position: relative;
+	padding: 5px;
+	background-color: #000000
 }
 
 .souvenir .selfie-img {
@@ -507,8 +517,6 @@ div.btn-valider {
 .souvenir .play-icon {
 	display: none;
 }
-
-
 
 .souvenir .selfie-title {
 	padding: 25px;
@@ -532,7 +540,7 @@ div.btn-valider {
 .souvenir .selfie-title-container {
 	margin-top: 19px;
 	padding-left: 30px;
-  padding-right: 30px;
+	padding-right: 30px;
 	height: 118px;
 }
 
@@ -547,7 +555,7 @@ div.btn-valider {
 .souvenir-row {
 	background: url(img/bg-barre-souvenirs.png) no-repeat center center;
 	background-size: 100%;
-    background-position: 10% 25%;
+	background-position: 10% 25%;
 }
 
 .souvenir .modal-header {
@@ -566,7 +574,7 @@ div.btn-valider {
 .wp-pagenavi {
 	text-align: center;
 	margin-top: 25px;
-  margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .wp-pagenavi a,
@@ -660,36 +668,36 @@ div.btn-valider {
 
 @media all and (min-width: 768px) and (max-width: 850px) {
 	#acv-members {
-    height: 453px!important;
-    margin-top: 2%!important;
-    width: 55.0em!important;
+		height: 453px!important;
+		margin-top: 2%!important;
+		width: 55.0em!important;
 	}
 
 	.additional-info span {
-    font-size: 15px!important;
+		font-size: 15px!important;
 	}
 
 	.acv-member {
-    height: 97px!important;
+		height: 97px!important;
 	}
 
 	.member-function {
-    font-size: 18px!important;
+		font-size: 18px!important;
 	}
 
 	.member-name {
-    font-size: 21px!important;
+		font-size: 21px!important;
 	}
 
 	.name-func {
-    margin-top: 5%!important;
+		margin-top: 5%!important;
 	}
 
 	.member-photo {
-    width: 88px!important;
-    height: 88px!important;
-    margin-top: 16px!important;
-    margin-left: 14px!important;
+		width: 88px!important;
+		height: 88px!important;
+		margin-top: 16px!important;
+		margin-left: 14px!important;
 	}
 
 }
@@ -725,15 +733,15 @@ div.btn-valider {
 
 	.navbar-header {
 		padding-top: 10px;
-    padding-bottom: 10px;
+		padding-bottom: 10px;
 	}
 
 	.navbar-default .navbar-toggle .icon-bar {
-    background-color: #fff!important;
+		background-color: #fff!important;
 	}
 
 	.navbar-default .navbar-toggle {
-    border-color: #000;
+		border-color: #000;
 	}
 
 	.navbar-toggle {
@@ -751,14 +759,14 @@ div.btn-valider {
 
 	#navbar li a {
 		padding-top: 7px!important;
-    padding-left: 50px!important;
+		padding-left: 50px!important;
 	}
 
 	#cadre {
 		width: 100%;
 		padding-top: 11px;
 		margin-top: 20px;
-	  padding-left: 5%;
+		padding-left: 5%;
 		padding-right: 5%;
 		background: none;
 	}
@@ -796,7 +804,7 @@ div.btn-valider {
 
 	#acv-members {
 		height: 100%!important;
-    width: 37.5em!important;
+		width: 37.5em!important;
 		background: none!important;
 		margin-top: 11%!important;
 	}
@@ -806,16 +814,23 @@ div.btn-valider {
 		background-size: 90%;
 		height: 155px!important;
 		padding-top: 26px;
-    padding-left: 50px!important;
+		padding-left: 50px!important;
 	}
 
 	.amine-alex-part {
 		margin-top: 0px!important;
 	}
+	
+	video#bgvid {
+		display: none;
+	}
+
+	iframe#bgvidyoutube {
+		display: block;
+	}
 }
 
 @media all and (max-width: 530px) {
-
 	#acv-members {
 		width: 29.0em!important;
 		margin-top: 12%!important;
@@ -823,29 +838,28 @@ div.btn-valider {
 
 	.acv-member {
 		padding-top: 15px!important;
-    padding-left: 28px!important;
+		padding-left: 28px!important;
 		height: 134px!important;
 	}
 
 	.member-photo {
-    width: 84px!important;
-    height: 84px!important;
-    margin-top: 18px!important;
-    margin-left: 14px;
+		width: 84px!important;
+		height: 84px!important;
+		margin-top: 18px!important;
+		margin-left: 14px;
 	}
 
 	.member-name {
-    font-size: 19px!important;
+		font-size: 19px!important;
 	}
 
 	.member-function {
-    font-size: 20px!important;
+		font-size: 20px!important;
 	}
 
 	.additional-info span {
-    font-size: 14px!important;
+		font-size: 14px!important;
 	}
-
 }
 
 @media all and (max-width: 400px) {
@@ -857,31 +871,31 @@ div.btn-valider {
 
 	.acv-member {
 		padding-top: 15px!important;
-    padding-left: 28px!important;
+		padding-left: 28px!important;
 		height: 134px!important;
 	}
 
 	.member-photo {
-    width: 72px!important;
-    height: 73px!important;
-    margin-top: 23px!important;
-    margin-left: 14px;
+		width: 72px!important;
+		height: 73px!important;
+		margin-top: 23px!important;
+		margin-left: 14px;
 	}
 
 	.member-name {
-    font-size: 18px!important;
+		font-size: 18px!important;
 	}
 
 	.member-function {
-    font-size: 17px!important;
+		font-size: 17px!important;
 	}
 
 	.additional-info span {
-    font-size: 13px!important;
+		font-size: 13px!important;
 	}
 
 	.name-func {
-    margin-top: 5%!important;
+		margin-top: 5%!important;
 	}
 }
 
@@ -894,10 +908,10 @@ div.btn-valider {
 
 #navbar li a {
 	height: 100%;
-  display: inline-block;
+	display: inline-block;
 	font-size: 19px;
-  padding-top: 15px;
-  padding-left: 69px;
+	padding-top: 15px;
+	padding-left: 69px;
 }
 
 #navbar ul {
@@ -994,17 +1008,17 @@ body.page-livre-dor #navbar li.livredor-item a{
 	padding-top: 24px;
 	margin-top: 5%;
 	background: url(img/background-apropos.png) no-repeat;
-  background-size: 100%;
-  background-position: 50% -37%;
-  width: 60.5em;
+	background-size: 100%;
+	background-position: 50% -37%;
+	width: 60.5em;
 }
 
 #acv-members .row {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-    max-width: 57.5em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	max-width: 57.5em;
 }
 
 .acv-member {
@@ -1080,12 +1094,12 @@ body.page-livre-dor #navbar li.livredor-item a{
 
 .member-photo {
 	border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  float: left;
-  border: 4px solid #FFF;
-  margin-top: 10px;
-  margin-left: 14px;
+	width: 100px;
+	height: 100px;
+	float: left;
+	border: 4px solid #FFF;
+	margin-top: 10px;
+	margin-left: 14px;
 }
 
 .hyphen {
@@ -1100,7 +1114,7 @@ body.page-livre-dor #navbar li.livredor-item a{
 
 .additional-info span {
 	font-size: 17px;
-  font-style: normal;
+	font-style: normal;
 }
 
 .member-name, .additional-info span, .social-net-links span{
