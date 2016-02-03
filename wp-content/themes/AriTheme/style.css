@@ -558,6 +558,11 @@ div.btn-valider {
 	width : 100%!important;
 }
 
+.modal .modal-content img {
+	width: 100%;
+	height: auto;
+}
+
 .wp-pagenavi {
 	text-align: center;
 	margin-top: 25px;

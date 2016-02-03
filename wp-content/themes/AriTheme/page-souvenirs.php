@@ -48,7 +48,25 @@ get_header();
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         </div>
                         <div class="modal-body">
-                            <div><?php the_content(); ?></div>
+                            <div class="modal-content">
+                              <?php
+                                $content = get_the_content();
+                                if ($content != '')
+                                {
+                                  the_content();
+                                }
+                                else {
+                                  the_post_thumbnail();
+                                }
+                              ?>
+                            </div>
+
+                          	<!-- Your share button code -->
+                          	<div class="fb-share-button"
+                          		data-href="https://www.youtube.com/watch?v=ZyqAeqcAaXY"
+                          		data-layout="button_count">
+                          	</div>
+
                         </div>
                     </div><!-- /.modal-content -->
                 </div><!-- /.modal-dialog -->
@@ -114,7 +132,18 @@ wp_reset_postdata();
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         </div>
                         <div class="modal-body">
-                            <div><?php the_content(); ?></div>
+                            <div class="modal-content">
+                              <?php
+                                $content = get_the_content();
+                                if ($content != '')
+                                {
+                                  the_content();
+                                }
+                                else {
+                                  the_post_thumbnail();
+                                }
+                              ?>
+                            </div>
                         </div>
                     </div><!-- /.modal-content -->
                 </div><!-- /.modal-dialog -->
