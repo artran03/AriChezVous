@@ -490,6 +490,7 @@ div.btn-valider {
 
 .souvenirs-container {
 	width: 60%;
+	max-width: 800px;
 	margin-top: 5%;
 }
 
@@ -552,10 +553,16 @@ div.btn-valider {
 	font-size: 16px;
 }
 
-.souvenir-row {
-	background: url(img/bg-barre-souvenirs.png) no-repeat center center;
+#three-per-div .souvenir-row {
+	background: url(img/bg-barre-souvenirs.png) no-repeat;
 	background-size: 100%;
-	background-position: 10% 25%;
+  background-position: 10% 23%;
+}
+
+#two-per-div .souvenir-row {
+	background: url(img/bg-barre-souvenirs.png) no-repeat;
+	background-size: 100%;
+  background-position: 10% 25%;
 }
 
 .souvenir .modal-header {
@@ -705,7 +712,7 @@ div.btn-valider {
 /** MENU MOBILE **/
 
 @media all and (max-width: 768px) {
-	.souvenir-row{
+	#two-per-div .souvenir-row{
 		background: none;
 	}
 
@@ -820,7 +827,7 @@ div.btn-valider {
 	.amine-alex-part {
 		margin-top: 0px!important;
 	}
-	
+
 	video#bgvid {
 		display: none;
 	}
