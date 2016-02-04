@@ -833,6 +833,7 @@ div.btn-valider {
 	}
 
 	iframe#bgvidyoutube {
+		width: 100%;
 		display: block;
 	}
 }
