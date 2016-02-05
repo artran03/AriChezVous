@@ -17,6 +17,16 @@ get_header();
 //endwhile;
 ?>
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.5&appId=874688442559707";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
 <div id="three-per-div" class="container-fluid souvenirs-container">
     <?php
     $loop = new WP_Query( array( 'post_type' => 'souvenirs', 'posts_per_page' => 9, 'paged' => get_query_var('paged') ) );
@@ -51,22 +61,17 @@ get_header();
                             <div class="modal-content">
                               <?php
                                 $content = get_the_content();
-                                if ($content != '')
-                                {
-                                  the_content();
+                                if ($content != '') {
+                                  ?>
+                                    <div class="fb-video" data-href="<?php echo $content; ?>" data-width="500">
+                                    </div>
+                                  <?php
                                 }
                                 else {
                                   the_post_thumbnail();
                                 }
                               ?>
                             </div>
-
-                          	<!-- Your share button code -->
-                          	<div class="fb-share-button"
-                          		data-href="https://www.youtube.com/watch?v=ZyqAeqcAaXY"
-                          		data-layout="button_count">
-                          	</div>
-
                         </div>
                     </div><!-- /.modal-content -->
                 </div><!-- /.modal-dialog -->
@@ -135,9 +140,11 @@ wp_reset_postdata();
                             <div class="modal-content">
                               <?php
                                 $content = get_the_content();
-                                if ($content != '')
-                                {
-                                  the_content();
+                                if ($content != '') {
+                                  ?>
+                                    <div class="fb-video" data-href="<?php echo $content; ?>" data-width="500">
+                                    </div>
+                                  <?php
                                 }
                                 else {
                                   the_post_thumbnail();
