@@ -359,7 +359,7 @@ li.livredor-item a:hover {
 	text-align: center;
 	padding-top: 280px;
 	background: url(img/new-cadre-01.png) no-repeat center center;
-	background-position-y: 40px;
+	background-position: 50% 40px;
 	background-size: 38em;
 }
 
@@ -416,7 +416,7 @@ li.livredor-item a:hover {
 @media all and (max-width: 768px) {
 	#demande-form {
 		padding-top: 380px;
-		background-position-y: 140px;
+		background-position: 50% 140px;
 	}
 
 	#demande-form span {
