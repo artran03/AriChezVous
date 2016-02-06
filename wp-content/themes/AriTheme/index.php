@@ -9,7 +9,7 @@ get_header();
 ?>
 
 <video autoplay loop id="bgvid">
-	<source src="Video_Promo_v2.mov" type="video/mp4">
+	<source src="Video_Promo_v2.mp4" type="video/mp4">
 </video>
 
 <iframe id="bgvidyoutube" width="560" height="315" src="https://www.youtube.com/embed/3JvNg59q3Tg" frameborder="0" allowfullscreen></iframe>
