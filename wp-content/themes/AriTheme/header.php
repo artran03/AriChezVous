@@ -4,6 +4,12 @@
 		<meta charset="<?php bloginfo('charset'); ?>">
 		<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
 		<title><?php bloginfo('name'); ?></title>
+		
+		<meta name="description" content="
+		<?php $mykey_values = get_post_custom_values('Description');
+		foreach ( $mykey_values as $key => $value ) { echo "$value"; }
+		?>" />
+		
 		<?php wp_head(); ?>
 		<link href='https://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
 		<link rel="icon" type="image/png" sizes="64x64" href="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/logo-fav.png">
