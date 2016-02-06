@@ -280,3 +280,9 @@ p.gwolle_gb_link {
 	}
 
 }
+
+@media screen and (min-width: 1500px) {
+	#gwolle_gb .input {
+		max-width: 500px;
+	}
+}
