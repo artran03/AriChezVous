@@ -1133,8 +1133,8 @@ body.page-livre-dor #navbar li.livredor-item a{
 	margin-top: 5px;
 }
 
-.social-net-links a:hover {
-	text-decoration: none;
+.social-net-links a, .social-net-links a:hover {
+	text-decoration: none!important;
 }
 
 .name-func {

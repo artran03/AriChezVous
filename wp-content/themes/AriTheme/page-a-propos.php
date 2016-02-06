@@ -28,12 +28,12 @@
       <div class="additional-info"><span>(Design & Illustrations)</span></div>
       <div class="social-net-links">
         <span>
-          <a href="#">
+          <a href="mailto:perrine.gregy@gmail.com">
             <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/logo-mail.png" width="23"
             onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-mail-hover.png';"
             onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-mail.png';"/>
           </a>
-          <a href="#">
+          <a href="http://www.perrinegregy.com/">
             <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/logo-perrine.png" width="23"
             onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-perrine-hover.png';"
             onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-perrine.png';"/>
@@ -80,12 +80,12 @@
       <div class="additional-info"><span>(Conception & Développement)</span></div>
       <div class="social-net-links">
         <span>
-          <a href="#">
+          <a href="mailto:med.amine.bouarfa@gmail.com">
             <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/logo-mail.png" width="23"
             onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-mail-hover.png';"
             onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-mail.png';"/>
           </a>
-          <a href="#">
+          <a href="https://www.linkedin.com/in/bouarfa">
             <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/logo-linkedin.png" width="23"
             onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-linkedin-hover.png';"
             onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-linkedin.png';"/>
@@ -105,12 +105,12 @@
       <div class="additional-info"><span>(Conception & Développement)</span></div>
       <div class="social-net-links">
         <span>
-          <a href="#">
+          <a href="mailto:alexdejacques@gmail.com">
             <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/logo-mail.png" width="23"
             onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-mail-hover.png';"
             onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-mail.png';"/>
           </a>
-          <a href="#">
+          <a href="https://fr.linkedin.com/in/alexandredejacques">
             <img src="<?php echo home_url(); ?>/wp-content/themes/AriTheme/img/logo-linkedin.png" width="23"
             onmouseover="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-linkedin-hover.png';"
             onmouseout="this.src='<?php echo home_url();?>/wp-content/themes/AriTheme/img/logo-linkedin.png';"/>
