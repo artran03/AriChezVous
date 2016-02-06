@@ -286,6 +286,8 @@ function gwolle_gb_frontend_posthandling() {
 			}
 		}
 
+		$entry->set_ischecked( false );
+
 
 		/* Check for logged in user, and set the userid as author_id, just in case someone is also admin, or gets promoted some day */
 		$entry->set_author_id( $user_id );
