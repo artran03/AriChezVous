@@ -396,10 +396,13 @@ li.livredor-item a:hover {
 }
 
 #demande-form input {
-	width: 110px;
 	border : none;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	outline: none;
+}
+
+#demande-form input:not([type=checkbox]) {
+	width: 110px;
 }
 
 #demande-form span.field-container.address {
@@ -416,6 +419,16 @@ li.livredor-item a:hover {
 
 #demande-form span.field-container.address input{
 	width : 300px;
+}
+
+#demande-form div.conditions {
+	margin : 5px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#demande-form div.conditions a:hover {
+	cursor: pointer;
 }
 
 #demande-form .left {
@@ -438,12 +451,16 @@ li.livredor-item a:hover {
 		font-size: 12px;
 		background-size: 400%;
 	}
+	
+	#demande-form div.conditions {
+		font-size: 14px;
+	}
 
 	#demande-form span.field-container {
 		width: 170px;
 	}
 
-	#demande-form input {
+	#demande-form input:not([type=checkbox]) {
 		width: 90px;
 	}
 
@@ -484,7 +501,7 @@ div.btn-valider input:hover {
 }
 
 div.btn-valider {
-	margin-top: 45px;
+	margin-top: 10px;
 	margin-bottom:45px;
 }
 
