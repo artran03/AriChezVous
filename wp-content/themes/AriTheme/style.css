@@ -368,6 +368,12 @@ li.livredor-item a:hover {
 	background-size: 5%;
 }
 
+.page-cadeau {
+  background: url(img/Ari_Tailleur.jpg);
+	background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* End backgrounds */
 
 #demande-form {
@@ -451,7 +457,7 @@ li.livredor-item a:hover {
 		font-size: 12px;
 		background-size: 400%;
 	}
-	
+
 	#demande-form div.conditions {
 		font-size: 12px;
 	}
@@ -485,7 +491,7 @@ body {
 	overflow-x:hidden;
 }
 
-div.btn-valider input {
+div.btn-valider input, div.btn-valider a {
 	background: url(img/bouton-validez.png) no-repeat center center;
 	height: 50px;
 	width: 120px !important;
@@ -495,7 +501,13 @@ div.btn-valider input {
 	font-style: italic;
 }
 
-div.btn-valider input:hover {
+div.btn-valider a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 11px;
+}
+
+div.btn-valider input:hover, div.btn-valider a:hover {
 	background: url(img/bouton-validez-inverse.png) no-repeat center center;
 	color: #000;
 }
@@ -1184,4 +1196,25 @@ body.page-livre-dor #navbar li.livredor-item a{
 
 .name-func {
 	margin-top: 4%;
+}
+
+.cadeau-container {
+  text-align: center;
+}
+
+.message-cadeau {
+  width: 70%;
+  margin: 0 auto;
+  color: white;
+  font-size: 21px;
+  padding-top: 3%;
+}
+
+.message-cadeau .btn-valider {
+  padding-top: 26%;
+}
+
+#modal-cadeau img {
+  width: 40px;
+  height: 40px;
 }
