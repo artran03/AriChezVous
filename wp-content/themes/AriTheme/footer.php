@@ -1,3 +1,7 @@
+
+	<div id="cadeau-btn">
+			<a href="<?php echo home_url(); ?>/Cadeau">Titres Offerts !</a>
+	</div>
 	<footer class="site-footer">
 			<div id="icones-social">
 				<a href="http://www.facebook.com/ariofficiel" title="Suivez-moi sur facebook !" target="_blank">

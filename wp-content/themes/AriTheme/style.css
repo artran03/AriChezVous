@@ -372,6 +372,7 @@ li.livredor-item a:hover {
   background: url(img/Ari_Tailleur.jpg);
 	background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 /* End backgrounds */
@@ -1217,4 +1218,22 @@ body.page-livre-dor #navbar li.livredor-item a{
 #modal-cadeau img {
   width: 40px;
   height: 40px;
+}
+
+#cadeau-btn {
+  text-align: center;
+}
+
+#cadeau-btn a {
+  color: white;
+  display: inline-block;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #f17a63;
+  border-radius: 50%;
+  border: 4px solid white;
+  text-decoration: none;
+  font-size: 18px;
 }
